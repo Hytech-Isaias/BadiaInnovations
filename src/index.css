@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  /* Purple Heart Palette (Accent) */
-  --color-purple-50: #f5f4fe;
-  --color-purple-100: #efeafd;
-  --color-purple-200: #dfd8fc;
-  --color-purple-300: #c8b8fa;
-  --color-purple-400: #ac90f5;
-  --color-purple-500: #9263ef;
-  --color-purple-600: #8342e5;
-  --color-purple-700: #7b3bd4;
-  --color-purple-800: #6027b0;
-  --color-purple-900: #502290;
-  --color-purple-950: #311461;
+  /* Purple Heart Palette (Accent) - Darker */
+  --color-purple-50: #e8e5f9;
+  --color-purple-100: #d5cff5;
+  --color-purple-200: #bdb3ed;
+  --color-purple-300: #9d8be3;
+  --color-purple-400: #7d5dd8;
+  --color-purple-500: #6a3fd1;
+  --color-purple-600: #5a2ec4;
+  --color-purple-700: #4d26a8;
+  --color-purple-800: #3e1d8a;
+  --color-purple-900: #301670;
+  --color-purple-950: #1f0d47;
   
   /* Dark Theme Colors */
   --color-dark-bg: #0a0a0b;

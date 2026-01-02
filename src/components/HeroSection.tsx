@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { ArrowRight, Play, Sparkles } from "lucide-react";
+import { ArrowRight, Phone, Sparkles } from "lucide-react";
 import { useRef } from "react";
 import useThemeStore from "../store/themeStore";
 
@@ -153,10 +153,10 @@ const HeroSection = () => {
                 onClick={handleScrollToContact}
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                className="group flex items-center justify-center gap-3 px-8 py-4 rounded-2xl font-semibold glass text-theme hover:bg-purple-500/10 transition-all"
+                className="group flex items-center justify-center gap-3 px-8 py-2 rounded-2xl font-semibold glass text-theme hover:bg-purple-500/10 transition-all"
               >
                 <div className="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center group-hover:bg-purple-500/30 transition-colors">
-                  <Play size={16} className="text-purple-500 ml-0.5" />
+                  <Phone size={16} className="text-purple-500 ml-0.5" />
                 </div>
                 {t("hero.cta2")}
               </motion.button>
@@ -170,9 +170,9 @@ const HeroSection = () => {
               className="flex flex-wrap gap-8"
             >
               {[
-                { value: "15+", label: "Projects" },
-                { value: "10+", label: "Clients" },
-                { value: "99%", label: "Satisfaction" },
+                { value: "5+", label: "Projects" },
+                { value: "3+", label: "Clients" },
+                { value: "100%", label: "Satisfaction" },
               ].map((stat, i) => (
                 <div key={i} className="text-center">
                   <div className="text-2xl md:text-3xl font-bold gradient-text">
@@ -254,7 +254,7 @@ const HeroSection = () => {
                   </span>
                 </div>
                 <div className="text-3xl font-bold text-theme mb-1">
-                  RD$ 45,000
+                  RD$ 50,000
                 </div>
                 <div className="text-sm text-muted mb-4">
                   Net Monthly Salary
@@ -262,11 +262,11 @@ const HeroSection = () => {
                 <div className="grid grid-cols-2 gap-2 text-xs">
                   <div className="glass-light rounded-lg p-2">
                     <div className="text-muted">ISR</div>
-                    <div className="font-semibold text-theme">-RD$ 3,200</div>
+                    <div className="font-semibold text-theme">-RD$ 2,955</div>
                   </div>
                   <div className="glass-light rounded-lg p-2">
                     <div className="text-muted">AFP</div>
-                    <div className="font-semibold text-theme">-RD$ 1,500</div>
+                    <div className="font-semibold text-theme">-RD$ 1,854</div>
                   </div>
                 </div>
               </div>
@@ -293,7 +293,18 @@ const HeroSection = () => {
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-1.5">
-                  {["React", "Next.js", "Node", "UI/UX"].map((tech) => (
+                  {[
+                    "React",
+                    "Vue",
+                    "Nest.js",
+                    "Next.js",
+                    "Laravel",
+                    "Spring Boot",
+                    "UI/UX",
+                    "GCP",
+                    "AWS",
+                    "Docker",
+                  ].map((tech) => (
                     <span
                       key={tech}
                       className="px-2 py-1 rounded-lg glass-light text-xs text-muted"

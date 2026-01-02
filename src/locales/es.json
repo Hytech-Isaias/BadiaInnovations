@@ -70,6 +70,21 @@
         "name": "E-Commerce",
         "desc": "Tiendas en línea completas con integración de pagos, gestión de inventario y envíos.",
         "features": ["Pasarela de Pagos", "Sistema de Inventario", "Gestión de Pedidos", "Portal de Clientes"]
+      },
+      "custom": {
+        "name": "Desarrollo Personalizado",
+        "desc": "Soluciones de software a medida construidas desde cero para satisfacer los requisitos únicos y flujos de trabajo de tu negocio.",
+        "features": ["Escalable", "Seguro", "Optimizado"]
+      },
+      "app": {
+        "name": "Desarrollo de Apps",
+        "desc": "Aplicaciones móviles nativas y multiplataforma que ofrecen experiencias de usuario excepcionales en iOS y Android.",
+        "features": ["Alto Rendimiento", "Experiencia Nativa", "Seguro"]
+      },
+      "seo": {
+        "name": "SEO y Estrategia de Contenido",
+        "desc": "Impulsa tu visibilidad online con estrategias de contenido bilingüe y optimización SEO técnica. Atrae tráfico orgánico, mejora tu posicionamiento y conecta con tu audiencia en inglés y español.",
+        "features": ["Optimización Técnica","Velocidad de Carga","Mobile-First", "Contenido Adaptable" ]
       }
     },
     "portfolio": {

@@ -6,10 +6,9 @@ import {
   ShoppingCart,
   ArrowUpRight,
   ExternalLink,
-  Palette,
   Smartphone,
-  Gauge,
-  Languages,
+  Blocks,
+  Search,
 } from "lucide-react";
 import useThemeStore from "../store/themeStore";
 
@@ -22,34 +21,55 @@ const ServicesSection = () => {
       icon: Globe,
       name: t("services.items.landing.name"),
       desc: t("services.items.landing.desc"),
-      features: [
-        { icon: Palette, label: "Modern Design" },
-        { icon: Gauge, label: "Fast Loading" },
-        { icon: Smartphone, label: "Mobile First" },
-      ],
+      features: t("services.items.landing.features", {
+        returnObjects: true,
+      }) as string[],
       gradient: "from-purple-600 to-purple-500",
     },
     {
       icon: Code2,
       name: t("services.items.business.name"),
       desc: t("services.items.business.desc"),
-      features: [
-        { icon: Palette, label: "Custom Design" },
-        { icon: Languages, label: "Multi-language" },
-        { icon: Gauge, label: "SEO Optimized" },
-      ],
+      features: t("services.items.business.features", {
+        returnObjects: true,
+      }) as string[],
       gradient: "from-purple-500 to-purple-400",
     },
     {
       icon: ShoppingCart,
       name: t("services.items.ecommerce.name"),
       desc: t("services.items.ecommerce.desc"),
-      features: [
-        { icon: Gauge, label: "Payment Gateway" },
-        { icon: Smartphone, label: "Inventory" },
-        { icon: Palette, label: "Custom Portal" },
-      ],
+      features: t("services.items.ecommerce.features", {
+        returnObjects: true,
+      }) as string[],
       gradient: "from-purple-700 to-purple-600",
+    },
+    {
+      icon: Blocks,
+      name: t("services.items.custom.name"),
+      desc: t("services.items.custom.desc"),
+      features: t("services.items.custom.features", {
+        returnObjects: true,
+      }) as string[],
+      gradient: "from-purple-600 to-purple-700",
+    },
+    {
+      icon: Smartphone,
+      name: t("services.items.app.name"),
+      desc: t("services.items.app.desc"),
+      features: t("services.items.app.features", {
+        returnObjects: true,
+      }) as string[],
+      gradient: "from-purple-500 to-purple-600",
+    },
+    {
+      icon: Search,
+      name: t("services.items.seo.name"),
+      desc: t("services.items.seo.desc"),
+      features: t("services.items.seo.features", {
+        returnObjects: true,
+      }) as string[],
+      gradient: "from-purple-400 to-purple-500",
     },
   ];
 
@@ -120,7 +140,7 @@ const ServicesSection = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20"
         >
           {services.map((service, index) => (
             <motion.div
@@ -155,10 +175,9 @@ const ServicesSection = () => {
                   {service.features.map((feature, i) => (
                     <div
                       key={i}
-                      className="flex items-center gap-1.5 px-3 py-1.5 glass-light rounded-lg text-xs text-muted"
+                      className="px-3 py-1.5 glass-light rounded-lg text-xs text-muted font-medium"
                     >
-                      <feature.icon size={12} className="text-purple-500" />
-                      {feature.label}
+                      {feature}
                     </div>
                   ))}
                 </div>

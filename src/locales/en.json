@@ -70,6 +70,21 @@
         "name": "E-Commerce",
         "desc": "Complete online stores with payment integration, inventory management, and shipping.",
         "features": ["Payment Gateway", "Inventory System", "Order Management", "Customer Portal"]
+      },
+      "custom": {
+        "name": "Custom Development",
+        "desc": "Tailored software solutions built from scratch to meet your unique business requirements and workflows.",
+        "features": ["Scalable", "Secure", "Optimized"]
+      },
+      "app": {
+        "name": "App Development",
+        "desc": "Native and cross-platform mobile applications that deliver exceptional user experiences on iOS and Android.",
+        "features": ["Fast Performance", "Native Feel", "Secure"]
+      },
+      "seo": {
+        "name": "SEO & Content Strategy",
+        "desc": "Boost your online visibility with bilingual content strategies and technical SEO optimization. Drive organic traffic, improve rankings, and connect with your audience in English and Spanish.",
+        "features": ["Technical Optimization","Speed","Mobile-First","Content Adaptability"]
       }
     },
     "portfolio": {

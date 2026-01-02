@@ -41,12 +41,12 @@
           "link": "https://tools.nominalrd.com",
           "cta": "Probar Herramientas"
         },
-        "tss": {
-          "name": "Calculadora TSS",
-          "desc": "Calcula rápidamente las contribuciones de Seguridad Social para empleadores y empleados.",
-          "features": ["Aportes Patronales", "Deducciones Empleado", "Reportes Mensuales"],
-          "link": "https://tools.nominalrd.com/tss",
-          "cta": "Calcular TSS"
+        "leaves": {
+          "name": "Calculadora de Despidos y Beneficios",
+          "desc": "Calcula rápidamente los despidos y beneficios legales para empleadores y empleados.",
+          "features": ["Despidos Legales", "Beneficios Legales", "Cumplimiento Legal"],
+          "link": "https://tools.nominalrd.com/es/leaves-benefits-calculator",
+          "cta": "Calcular Despidos y Beneficios"
         }
       }
     }

@@ -165,7 +165,7 @@ const BentoProducts = () => {
               </p>
 
               <a
-                href="https://tools.nominalrd.com"
+                href="https://tools.nominalrd.com/es/salary-calculator"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 text-sm font-medium text-purple-500 hover:text-purple-400 transition-colors"
@@ -189,19 +189,19 @@ const BentoProducts = () => {
               </div>
 
               <h4 className="text-lg font-bold text-theme mb-2">
-                {t("products.tools.items.tss.name")}
+                {t("products.tools.items.leaves.name")}
               </h4>
               <p className="text-sm text-muted mb-4 line-clamp-2">
-                {t("products.tools.items.tss.desc")}
+                {t("products.tools.items.leaves.desc")}
               </p>
 
               <a
-                href="https://tools.nominalrd.com/tss"
+                href="https://tools.nominalrd.com/es/leaves-benefits-calculator"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1 text-sm font-medium text-purple-500 hover:text-purple-400 transition-colors"
               >
-                {t("products.tools.items.tss.cta")}
+                {t("products.tools.items.leaves.cta")}
                 <ArrowUpRight size={14} />
               </a>
             </div>
@@ -211,7 +211,7 @@ const BentoProducts = () => {
           <motion.div variants={itemVariants} className="md:col-span-2">
             <div className="h-full glass rounded-3xl p-6 flex items-center justify-around">
               {[
-                { value: "500+", label: "Active Users" },
+                { value: "20+", label: "Active Users" },
                 { value: "99.9%", label: "Uptime" },
                 { value: "24/7", label: "Support" },
               ].map((stat, i) => (

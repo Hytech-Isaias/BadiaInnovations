@@ -38,15 +38,15 @@
           "name": "Salary Calculator",
           "desc": "Calculate net salary, deductions, and benefits according to Dominican Republic labor laws.",
           "features": ["ISR Calculation", "AFP/SFS Deductions", "Bonuses & Vacation"],
-          "link": "https://tools.nominalrd.com",
+          "link": "https://tools.nominalrd.com/es/salary-calculator",
           "cta": "Try Free Tools"
         },
-        "tss": {
-          "name": "TSS Calculator",
-          "desc": "Quickly calculate Social Security contributions for employers and employees.",
-          "features": ["Employer Contributions", "Employee Deductions", "Monthly Reports"],
-          "link": "https://tools.nominalrd.com/tss",
-          "cta": "Calculate TSS"
+        "leaves": {
+          "name": "Leaves & Benefits Calculator",
+          "desc": "Calculate leaves, benefits, and legal compliance for Dominican Republic businesses.",
+          "features": ["Leaves", "Benefits", "Legal Compliance"],
+          "link": "https://tools.nominalrd.com/es/leaves-benefits-calculator",
+          "cta": "Calculate Leaves & Benefits"
         }
       }
     }

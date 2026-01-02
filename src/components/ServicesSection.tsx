@@ -226,15 +226,12 @@ const ServicesSection = () => {
                     </div>
 
                     {/* Content area */}
-                    <div className="absolute inset-0 top-8 flex items-center justify-center">
-                      <div className="text-center">
-                        <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-purple-600/20 to-purple-400/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
-                          <Globe size={40} className="text-purple-500" />
-                        </div>
-                        <span className="text-muted text-sm">
-                          Wedding Planning Website
-                        </span>
-                      </div>
+                    <div className="absolute inset-0 top-8">
+                      <img
+                        src="/src/assets/images/TailoredWeddings.png"
+                        alt="Tailored Weddings RD Website"
+                        className="w-full h-full object-cover object-top"
+                      />
                     </div>
                   </div>
 

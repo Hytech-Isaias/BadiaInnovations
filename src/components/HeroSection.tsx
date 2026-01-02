@@ -230,7 +230,7 @@ const HeroSection = () => {
                         </div>
                       ))}
                     </div>
-                    <span className="text-sm text-muted">+500 companies</span>
+                    <span className="text-sm text-muted">+10 companies</span>
                   </div>
                 </div>
               </div>

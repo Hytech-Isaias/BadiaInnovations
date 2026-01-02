@@ -27,6 +27,14 @@
           "features": ["Gestión de Nómina", "Base de Empleados", "Reportes Legales", "Cálculos de Impuestos"],
           "link": "https://nominalrd.com",
           "cta": "Visitar NominalRD"
+        },
+        "gymtracker": {
+          "name": "GymTracker",
+          "desc": "Compañero de fitness impulsado por IA para web y Android. Obtén rutinas de ejercicio personalizadas, rastrea tu progreso y alcanza tus metas fitness con recomendaciones inteligentes.",
+          "features": ["Planes de Entrenamiento IA", "Seguimiento de Progreso", "App Web y Android", "Gratis y Premium"],
+          "link": "https://gymtracker.badiainnovations.com",
+          "cta": "Próximamente",
+          "status": "En Desarrollo"
         }
       }
     },
@@ -36,9 +44,9 @@
       "items": {
         "salary": {
           "name": "Calculadora de Salario",
-          "desc": "Calcula el salario neto, deducciones y beneficios según las leyes laborales de República Dominicana.",
-          "features": ["Cálculo de ISR", "Deducciones AFP/SFS", "Bonificaciones y Vacaciones"],
-          "link": "https://tools.nominalrd.com",
+          "desc": "Calcula el salario neto, deducciones de ISR, AFP, SFS y más para empleados dominicanos.",
+          "features": ["Cálculo automático de ISR", "Deducciones de Seguro Social", "Horas extras y nocturnidad", "Vista mensual y quincenal"],
+          "link": "https://tools.nominalrd.com/es/salary-calculator",
           "cta": "Probar Herramientas"
         },
         "leaves": {

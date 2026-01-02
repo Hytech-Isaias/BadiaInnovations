@@ -27,6 +27,14 @@
           "features": ["Payroll Management", "Employee Database", "Legal Reports", "Tax Calculations"],
           "link": "https://nominalrd.com",
           "cta": "Visit NominalRD"
+        },
+        "gymtracker": {
+          "name": "GymTracker",
+          "desc": "AI-powered fitness companion for web and Android. Get personalized workout routines, track your progress, and achieve your fitness goals with intelligent recommendations.",
+          "features": ["AI Workout Plans", "Progress Tracking", "Web & Android App", "Free & Premium"],
+          "link": "https://gymtracker.badiainnovations.com",
+          "cta": "Coming Soon",
+          "status": "In Development"
         }
       }
     },
@@ -36,10 +44,10 @@
       "items": {
         "salary": {
           "name": "Salary Calculator",
-          "desc": "Calculate net salary, deductions, and benefits according to Dominican Republic labor laws.",
-          "features": ["ISR Calculation", "AFP/SFS Deductions", "Bonuses & Vacation"],
+          "desc": "Calculate net salary, ISR, AFP, SFS deductions and more for Dominican Republic employees.",
+          "features": ["Automatic ISR Calculation", "Social Security Deductions", "Overtime & Night Hours", "Monthly & Biweekly View"],
           "link": "https://tools.nominalrd.com/es/salary-calculator",
-          "cta": "Try Free Tools"
+          "cta": "Try Calculator"
         },
         "leaves": {
           "name": "Leaves & Benefits Calculator",

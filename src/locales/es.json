@@ -1,0 +1,128 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "products": "Productos",
+    "services": "Servicios",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "tagline": "Innovación que transforma tu negocio",
+    "title": "Construyendo el Futuro de las",
+    "titleHighlight": "Soluciones Digitales",
+    "subtitle": "Creamos aplicaciones de software poderosas y soluciones web personalizadas que impulsan tu negocio. Desde gestión de RRHH hasta sitios web impresionantes.",
+    "cta1": "Explorar Productos",
+    "cta2": "Contáctanos",
+    "scroll": "Desplázate para descubrir"
+  },
+  "products": {
+    "title": "Nuestros Productos",
+    "subtitle": "Aplicaciones SaaS potentes diseñadas para optimizar las operaciones de tu negocio",
+    "apps": {
+      "title": "Aplicaciones Empresariales",
+      "desc": "Soluciones de software completas para empresas",
+      "items": {
+        "nominal": {
+          "name": "NominalRD",
+          "desc": "Sistema completo de gestión de RRHH y nómina para empresas dominicanas. Gestiona empleados, calcula nóminas, genera reportes y asegura cumplimiento legal.",
+          "features": ["Gestión de Nómina", "Base de Empleados", "Reportes Legales", "Cálculos de Impuestos"],
+          "link": "https://nominalrd.com",
+          "cta": "Visitar NominalRD"
+        }
+      }
+    },
+    "tools": {
+      "title": "Herramientas Gratuitas",
+      "desc": "Calculadoras y utilidades útiles sin costo",
+      "items": {
+        "salary": {
+          "name": "Calculadora de Salario",
+          "desc": "Calcula el salario neto, deducciones y beneficios según las leyes laborales de República Dominicana.",
+          "features": ["Cálculo de ISR", "Deducciones AFP/SFS", "Bonificaciones y Vacaciones"],
+          "link": "https://tools.nominalrd.com",
+          "cta": "Probar Herramientas"
+        },
+        "tss": {
+          "name": "Calculadora TSS",
+          "desc": "Calcula rápidamente las contribuciones de Seguridad Social para empleadores y empleados.",
+          "features": ["Aportes Patronales", "Deducciones Empleado", "Reportes Mensuales"],
+          "link": "https://tools.nominalrd.com/tss",
+          "cta": "Calcular TSS"
+        }
+      }
+    }
+  },
+  "services": {
+    "title": "Servicios de Desarrollo Web",
+    "subtitle": "Sitios web y aplicaciones personalizadas para tu marca",
+    "desc": "Construimos sitios web impresionantes y de alto rendimiento que convierten visitantes en clientes. Desde páginas de aterrizaje hasta plataformas de comercio electrónico completas.",
+    "items": {
+      "landing": {
+        "name": "Landing Pages",
+        "desc": "Páginas de aterrizaje llamativas y optimizadas para conversión, diseñadas para captar leads y hacer crecer tu negocio.",
+        "features": ["Diseño Moderno", "Optimizado SEO", "Carga Rápida", "Mobile First"]
+      },
+      "business": {
+        "name": "Sitios Web Empresariales",
+        "desc": "Sitios web profesionales que establecen la presencia de tu marca y conectan con tu audiencia.",
+        "features": ["Diseño Personalizado", "Integración CMS", "Analíticas", "Multi-idioma"]
+      },
+      "ecommerce": {
+        "name": "E-Commerce",
+        "desc": "Tiendas en línea completas con integración de pagos, gestión de inventario y envíos.",
+        "features": ["Pasarela de Pagos", "Sistema de Inventario", "Gestión de Pedidos", "Portal de Clientes"]
+      }
+    },
+    "portfolio": {
+      "title": "Nuestro Portafolio",
+      "tailored": {
+        "name": "Tailored Weddings RD",
+        "desc": "Sitio web de planificación de bodas de lujo con diseño elegante y soporte bilingüe.",
+        "link": "https://tailoredweddingsrd.com"
+      }
+    },
+    "cta": "Inicia Tu Proyecto"
+  },
+  "whyUs": {
+    "title": "¿Por Qué Elegirnos?",
+    "subtitle": "Combinamos innovación con confiabilidad para entregar resultados excepcionales",
+    "stats": {
+      "clients": "Clientes Felices",
+      "projects": "Proyectos Entregados",
+      "experience": "Años de Experiencia",
+      "support": "Soporte 24/7"
+    },
+    "features": {
+      "modern": {
+        "title": "Tecnología Moderna",
+        "desc": "Construido con los últimos frameworks y mejores prácticas"
+      },
+      "security": {
+        "title": "Seguro y Confiable",
+        "desc": "Seguridad de nivel empresarial para tu tranquilidad"
+      },
+      "support": {
+        "title": "Soporte Dedicado",
+        "desc": "Asistencia experta cuando más la necesitas"
+      },
+      "scalable": {
+        "title": "Soluciones Escalables",
+        "desc": "Crece junto con las necesidades de tu negocio"
+      }
+    }
+  },
+  "cta": {
+    "title": "¿Listo para Transformar tu Negocio?",
+    "subtitle": "Construyamos algo increíble juntos. Contáctanos hoy para discutir tu proyecto.",
+    "button": "Ponte en Contacto"
+  },
+  "footer": {
+    "description": "Creando soluciones de software innovadoras que empoderan a las empresas a prosperar en la era digital.",
+    "products": "Productos",
+    "services": "Servicios",
+    "contact": "Contacto",
+    "quickLinks": "Enlaces Rápidos",
+    "rights": "Todos los derechos reservados.",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio"
+  }
+}

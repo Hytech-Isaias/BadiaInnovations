@@ -1,0 +1,128 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "hero": {
+    "tagline": "Innovation that transforms your business",
+    "title": "Building the Future of",
+    "titleHighlight": "Digital Solutions",
+    "subtitle": "We create powerful software applications and custom web solutions that drive your business forward. From HR management to stunning websites.",
+    "cta1": "Explore Products",
+    "cta2": "Contact Us",
+    "scroll": "Scroll to discover"
+  },
+  "products": {
+    "title": "Our Products",
+    "subtitle": "Powerful SaaS applications designed to streamline your business operations",
+    "apps": {
+      "title": "Enterprise Applications",
+      "desc": "Complete software solutions for businesses",
+      "items": {
+        "nominal": {
+          "name": "NominalRD",
+          "desc": "Complete HR and payroll management system for Dominican Republic businesses. Manage employees, calculate payroll, generate reports, and ensure legal compliance.",
+          "features": ["Payroll Management", "Employee Database", "Legal Reports", "Tax Calculations"],
+          "link": "https://nominalrd.com",
+          "cta": "Visit NominalRD"
+        }
+      }
+    },
+    "tools": {
+      "title": "Free Tools",
+      "desc": "Useful calculators and utilities at no cost",
+      "items": {
+        "salary": {
+          "name": "Salary Calculator",
+          "desc": "Calculate net salary, deductions, and benefits according to Dominican Republic labor laws.",
+          "features": ["ISR Calculation", "AFP/SFS Deductions", "Bonuses & Vacation"],
+          "link": "https://tools.nominalrd.com",
+          "cta": "Try Free Tools"
+        },
+        "tss": {
+          "name": "TSS Calculator",
+          "desc": "Quickly calculate Social Security contributions for employers and employees.",
+          "features": ["Employer Contributions", "Employee Deductions", "Monthly Reports"],
+          "link": "https://tools.nominalrd.com/tss",
+          "cta": "Calculate TSS"
+        }
+      }
+    }
+  },
+  "services": {
+    "title": "Web Development Services",
+    "subtitle": "Custom websites and web applications tailored to your brand",
+    "desc": "We build stunning, high-performance websites that convert visitors into customers. From landing pages to full e-commerce platforms.",
+    "items": {
+      "landing": {
+        "name": "Landing Pages",
+        "desc": "Eye-catching, conversion-optimized landing pages designed to capture leads and grow your business.",
+        "features": ["Modern Design", "SEO Optimized", "Fast Loading", "Mobile First"]
+      },
+      "business": {
+        "name": "Business Websites",
+        "desc": "Professional websites that establish your brand presence and engage your audience.",
+        "features": ["Custom Design", "CMS Integration", "Analytics", "Multi-language"]
+      },
+      "ecommerce": {
+        "name": "E-Commerce",
+        "desc": "Complete online stores with payment integration, inventory management, and shipping.",
+        "features": ["Payment Gateway", "Inventory System", "Order Management", "Customer Portal"]
+      }
+    },
+    "portfolio": {
+      "title": "Our Portfolio",
+      "tailored": {
+        "name": "Tailored Weddings RD",
+        "desc": "Luxury wedding planning website with elegant design and bilingual support.",
+        "link": "https://tailoredweddingsrd.com"
+      }
+    },
+    "cta": "Start Your Project"
+  },
+  "whyUs": {
+    "title": "Why Choose Us",
+    "subtitle": "We combine innovation with reliability to deliver exceptional results",
+    "stats": {
+      "clients": "Happy Clients",
+      "projects": "Projects Delivered",
+      "experience": "Years Experience",
+      "support": "24/7 Support"
+    },
+    "features": {
+      "modern": {
+        "title": "Modern Technology",
+        "desc": "Built with the latest frameworks and best practices"
+      },
+      "security": {
+        "title": "Secure & Reliable",
+        "desc": "Enterprise-grade security for your peace of mind"
+      },
+      "support": {
+        "title": "Dedicated Support",
+        "desc": "Expert assistance when you need it most"
+      },
+      "scalable": {
+        "title": "Scalable Solutions",
+        "desc": "Grows with your business needs"
+      }
+    }
+  },
+  "cta": {
+    "title": "Ready to Transform Your Business?",
+    "subtitle": "Let's build something amazing together. Contact us today to discuss your project.",
+    "button": "Get in Touch"
+  },
+  "footer": {
+    "description": "Creating innovative software solutions that empower businesses to thrive in the digital age.",
+    "products": "Products",
+    "services": "Services",
+    "contact": "Contact",
+    "quickLinks": "Quick Links",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  }
+}

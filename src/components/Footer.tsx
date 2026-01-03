@@ -1,9 +1,9 @@
 import { Mail, Linkedin, MapPin, ArrowUpRight, Heart } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import logo from "../assets/images/logo.png";
 import useThemeStore from "../store/themeStore";
-import clsx from "clsx";
+import BlackLogo from "../assets/images/BadiaDevelopers-02.png";
+import WhiteLogo from "../assets/images/BadiaDevelopers-06.png";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -31,7 +31,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative pt-20 pb-8 border-t border-theme bg-surface overflow-hidden">
+    <footer className="relative pt-12 pb-8 border-t border-theme bg-surface overflow-hidden">
       {/* Background decoration */}
       <div
         className="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full blur-3xl pointer-events-none"
@@ -44,28 +44,29 @@ const Footer = () => {
       />
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-10">
           {/* Brand Column */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="lg:col-span-1 space-y-6"
+            className="lg:col-span-1 space-y-4"
           >
             <div className="flex items-center gap-3">
               <img
-                src={logo}
-                alt="Badia Innovations"
-                className={clsx(
-                  "h-10 w-auto",
-                  theme === "dark" && "brightness-0 invert"
-                )}
+                src={theme === "dark" ? WhiteLogo : BlackLogo}
+                alt="Badia Developers"
+                width={224}
+                height={84}
+                className="w-40 md:w-44 lg:w-56 h-auto"
+                loading="lazy"
+                decoding="async"
               />
-              <span className="font-bold text-lg">
+              {/* <span className="font-bold text-lg">
                 <span className="text-theme">Badia </span>
                 <span className="gradient-text">Innovations</span>
-              </span>
+              </span> */}
             </div>
             <p className="text-muted text-sm leading-relaxed max-w-xs">
               {t("footer.description")}

@@ -6,8 +6,9 @@ import clsx from "clsx";
 import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
 import ThemeToggle from "./ThemeToggle";
-import logo from "../assets/images/logo.png";
 import useThemeStore from "../store/themeStore";
+import BlackLogo from "../assets/images/BadiaDevelopers-02.png";
+import WhiteLogo from "../assets/images/BadiaDevelopers-06.png";
 
 const Navbar = () => {
   const { t } = useTranslation();
@@ -54,17 +55,16 @@ const Navbar = () => {
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-3 group">
           <img
-            src={logo}
-            alt="Badia Innovations"
-            className={clsx(
-              "h-10 w-auto transition-all duration-300 group-hover:scale-105",
-              theme === "dark" ? "brightness-0 invert" : ""
-            )}
+            src={theme === "dark" ? WhiteLogo : BlackLogo}
+            alt="Badia Developers"
+            className="w-28 md:w-36 lg:w-42 h-auto"
+            loading="lazy"
+            decoding="async"
           />
-          <span className="font-bold text-lg hidden sm:block">
+          {/* <span className="font-bold text-lg hidden sm:block">
             <span className="text-theme">Badia </span>
             <span className="gradient-text">Innovations</span>
-          </span>
+          </span> */}
         </Link>
 
         {/* Desktop Menu */}

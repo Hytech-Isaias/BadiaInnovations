@@ -1,10 +1,9 @@
-import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { Shield, Eye, Cookie, Database, Lock, Users, Globe, Mail } from "lucide-react";
 
 const PrivacyPolicy = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const sections = [
     {
@@ -77,18 +76,7 @@ const PrivacyPolicy = () => {
   ];
 
   return (
-    <>
-      <Helmet>
-        <title>{t("privacy.title")} | Badia Innovations</title>
-        <meta
-          name="description"
-          content={t("privacy.intro.p1")}
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={`https://badiainnovations.dev/${i18n.language}/privacy-policy`} />
-      </Helmet>
-
-      <div className="min-h-screen pt-24 pb-16">
+    <div className="min-h-screen pt-24 pb-16">
         <div className="container mx-auto px-4 md:px-6 max-w-5xl">
           {/* Header */}
           <motion.div
@@ -228,7 +216,6 @@ const PrivacyPolicy = () => {
           </motion.div>
         </div>
       </div>
-    </>
   );
 };
 

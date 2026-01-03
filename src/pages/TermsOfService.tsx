@@ -1,10 +1,9 @@
-import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { FileText, CheckCircle, XCircle, Scale, AlertTriangle, CreditCard, RefreshCw, Mail, Users2 } from "lucide-react";
 
 const TermsOfService = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const sections = [
     {
@@ -93,18 +92,7 @@ const TermsOfService = () => {
   ];
 
   return (
-    <>
-      <Helmet>
-        <title>{t("terms.title")} | Badia Innovations</title>
-        <meta
-          name="description"
-          content={t("terms.intro.p1")}
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={`https://badiainnovations.dev/${i18n.language}/terms-of-service`} />
-      </Helmet>
-
-      <div className="min-h-screen pt-24 pb-16">
+    <div className="min-h-screen pt-24 pb-16">
         <div className="container mx-auto px-4 md:px-6 max-w-5xl">
           {/* Header */}
           <motion.div
@@ -244,7 +232,6 @@ const TermsOfService = () => {
           </motion.div>
         </div>
       </div>
-    </>
   );
 };
 

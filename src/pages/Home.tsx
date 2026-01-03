@@ -9,22 +9,31 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Badia Innovations | Software Solutions & Web Development</title>
+        <title>Badia Innovations | Software Development, HR Solutions & Web Design in Dominican Republic</title>
         <meta
           name="description"
-          content="Badia Innovations - Creating powerful software applications and custom web solutions. NominalRD HR App, Free Tools, and Custom Web Development."
+          content="Leading software development company in Dominican Republic. NominalRD HR & payroll system, custom web development, e-commerce solutions, and free business tools. Transform your business with innovative digital solutions."
         />
-        <link rel="canonical" href="https://badiainnovations.com/" />
+        <meta
+          name="keywords"
+          content="software development Dominican Republic, web development DR, NominalRD, HR software Dominican Republic, payroll system DR, custom web design, e-commerce development, business websites, landing pages, software solutions, SaaS applications, salary calculator Dominican Republic, nomina RD, sistema de recursos humanos, desarrollo web republica dominicana"
+        />
+        <link rel="canonical" href="https://badiainnovations.dev/" />
         <meta
           property="og:title"
-          content="Badia Innovations | Software Solutions"
+          content="Badia Innovations | Software Development & HR Solutions in Dominican Republic"
         />
         <meta
           property="og:description"
-          content="Creating powerful software applications and custom web solutions."
+          content="Leading software development company in Dominican Republic. NominalRD HR & payroll system, custom web development, e-commerce solutions, and free business tools."
         />
         <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://badiainnovations.dev/" />
+        <meta property="og:image" content="https://badiainnovations.dev/og-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Badia Innovations | Software Development & HR Solutions" />
+        <meta name="twitter:description" content="Leading software development company in Dominican Republic. NominalRD HR & payroll system, custom web development, e-commerce solutions." />
+        <meta name="twitter:image" content="https://badiainnovations.dev/twitter-image.jpg" />
       </Helmet>
 
       <HeroSection />

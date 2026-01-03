@@ -3,8 +3,8 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import useThemeStore from "../store/themeStore";
-import BlackLogo from "../assets/images/BadiaDevelopers-02.png";
-import WhiteLogo from "../assets/images/BadiaDevelopers-06.png";
+import BlackLogo from "../assets/images/BadiaDevelopers-02.png?format=webp;png&quality=90";
+import WhiteLogo from "../assets/images/BadiaDevelopers-06.png?format=webp;png&quality=90";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -55,15 +55,33 @@ const Footer = () => {
             className="lg:col-span-1 space-y-4"
           >
             <div className="flex items-center gap-3">
-              <img
-                src={theme === "dark" ? WhiteLogo : BlackLogo}
-                alt="Badia Developers"
-                width={224}
-                height={84}
-                className="w-40 md:w-44 lg:w-56 h-auto"
-                loading="lazy"
-                decoding="async"
-              />
+              {theme === "dark" ? (
+                <picture>
+                  <source srcSet={WhiteLogo.sources.webp} type="image/webp" />
+                  <img
+                    src={WhiteLogo.img.src}
+                    alt="Badia Developers"
+                    width={224}
+                    height={84}
+                    className="w-40 md:w-44 lg:w-56 h-auto"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              ) : (
+                <picture>
+                  <source srcSet={BlackLogo.sources.webp} type="image/webp" />
+                  <img
+                    src={BlackLogo.img.src}
+                    alt="Badia Developers"
+                    width={224}
+                    height={84}
+                    className="w-40 md:w-44 lg:w-56 h-auto"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              )}
               {/* <span className="font-bold text-lg">
                 <span className="text-theme">Badia </span>
                 <span className="gradient-text">Innovations</span>

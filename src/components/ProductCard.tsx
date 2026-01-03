@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, Check } from "lucide-react";
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 import clsx from "clsx";
 
 interface ProductCardProps {

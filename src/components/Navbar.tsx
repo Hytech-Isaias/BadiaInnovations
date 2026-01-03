@@ -7,8 +7,8 @@ import { useTranslation } from "react-i18next";
 import LanguageSwitcher from "./LanguageSwitcher";
 import ThemeToggle from "./ThemeToggle";
 import useThemeStore from "../store/themeStore";
-import BlackLogo from "../assets/images/BadiaDevelopers-02.png";
-import WhiteLogo from "../assets/images/BadiaDevelopers-06.png";
+import BlackLogo from "../assets/images/BadiaDevelopers-02.png?format=webp;png&quality=90";
+import WhiteLogo from "../assets/images/BadiaDevelopers-06.png?format=webp;png&quality=90";
 
 const Navbar = () => {
   const { t } = useTranslation();
@@ -60,13 +60,29 @@ const Navbar = () => {
           onClick={() => handleNavClick("/")}
           className="flex items-center gap-3 group cursor-pointer"
         >
-          <img
-            src={theme === "dark" ? WhiteLogo : BlackLogo}
-            alt="Badia Developers"
-            className="w-28 md:w-36 lg:w-42 h-auto"
-            loading="lazy"
-            decoding="async"
-          />
+          {theme === "dark" ? (
+            <picture>
+              <source srcSet={WhiteLogo.sources.webp} type="image/webp" />
+              <img
+                src={WhiteLogo.img.src}
+                alt="Badia Developers"
+                className="w-28 md:w-36 lg:w-42 h-auto"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+          ) : (
+            <picture>
+              <source srcSet={BlackLogo.sources.webp} type="image/webp" />
+              <img
+                src={BlackLogo.img.src}
+                alt="Badia Developers"
+                className="w-28 md:w-36 lg:w-42 h-auto"
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+          )}
           {/* <span className="font-bold text-lg hidden sm:block">
             <span className="text-theme">Badia </span>
             <span className="gradient-text">Innovations</span>

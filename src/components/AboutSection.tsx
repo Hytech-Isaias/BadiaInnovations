@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import { Award, Code, Rocket, Users } from "lucide-react";
 import useThemeStore from "../store/themeStore";
-import BlackLogo from "../assets/images/BadiaDevelopers-05.png";
-import WhiteLogo from "../assets/images/BadiaDevelopers-09.png";
+import BlackLogo from "../assets/images/BadiaDevelopers-05.png?format=webp;png&quality=90";
+import WhiteLogo from "../assets/images/BadiaDevelopers-09.png?format=webp;png&quality=90";
 
 const AboutSection = () => {
   const { t } = useTranslation();
@@ -72,13 +72,29 @@ const AboutSection = () => {
             className="flex justify-center lg:justify-end"
           >
             <div className="relative">
-              <img
-                src={theme === "dark" ? WhiteLogo : BlackLogo}
-                alt="Badia Developers"
-                className="w-full max-w-md lg:max-w-lg h-auto"
-                loading="lazy"
-                decoding="async"
-              />
+              {theme === "dark" ? (
+                <picture>
+                  <source srcSet={WhiteLogo.sources.webp} type="image/webp" />
+                  <img
+                    src={WhiteLogo.img.src}
+                    alt="Badia Developers"
+                    className="w-full max-w-md lg:max-w-lg h-auto"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              ) : (
+                <picture>
+                  <source srcSet={BlackLogo.sources.webp} type="image/webp" />
+                  <img
+                    src={BlackLogo.img.src}
+                    alt="Badia Developers"
+                    className="w-full max-w-md lg:max-w-lg h-auto"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </picture>
+              )}
               {/* Decorative accent */}
               <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-linear-to-br from-purple-600 to-purple-400 rounded-full blur-3xl opacity-30" />
             </div>

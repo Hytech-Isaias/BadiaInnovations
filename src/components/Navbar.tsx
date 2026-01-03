@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import clsx from "clsx";
@@ -33,11 +33,14 @@ const Navbar = () => {
     { name: t("nav.home"), path: "/" },
     { name: t("nav.products"), path: "#products" },
     { name: t("nav.services"), path: "#services" },
-    { name: t("nav.contact"), path: "#contact" },
+    { name: t("nav.portfolio"), path: "#portfolio" },
+    { name: t("nav.about"), path: "#about" },
   ];
 
   const handleNavClick = (path: string) => {
-    if (path.startsWith("#")) {
+    if (path === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else if (path.startsWith("#")) {
       const element = document.querySelector(path);
       element?.scrollIntoView({ behavior: "smooth" });
     }
@@ -53,7 +56,10 @@ const Navbar = () => {
       )}
     >
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
-        <Link to="/" className="flex items-center gap-3 group">
+        <button
+          onClick={() => handleNavClick("/")}
+          className="flex items-center gap-3 group cursor-pointer"
+        >
           <img
             src={theme === "dark" ? WhiteLogo : BlackLogo}
             alt="Badia Developers"
@@ -65,7 +71,7 @@ const Navbar = () => {
             <span className="text-theme">Badia </span>
             <span className="gradient-text">Innovations</span>
           </span> */}
-        </Link>
+        </button>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-6">

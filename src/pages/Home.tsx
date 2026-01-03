@@ -3,6 +3,7 @@ import { useTranslation } from "react-i18next";
 import HeroSection from "../components/HeroSection";
 import BentoProducts from "../components/BentoProducts";
 import ServicesSection from "../components/ServicesSection";
+import AboutSection from "../components/AboutSection";
 import CTASection from "../components/CTASection";
 
 const Home = () => {
@@ -32,6 +33,7 @@ const Home = () => {
       <HeroSection />
       <BentoProducts />
       <ServicesSection />
+      <AboutSection />
       <CTASection />
     </>
   );

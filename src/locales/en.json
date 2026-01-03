@@ -150,6 +150,36 @@
       }
     }
   },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Building innovative solutions with passion and expertise",
+    "badge": "Software Engineer",
+    "heading": "Crafting Digital Excellence",
+    "description": {
+      "p1": "Hi, I'm Isaias Badia, a passionate software engineer specializing in full-stack development and innovative web solutions. With expertise in modern technologies like React, Vue, Node.js, and cloud platforms, I transform ideas into powerful digital experiences.",
+      "p2": "From enterprise HR systems like NominalRD to elegant wedding planning websites, I've built solutions that combine beautiful design with robust functionality. Every project is an opportunity to push boundaries and deliver exceptional value.",
+      "p3": "Based in the Dominican Republic, I'm committed to helping businesses thrive in the digital age through custom software development, modern web applications, and strategic technical consulting."
+    },
+    "cta": "Connect on LinkedIn",
+    "highlights": {
+      "experience": {
+        "title": "Full-Stack Expertise",
+        "desc": "React, Vue, Node.js, Laravel, Spring Boot"
+      },
+      "innovation": {
+        "title": "Innovation Driven",
+        "desc": "Cutting-edge solutions for modern challenges"
+      },
+      "clients": {
+        "title": "Client Focused",
+        "desc": "Your success is my priority"
+      },
+      "quality": {
+        "title": "Quality First",
+        "desc": "Clean code, best practices, excellence"
+      }
+    }
+  },
   "cta": {
     "title": "Ready to Transform Your Business?",
     "subtitle": "Let's build something amazing together. Contact us today to discuss your project.",

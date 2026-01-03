@@ -150,6 +150,36 @@
       }
     }
   },
+  "about": {
+    "title": "Sobre Nosotros",
+    "subtitle": "Construyendo soluciones innovadoras con pasión y experiencia",
+    "badge": "Ingeniero de Software",
+    "heading": "Creando Excelencia Digital",
+    "description": {
+      "p1": "Hola, soy Isaías Badia, un ingeniero de software apasionado especializado en desarrollo full-stack y soluciones web innovadoras. Con experiencia en tecnologías modernas como React, Vue, Node.js y plataformas en la nube, transformo ideas en experiencias digitales poderosas.",
+      "p2": "Desde sistemas empresariales de RRHH como NominalRD hasta elegantes sitios web de planificación de bodas, he construido soluciones que combinan diseño hermoso con funcionalidad robusta. Cada proyecto es una oportunidad para superar límites y entregar valor excepcional.",
+      "p3": "Basado en República Dominicana, estoy comprometido a ayudar a las empresas a prosperar en la era digital a través de desarrollo de software personalizado, aplicaciones web modernas y consultoría técnica estratégica."
+    },
+    "cta": "Conectar en LinkedIn",
+    "highlights": {
+      "experience": {
+        "title": "Experiencia Full-Stack",
+        "desc": "React, Vue, Node.js, Laravel, Spring Boot"
+      },
+      "innovation": {
+        "title": "Impulsado por Innovación",
+        "desc": "Soluciones de vanguardia para desafíos modernos"
+      },
+      "clients": {
+        "title": "Enfocado en el Cliente",
+        "desc": "Tu éxito es mi prioridad"
+      },
+      "quality": {
+        "title": "Calidad Primero",
+        "desc": "Código limpio, mejores prácticas, excelencia"
+      }
+    }
+  },
   "cta": {
     "title": "¿Listo para Transformar tu Negocio?",
     "subtitle": "Construyamos algo increíble juntos. Contáctanos hoy para discutir tu proyecto.",

@@ -46,7 +46,13 @@ const Footer = () => {
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand Column */}
-          <div className="lg:col-span-1 space-y-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="lg:col-span-1 space-y-6"
+          >
             <div className="flex items-center gap-3">
               <img
                 src={logo}
@@ -84,10 +90,15 @@ const Footer = () => {
                 <Mail size={18} />
               </motion.a>
             </div>
-          </div>
+          </motion.div>
 
           {/* Products Column */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
             <h3 className="font-semibold text-theme mb-6 text-sm uppercase tracking-wider">
               {t("footer.products")}
             </h3>
@@ -109,10 +120,15 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
 
           {/* Services Column */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
             <h3 className="font-semibold text-theme mb-6 text-sm uppercase tracking-wider">
               {t("footer.services")}
             </h3>
@@ -123,10 +139,15 @@ const Footer = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
 
           {/* Contact Column */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+          >
             <h3 className="font-semibold text-theme mb-6 text-sm uppercase tracking-wider">
               {t("footer.contact")}
             </h3>
@@ -162,7 +183,7 @@ const Footer = () => {
                 <span>{t("footer.location")}</span>
               </li>
             </ul>
-          </div>
+          </motion.div>
         </div>
 
         {/* Bottom Bar */}

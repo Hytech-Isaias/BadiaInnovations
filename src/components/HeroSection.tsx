@@ -95,7 +95,7 @@ const HeroSection = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              transition={{ duration: 0.3 }}
               className="inline-flex items-center gap-2 px-4 py-2 glass-light rounded-full mb-6"
             >
               <Sparkles size={14} className="text-purple-500" />
@@ -108,7 +108,7 @@ const HeroSection = () => {
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
+              transition={{ duration: 0.4, delay: 0.05 }}
               className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-theme leading-[1.1] mb-6"
             >
               {t("hero.title")}{" "}
@@ -119,7 +119,7 @@ const HeroSection = () => {
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              transition={{ duration: 0.4, delay: 0.1 }}
               className="text-lg md:text-xl text-muted leading-relaxed mb-8 max-w-xl"
             >
               {t("hero.subtitle")}
@@ -129,7 +129,7 @@ const HeroSection = () => {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              transition={{ duration: 0.4, delay: 0.15 }}
               className="flex flex-col sm:flex-row gap-4 mb-12"
             >
               <motion.button
@@ -166,7 +166,7 @@ const HeroSection = () => {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
               className="flex flex-wrap gap-8"
             >
               {[

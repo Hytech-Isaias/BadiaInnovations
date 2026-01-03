@@ -225,9 +225,11 @@ const ServicesSection = () => {
                     {/* Content area */}
                     <div className="absolute inset-0 top-8">
                       <img
-                        src="/src/assets/images/TailoredWeddings.png"
+                        src="/src/assets/images/TailoredWeddings.png?format=webp;png&quality=90"
                         alt="Tailored Weddings RD Website"
                         className="w-full h-full object-cover object-top"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                   </div>

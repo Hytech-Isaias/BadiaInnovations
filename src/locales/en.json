@@ -12,7 +12,22 @@
     "subtitle": "We create powerful software applications and custom web solutions that drive your business forward. From HR management to stunning websites.",
     "cta1": "Explore Products",
     "cta2": "Contact Us",
-    "scroll": "Scroll to discover"
+    "scroll": "Scroll to discover",
+    "stats": {
+      "projects": "Projects",
+      "clients": "Clients",
+      "satisfaction": "Satisfaction"
+    },
+    "cards": {
+      "hrPayroll": "HR & Payroll",
+      "employeeSat": "Employee Satisfaction",
+      "companies": "+10 companies",
+      "salaryCalc": "Salary Calculator",
+      "free": "Free",
+      "netSalary": "Net Monthly Salary",
+      "webDev": "Web Development",
+      "customSolutions": "Custom Solutions"
+    }
   },
   "products": {
     "title": "Our Products",
@@ -97,6 +112,8 @@
     },
     "portfolio": {
       "title": "Our Portfolio",
+      "subtitle": "See our latest work in action",
+      "cta": "View Live Site",
       "tailored": {
         "name": "Tailored Weddings RD",
         "desc": "Luxury wedding planning website with elegant design and bilingual support.",
@@ -136,7 +153,14 @@
   "cta": {
     "title": "Ready to Transform Your Business?",
     "subtitle": "Let's build something amazing together. Contact us today to discuss your project.",
-    "button": "Get in Touch"
+    "button": "Get in Touch",
+    "badge": "Let's work together",
+    "linkedin": "LinkedIn",
+    "trust": {
+      "available": "Available for projects",
+      "fastResponse": "Fast response time",
+      "location": "Dominican Republic based"
+    }
   },
   "footer": {
     "description": "Creating innovative software solutions that empower businesses to thrive in the digital age.",
@@ -146,6 +170,21 @@
     "quickLinks": "Quick Links",
     "rights": "All rights reserved.",
     "privacy": "Privacy Policy",
-    "terms": "Terms of Service"
+    "terms": "Terms of Service",
+    "productsList": {
+      "nominal": "NominalRD",
+      "salaryCalc": "Salary Calculator",
+      "leavesCalc": "Leaves & Benefits Calculator",
+      "gymtracker": "GymTracker"
+    },
+    "servicesList": {
+      "landing": "Landing Pages",
+      "business": "Business Websites",
+      "ecommerce": "E-Commerce",
+      "custom": "Custom Development"
+    },
+    "location": "Dominican Republic",
+    "madeWith": "Made with",
+    "in": "in"
   }
 }

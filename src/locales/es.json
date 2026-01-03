@@ -12,7 +12,22 @@
     "subtitle": "Creamos aplicaciones de software poderosas y soluciones web personalizadas que impulsan tu negocio. Desde gestión de RRHH hasta sitios web impresionantes.",
     "cta1": "Explorar Productos",
     "cta2": "Contáctanos",
-    "scroll": "Desplázate para descubrir"
+    "scroll": "Desplázate para descubrir",
+    "stats": {
+      "projects": "Proyectos",
+      "clients": "Clientes",
+      "satisfaction": "Satisfacción"
+    },
+    "cards": {
+      "hrPayroll": "RRHH y Nómina",
+      "employeeSat": "Satisfacción de Empleados",
+      "companies": "+10 empresas",
+      "salaryCalc": "Calculadora de Salario",
+      "free": "Gratis",
+      "netSalary": "Salario Neto Mensual",
+      "webDev": "Desarrollo Web",
+      "customSolutions": "Soluciones Personalizadas"
+    }
   },
   "products": {
     "title": "Nuestros Productos",
@@ -97,6 +112,8 @@
     },
     "portfolio": {
       "title": "Nuestro Portafolio",
+      "subtitle": "Mira nuestro último trabajo en acción",
+      "cta": "Ver Sitio en Vivo",
       "tailored": {
         "name": "Tailored Weddings RD",
         "desc": "Sitio web de planificación de bodas de lujo con diseño elegante y soporte bilingüe.",
@@ -136,7 +153,14 @@
   "cta": {
     "title": "¿Listo para Transformar tu Negocio?",
     "subtitle": "Construyamos algo increíble juntos. Contáctanos hoy para discutir tu proyecto.",
-    "button": "Ponte en Contacto"
+    "button": "Ponte en Contacto",
+    "badge": "Trabajemos juntos",
+    "linkedin": "LinkedIn",
+    "trust": {
+      "available": "Disponible para proyectos",
+      "fastResponse": "Tiempo de respuesta rápido",
+      "location": "Basado en República Dominicana"
+    }
   },
   "footer": {
     "description": "Creando soluciones de software innovadoras que empoderan a las empresas a prosperar en la era digital.",
@@ -146,6 +170,21 @@
     "quickLinks": "Enlaces Rápidos",
     "rights": "Todos los derechos reservados.",
     "privacy": "Política de Privacidad",
-    "terms": "Términos de Servicio"
+    "terms": "Términos de Servicio",
+    "productsList": {
+      "nominal": "NominalRD",
+      "salaryCalc": "Calculadora de Salario",
+      "leavesCalc": "Calculadora de Despidos y Beneficios",
+      "gymtracker": "GymTracker"
+    },
+    "servicesList": {
+      "landing": "Páginas de Aterrizaje",
+      "business": "Sitios Web Empresariales",
+      "ecommerce": "Comercio Electrónico",
+      "custom": "Desarrollo Personalizado"
+    },
+    "location": "República Dominicana",
+    "madeWith": "Hecho con",
+    "in": "en"
   }
 }

@@ -197,7 +197,7 @@ const ServicesSection = () => {
             <h3 className="text-2xl font-bold text-theme mb-2">
               {t("services.portfolio.title")}
             </h3>
-            <p className="text-muted">See our latest work in action</p>
+            <p className="text-muted">{t("services.portfolio.subtitle")}</p>
           </div>
 
           <a
@@ -273,7 +273,7 @@ const ServicesSection = () => {
                   </div>
 
                   <div className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-purple-500 text-white font-medium group-hover:from-purple-500 group-hover:to-purple-400 transition-all">
-                    View Live Site
+                    {t("services.portfolio.cta")}
                     <ArrowUpRight
                       size={16}
                       className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"

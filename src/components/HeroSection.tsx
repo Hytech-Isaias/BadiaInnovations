@@ -40,7 +40,7 @@ const HeroSection = () => {
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.5, 0.3],
           }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
           className="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full blur-3xl"
           style={{
             background:
@@ -170,9 +170,9 @@ const HeroSection = () => {
               className="flex flex-wrap gap-8"
             >
               {[
-                { value: "5+", label: "Projects" },
-                { value: "3+", label: "Clients" },
-                { value: "100%", label: "Satisfaction" },
+                { value: "5+", label: t("hero.stats.projects") },
+                { value: "3+", label: t("hero.stats.clients") },
+                { value: "100%", label: t("hero.stats.satisfaction") },
               ].map((stat, i) => (
                 <div key={i} className="text-center">
                   <div className="text-2xl md:text-3xl font-bold gradient-text">
@@ -201,7 +201,9 @@ const HeroSection = () => {
                   </div>
                   <div>
                     <h3 className="font-bold text-theme">NominalRD</h3>
-                    <p className="text-sm text-muted">HR & Payroll</p>
+                    <p className="text-sm text-muted">
+                      {t("hero.cards.hrPayroll")}
+                    </p>
                   </div>
                 </div>
                 <div className="space-y-3">
@@ -214,7 +216,9 @@ const HeroSection = () => {
                     />
                   </div>
                   <div className="flex justify-between text-sm">
-                    <span className="text-muted">Employee Satisfaction</span>
+                    <span className="text-muted">
+                      {t("hero.cards.employeeSat")}
+                    </span>
                     <span className="text-purple-500 font-semibold">85%</span>
                   </div>
                 </div>
@@ -230,7 +234,9 @@ const HeroSection = () => {
                         </div>
                       ))}
                     </div>
-                    <span className="text-sm text-muted">+10 companies</span>
+                    <span className="text-sm text-muted">
+                      {t("hero.cards.companies")}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -247,17 +253,17 @@ const HeroSection = () => {
               <div className="glass rounded-3xl p-5 shadow-xl">
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-sm font-medium text-muted">
-                    Salary Calculator
+                    {t("hero.cards.salaryCalc")}
                   </span>
                   <span className="px-2 py-0.5 rounded-full bg-green-500/20 text-green-500 text-xs font-medium">
-                    Free
+                    {t("hero.cards.free")}
                   </span>
                 </div>
                 <div className="text-3xl font-bold text-theme mb-1">
                   RD$ 50,000
                 </div>
                 <div className="text-sm text-muted mb-4">
-                  Net Monthly Salary
+                  {t("hero.cards.netSalary")}
                 </div>
                 <div className="grid grid-cols-2 gap-2 text-xs">
                   <div className="glass-light rounded-lg p-2">
@@ -287,9 +293,11 @@ const HeroSection = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-theme text-sm">
-                      Web Development
+                      {t("hero.cards.webDev")}
                     </h4>
-                    <p className="text-xs text-muted">Custom Solutions</p>
+                    <p className="text-xs text-muted">
+                      {t("hero.cards.customSolutions")}
+                    </p>
                   </div>
                 </div>
                 <div className="flex flex-wrap gap-1.5">

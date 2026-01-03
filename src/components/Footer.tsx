@@ -12,16 +12,22 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const products = [
-    { name: "NominalRD", href: "https://nominalrd.com" },
-    { name: "Salary Calculator", href: "https://tools.nominalrd.com" },
-    { name: "TSS Calculator", href: "https://tools.nominalrd.com/tss" },
+    { name: t("footer.productsList.nominal"), href: "https://nominalrd.com" },
+    {
+      name: t("footer.productsList.salaryCalc"),
+      href: "https://tools.nominalrd.com/es/salary-calculator",
+    },
+    {
+      name: t("footer.productsList.leavesCalc"),
+      href: "https://tools.nominalrd.com/leaves-calculator",
+    },
   ];
 
   const services = [
-    { name: "Landing Pages" },
-    { name: "Business Websites" },
-    { name: "E-Commerce" },
-    { name: "Custom Development" },
+    { name: t("footer.servicesList.landing") },
+    { name: t("footer.servicesList.business") },
+    { name: t("footer.servicesList.ecommerce") },
+    { name: t("footer.servicesList.custom") },
   ];
 
   return (
@@ -153,7 +159,7 @@ const Footer = () => {
                 <div className="w-8 h-8 glass rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
                   <MapPin size={14} className="text-purple-500" />
                 </div>
-                <span>Dominican Republic</span>
+                <span>{t("footer.location")}</span>
               </li>
             </ul>
           </div>
@@ -162,9 +168,9 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-theme pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted">
           <p className="flex items-center gap-1">
-            &copy; {currentYear} Badia Innovations. Made with
+            &copy; {currentYear} Badia Innovations. {t("footer.madeWith")}
             <Heart size={12} className="text-purple-500 fill-purple-500" />
-            in Dominican Republic
+            {t("footer.in")} {t("footer.location")}
           </p>
           <div className="flex space-x-6">
             <a

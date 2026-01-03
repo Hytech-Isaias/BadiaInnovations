@@ -218,5 +218,280 @@
     "location": "República Dominicana",
     "madeWith": "Hecho con",
     "in": "en"
+  },
+  "privacy": {
+    "title": "Política de Privacidad",
+    "lastUpdated": "Última Actualización: 3 de enero de 2026",
+    "intro": {
+      "p1": "Bienvenido a Badia Innovations (\"nosotros\", \"nuestro\" o \"nos\"). Esta Política de Privacidad explica cómo recopilamos, usamos, divulgamos y protegemos su información cuando visita nuestros sitios web (badiainnovations.dev y todos los subdominios), usa nuestras aplicaciones (incluyendo NominalRD, GymTracker y otros servicios), e interactúa con nuestros servicios.",
+      "p2": "Al acceder o usar nuestros servicios, usted acepta esta Política de Privacidad. Si no está de acuerdo con los términos de esta Política de Privacidad, por favor no acceda a nuestros servicios."
+    },
+    "sections": {
+      "collection": {
+        "title": "Información que Recopilamos",
+        "items": [
+          "Información Personal: Cuando usa nuestros servicios, podemos recopilar información personal como su nombre, dirección de correo electrónico, nombre de empresa y datos de contacto.",
+          "Datos de Uso: Recopilamos automáticamente información sobre cómo interactúa con nuestros sitios web y aplicaciones, incluyendo direcciones IP, tipo de navegador, información del dispositivo, páginas visitadas y tiempo pasado en las páginas.",
+          "Cookies y Rastreo: Usamos cookies, web beacons y tecnologías de rastreo similares para mejorar su experiencia y analizar patrones de uso.",
+          "Información de Pago: Para servicios pagos, recopilamos información de facturación a través de procesadores de pago de terceros seguros."
+        ]
+      },
+      "usage": {
+        "title": "Cómo Usamos su Información",
+        "items": [
+          "Prestación de Servicios: Para proporcionar, mantener y mejorar nuestras aplicaciones de software y servicios de desarrollo web.",
+          "Comunicación: Para enviarle actualizaciones, boletines, materiales de marketing y responder a sus consultas.",
+          "Análisis: Para analizar patrones de uso y mejorar nuestros productos y servicios.",
+          "Cumplimiento Legal: Para cumplir con obligaciones legales y proteger nuestros derechos.",
+          "Publicidad: Podemos usar su información para mostrar anuncios relevantes a través de Google AdSense y otros socios publicitarios."
+        ]
+      },
+      "cookies": {
+        "title": "Cookies y Tecnologías de Rastreo",
+        "items": [
+          "Cookies Esenciales: Requeridas para la funcionalidad básica del sitio web y seguridad.",
+          "Cookies de Análisis: Usadas para entender cómo los visitantes interactúan con nuestros sitios web (Google Analytics).",
+          "Cookies Publicitarias: Usadas por Google AdSense y otros socios para mostrar anuncios relevantes basados en su actividad de navegación.",
+          "Cookies de Preferencia: Recuerdan sus configuraciones y preferencias.",
+          "Puede controlar las cookies a través de la configuración de su navegador. Sin embargo, deshabilitar las cookies puede limitar su capacidad de usar ciertas funciones."
+        ]
+      },
+      "thirdParty": {
+        "title": "Servicios de Terceros",
+        "items": [
+          "Google Analytics: Usamos Google Analytics para analizar el tráfico del sitio web y el comportamiento del usuario.",
+          "Google AdSense: Mostramos anuncios a través de Google AdSense. Google puede usar cookies para servir anuncios basados en sus visitas previas a nuestro sitio web u otros sitios web.",
+          "Procesadores de Pago: Usamos procesadores de pago de terceros para manejar transacciones de forma segura.",
+          "Servicios de Hosting: Nuestros sitios web están alojados en plataformas de nube seguras.",
+          "Estos terceros tienen sus propias políticas de privacidad y son responsables de sus propias prácticas de datos."
+        ]
+      },
+      "sharing": {
+        "title": "Intercambio y Divulgación de Datos",
+        "items": [
+          "Proveedores de Servicios: Podemos compartir información con proveedores de servicios de terceros confiables que ayudan a operar nuestro negocio.",
+          "Requisitos Legales: Podemos divulgar información cuando lo requiera la ley o para proteger nuestros derechos y seguridad.",
+          "Transferencias Comerciales: En caso de fusión, adquisición o venta de activos, su información puede ser transferida.",
+          "Con su Consentimiento: Podemos compartir información con su consentimiento explícito.",
+          "No vendemos su información personal a terceros."
+        ]
+      },
+      "security": {
+        "title": "Seguridad de Datos",
+        "items": [
+          "Implementamos medidas de seguridad estándar de la industria para proteger su información de acceso, alteración, divulgación o destrucción no autorizados.",
+          "Todas las transmisiones de datos están encriptadas usando protocolos SSL/TLS.",
+          "Revisamos y actualizamos regularmente nuestras prácticas de seguridad.",
+          "Sin embargo, ningún método de transmisión por internet es 100% seguro, y no podemos garantizar seguridad absoluta."
+        ]
+      },
+      "retention": {
+        "title": "Retención de Datos",
+        "items": [
+          "Retenemos su información personal durante el tiempo necesario para cumplir los propósitos descritos en esta política.",
+          "La información de la cuenta se retiene hasta que solicite su eliminación o cierre su cuenta.",
+          "Los datos de uso y análisis pueden retenerse hasta 26 meses.",
+          "Los datos legales y de cumplimiento pueden retenerse por períodos más largos según lo requiera la ley."
+        ]
+      },
+      "rights": {
+        "title": "Sus Derechos",
+        "items": [
+          "Acceso: Tiene derecho a acceder a su información personal.",
+          "Corrección: Puede solicitar la corrección de información inexacta.",
+          "Eliminación: Puede solicitar la eliminación de su información personal, sujeto a obligaciones legales.",
+          "Exclusión: Puede optar por no recibir comunicaciones de marketing en cualquier momento.",
+          "Portabilidad de Datos: Puede solicitar una copia de sus datos en un formato portable.",
+          "Para ejercer estos derechos, contáctenos en privacy@badiainnovations.dev"
+        ]
+      }
+    },
+    "additional": {
+      "children": {
+        "title": "Privacidad de Menores",
+        "content": "Nuestros servicios no están destinados a personas menores de 13 años. No recopilamos conscientemente información personal de niños. Si cree que hemos recopilado información de un niño, contáctenos inmediatamente."
+      },
+      "international": {
+        "title": "Transferencias Internacionales de Datos",
+        "content": "Su información puede ser transferida y procesada en países distintos a su país de residencia. Aseguramos que existan salvaguardas apropiadas para proteger su información de acuerdo con esta política de privacidad."
+      },
+      "ccpa": {
+        "title": "Derechos de Privacidad de California (CCPA)",
+        "content": "Los residentes de California tienen derechos específicos con respecto a su información personal, incluido el derecho a saber qué información se recopila, el derecho a eliminar información y el derecho a optar por no vender información personal. No vendemos información personal."
+      },
+      "gdpr": {
+        "title": "Derechos de Privacidad Europeos (GDPR)",
+        "content": "Si se encuentra en el Espacio Económico Europeo (EEE), tiene derechos bajo el Reglamento General de Protección de Datos (GDPR), incluido el derecho a acceder, rectificar, borrar, restringir el procesamiento, portabilidad de datos y oponerse al procesamiento de su información personal."
+      },
+      "googleAds": {
+        "title": "Publicidad de Google",
+        "content": "Usamos Google AdSense para mostrar anuncios. Google usa cookies para servir anuncios basados en sus visitas previas a nuestro sitio web u otros sitios web. Puede optar por no recibir publicidad personalizada visitando la Configuración de Anuncios de Google (www.google.com/settings/ads) o visitando www.aboutads.info."
+      },
+      "doNotTrack": {
+        "title": "Señales de No Rastrear",
+        "content": "Algunos navegadores transmiten señales de 'No Rastrear'. Actualmente no respondemos a las señales de No Rastrear, ya que no existe un estándar de la industria sobre cómo responder a tales señales."
+      }
+    },
+    "contact": {
+      "title": "Contáctenos",
+      "description": "Si tiene alguna pregunta o inquietud sobre esta Política de Privacidad o nuestras prácticas de datos, contáctenos:",
+      "email": "Correo Electrónico",
+      "support": "Soporte",
+      "emailAddress": "privacy@badiainnovations.dev",
+      "supportAddress": "support@badiainnovations.dev"
+    },
+    "updates": {
+      "title": "Actualizaciones de Política:",
+      "content": "Podemos actualizar esta Política de Privacidad de vez en cuando. Le notificaremos de cualquier cambio publicando la nueva Política de Privacidad en esta página y actualizando la fecha de \"Última Actualización\". Se le recomienda revisar esta Política de Privacidad periódicamente para cualquier cambio."
+    }
+  },
+  "terms": {
+    "title": "Términos de Servicio",
+    "lastUpdated": "Última Actualización: 3 de enero de 2026",
+    "intro": {
+      "p1": "Bienvenido a Badia Innovations. Estos Términos de Servicio (\"Términos\") rigen su acceso y uso de nuestros sitios web (badiainnovations.dev y todos los subdominios), aplicaciones (incluyendo NominalRD, GymTracker y otros servicios), y cualquier servicio relacionado (colectivamente, los \"Servicios\").",
+      "p2": "Por favor lea estos Términos cuidadosamente antes de usar nuestros Servicios. Al acceder o usar nuestros Servicios, usted acepta estar sujeto a estos Términos y nuestra Política de Privacidad. Si no está de acuerdo con alguna parte de estos Términos, no puede acceder a nuestros Servicios."
+    },
+    "sections": {
+      "acceptance": {
+        "title": "Aceptación de Términos",
+        "items": [
+          "Al acceder y usar los sitios web de Badia Innovations (badiainnovations.dev y todos los subdominios), aplicaciones (incluyendo NominalRD, GymTracker y otros servicios), y servicios, usted acepta y está de acuerdo en estar sujeto a estos Términos de Servicio.",
+          "Si no está de acuerdo con estos términos, no debe usar nuestros servicios.",
+          "Nos reservamos el derecho de modificar estos términos en cualquier momento. Su uso continuado de nuestros servicios constituye la aceptación de cualquier modificación.",
+          "Estos términos se aplican a todos los visitantes, usuarios y otros que accedan o usen nuestros servicios."
+        ]
+      },
+      "accounts": {
+        "title": "Cuentas de Usuario y Registro",
+        "items": [
+          "Algunos servicios requieren que cree una cuenta. Usted es responsable de mantener la confidencialidad de las credenciales de su cuenta.",
+          "Debe proporcionar información precisa, actual y completa durante el registro.",
+          "Usted es responsable de todas las actividades que ocurran bajo su cuenta.",
+          "Debe notificarnos inmediatamente de cualquier uso no autorizado de su cuenta.",
+          "Nos reservamos el derecho de suspender o terminar cuentas que violen estos términos.",
+          "Debe tener al menos 13 años para crear una cuenta."
+        ]
+      },
+      "acceptable": {
+        "title": "Política de Uso Aceptable",
+        "items": [
+          "Usted acepta usar nuestros servicios solo para propósitos legales y de acuerdo con estos términos.",
+          "No usará nuestros servicios para transmitir contenido dañino, amenazante, abusivo, acosador, difamatorio, vulgar, obsceno u objetable.",
+          "No intentará obtener acceso no autorizado a nuestros sistemas o redes.",
+          "No usará nuestros servicios para distribuir malware, virus u otro código malicioso.",
+          "No participará en actividades que interfieran o interrumpan nuestros servicios.",
+          "No suplantará a ninguna persona o entidad ni tergiversará su afiliación con cualquier persona o entidad.",
+          "La violación de esta política puede resultar en la terminación inmediata de su cuenta."
+        ]
+      },
+      "ip": {
+        "title": "Derechos de Propiedad Intelectual",
+        "items": [
+          "Todo el contenido, características y funcionalidad de nuestros servicios son propiedad de Badia Innovations y están protegidos por leyes internacionales de derechos de autor, marcas registradas y otras leyes de propiedad intelectual.",
+          "Nuestras marcas registradas, logotipos y marcas de servicio no pueden usarse sin nuestro consentimiento previo por escrito.",
+          "No puede copiar, modificar, distribuir, vender o arrendar ninguna parte de nuestros servicios sin nuestro permiso explícito.",
+          "El contenido generado por el usuario sigue siendo propiedad del usuario, pero nos otorga una licencia para usar, mostrar y distribuir dicho contenido según sea necesario para proporcionar nuestros servicios.",
+          "Respetamos los derechos de propiedad intelectual de otros y esperamos que los usuarios hagan lo mismo."
+        ]
+      },
+      "payments": {
+        "title": "Pagos y Suscripciones",
+        "items": [
+          "Algunos servicios requieren pago. Todas las tarifas están en USD a menos que se indique lo contrario.",
+          "Las tarifas de suscripción se facturan por adelantado de forma recurrente (mensual, anualmente, etc.).",
+          "Usted nos autoriza a cargar su método de pago por todas las tarifas incurridas.",
+          "Todas las ventas son finales. No ofrecemos reembolsos excepto cuando lo requiera la ley o como se indique explícitamente en nuestra política de reembolsos.",
+          "Nos reservamos el derecho de cambiar nuestros precios en cualquier momento con 30 días de aviso.",
+          "El no pago de las tarifas puede resultar en la suspensión o terminación de su cuenta.",
+          "Usted es responsable de todos los impuestos aplicables."
+        ]
+      },
+      "free": {
+        "title": "Herramientas y Servicios Gratuitos",
+        "items": [
+          "Ofrecemos herramientas y calculadoras gratuitas (como la Calculadora de Salario y Calculadora de Despidos) tal como están, sin garantías.",
+          "Los servicios gratuitos pueden modificarse, suspenderse o discontinuarse en cualquier momento sin previo aviso.",
+          "No garantizamos la precisión de los cálculos o resultados de las herramientas gratuitas.",
+          "Los servicios gratuitos están sujetos a límites de uso y políticas de uso justo.",
+          "Podemos mostrar publicidad en los servicios gratuitos."
+        ]
+      },
+      "disclaimers": {
+        "title": "Descargos de Responsabilidad y Limitaciones de Responsabilidad",
+        "items": [
+          "Nuestros servicios se proporcionan 'tal cual' y 'según disponibilidad' sin garantías de ningún tipo, ya sean expresas o implícitas.",
+          "No garantizamos que nuestros servicios sean ininterrumpidos, oportunos, seguros o libres de errores.",
+          "No somos responsables de ninguna pérdida de datos, beneficios u otros daños que surjan de su uso de nuestros servicios.",
+          "Nuestra responsabilidad total hacia usted por cualquier reclamo que surja de su uso de nuestros servicios no excederá la cantidad que nos pagó en los 12 meses anteriores al reclamo.",
+          "Algunas jurisdicciones no permiten la exclusión de ciertas garantías o la limitación de responsabilidad, por lo que las limitaciones anteriores pueden no aplicarse a usted.",
+          "Usted reconoce que los cálculos, informes y datos de nuestros sistemas de RRHH y nómina son herramientas para ayudarlo, y usted sigue siendo responsable del cumplimiento de todas las leyes aplicables."
+        ]
+      },
+      "termination": {
+        "title": "Terminación",
+        "items": [
+          "Podemos terminar o suspender su acceso a nuestros servicios inmediatamente, sin previo aviso, por cualquier motivo, incluido el incumplimiento de estos términos.",
+          "Puede terminar su cuenta en cualquier momento contactándonos o usando las funciones de eliminación de cuenta.",
+          "Al terminar, su derecho a usar nuestros servicios cesará inmediatamente.",
+          "Todas las disposiciones de estos términos que por su naturaleza deban sobrevivir a la terminación sobrevivirán, incluidas las disposiciones de propiedad, descargos de garantía y limitaciones de responsabilidad.",
+          "La terminación no lo releva de ninguna obligación incurrida antes de la terminación."
+        ]
+      }
+    },
+    "additional": {
+      "thirdParty": {
+        "title": "Servicios y Enlaces de Terceros",
+        "content": "Nuestros servicios pueden contener enlaces a sitios web, aplicaciones o servicios de terceros. No somos responsables del contenido, políticas de privacidad o prácticas de servicios de terceros. Su uso de servicios de terceros es bajo su propio riesgo y sujeto a sus términos y condiciones."
+      },
+      "advertising": {
+        "title": "Publicidad",
+        "content": "Mostramos anuncios a través de Google AdSense y otros socios publicitarios en nuestros sitios web y servicios gratuitos. Estos anunciantes pueden usar cookies y otras tecnologías de rastreo para servir anuncios dirigidos. No somos responsables del contenido de los anuncios o las prácticas de los anunciantes."
+      },
+      "privacy": {
+        "title": "Privacidad y Seguridad de Datos",
+        "content": "Su uso de nuestros servicios también está regido por nuestra Política de Privacidad, que explica cómo recopilamos, usamos y protegemos su información personal. Al usar nuestros servicios, usted consiente la recopilación y uso de su información según se describe en nuestra Política de Privacidad."
+      },
+      "compliance": {
+        "title": "Cumplimiento con las Leyes de República Dominicana",
+        "content": "Nuestros servicios de RRHH y nómina (NominalRD) están diseñados para cumplir con las leyes laborales y regulaciones fiscales de República Dominicana. Sin embargo, usted es el único responsable de garantizar el cumplimiento de todas las leyes aplicables. Recomendamos consultar con profesionales legales y fiscales."
+      },
+      "export": {
+        "title": "Cumplimiento de Exportación",
+        "content": "Usted acepta cumplir con todas las leyes y regulaciones de exportación e importación aplicables. Usted declara que no está ubicado en un país sujeto a un embargo del gobierno de EE. UU. o designado como país 'que apoya el terrorismo'."
+      },
+      "indemnification": {
+        "title": "Indemnización",
+        "content": "Usted acepta indemnizar, defender y eximir de responsabilidad a Badia Innovations y sus funcionarios, directores, empleados y agentes de cualquier reclamo, responsabilidad, daño, pérdida y gasto que surja de su uso de nuestros servicios, su violación de estos términos o su violación de cualquier derecho de otra parte."
+      },
+      "governing": {
+        "title": "Ley Aplicable y Resolución de Disputas",
+        "content": "Estos términos se regirán e interpretarán de acuerdo con las leyes de República Dominicana, sin tener en cuenta sus disposiciones sobre conflictos de leyes. Cualquier disputa que surja de estos términos o su uso de nuestros servicios se resolverá mediante arbitraje vinculante de acuerdo con las reglas de República Dominicana, excepto que cualquiera de las partes puede buscar medidas cautelares en los tribunales. Renuncia a cualquier derecho a un juicio por jurado."
+      },
+      "severability": {
+        "title": "Divisibilidad",
+        "content": "Si alguna disposición de estos términos se considera inválida o inaplicable, las disposiciones restantes permanecerán en pleno vigor y efecto. La disposición inválida o inaplicable se modificará en la medida mínima necesaria para hacerla válida y aplicable."
+      },
+      "entire": {
+        "title": "Acuerdo Completo",
+        "content": "Estos Términos de Servicio, junto con nuestra Política de Privacidad, constituyen el acuerdo completo entre usted y Badia Innovations con respecto a su uso de nuestros servicios y reemplazan todos los acuerdos y entendimientos anteriores."
+      },
+      "waiver": {
+        "title": "Renuncia",
+        "content": "Nuestro incumplimiento para hacer cumplir cualquier derecho o disposición de estos términos no se considerará una renuncia a esos derechos. Cualquier renuncia a cualquier disposición de estos términos será efectiva solo si se hace por escrito y está firmada por un representante autorizado de Badia Innovations."
+      }
+    },
+    "contact": {
+      "title": "Contáctenos",
+      "description": "Si tiene alguna pregunta sobre estos Términos de Servicio, contáctenos:",
+      "email": "Correo Electrónico",
+      "support": "Soporte",
+      "emailAddress": "legal@badiainnovations.dev",
+      "supportAddress": "support@badiainnovations.dev"
+    },
+    "updates": {
+      "title": "Actualizaciones de Términos:",
+      "content": "Nos reservamos el derecho de modificar estos Términos en cualquier momento. Le notificaremos de cualquier cambio material publicando los nuevos Términos en esta página y actualizando la fecha de \"Última Actualización\". Su uso continuado de nuestros Servicios después de tales cambios constituye su aceptación de los nuevos Términos."
+    }
   }
 }

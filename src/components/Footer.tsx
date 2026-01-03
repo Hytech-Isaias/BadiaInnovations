@@ -1,5 +1,6 @@
 import { Mail, Linkedin, MapPin, ArrowUpRight, Heart } from "lucide-react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import useThemeStore from "../store/themeStore";
 import BlackLogo from "../assets/images/BadiaDevelopers-02.png";
@@ -195,18 +196,18 @@ const Footer = () => {
             {t("footer.in")} {t("footer.location")}
           </p>
           <div className="flex space-x-6">
-            <a
-              href="#"
+            <Link
+              to="/privacy-policy"
               className="hover:text-purple-500 transition-colors duration-300"
             >
               {t("footer.privacy")}
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/terms-of-service"
               className="hover:text-purple-500 transition-colors duration-300"
             >
               {t("footer.terms")}
-            </a>
+            </Link>
           </div>
         </div>
       </div>

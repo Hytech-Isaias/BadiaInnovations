@@ -82,7 +82,7 @@ const Navbar = () => {
               className="text-sm font-medium transition-colors relative group text-muted hover:text-theme"
             >
               {link.name}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-purple-400 transition-all duration-300 group-hover:w-full" />
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-linear-to-r from-purple-600 to-purple-400 transition-all duration-300 group-hover:w-full" />
             </button>
           ))}
 
@@ -101,8 +101,8 @@ const Navbar = () => {
             whileTap={{ scale: 0.98 }}
             className="relative px-6 py-2.5 rounded-full font-medium text-sm overflow-hidden group"
           >
-            <span className="absolute inset-0 bg-gradient-to-r from-purple-600 to-purple-500" />
-            <span className="absolute inset-0 bg-gradient-to-r from-purple-500 to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <span className="absolute inset-0 bg-linear-to-r from-purple-600 to-purple-500" />
+            <span className="absolute inset-0 bg-linear-to-r from-purple-500 to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <span className="relative text-white">{t("nav.contact")}</span>
           </motion.a>
         </div>
@@ -154,7 +154,7 @@ const Navbar = () => {
                   handleNavClick("#contact");
                   setIsOpen(false);
                 }}
-                className="bg-gradient-to-r from-purple-600 to-purple-500 text-white px-6 py-3 rounded-full text-center font-medium"
+                className="bg-linear-to-r from-purple-600 to-purple-500 text-white px-6 py-3 rounded-full text-center font-medium"
               >
                 {t("nav.contact")}
               </a>

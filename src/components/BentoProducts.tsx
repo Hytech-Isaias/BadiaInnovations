@@ -134,10 +134,6 @@ const BentoProducts = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-2 glass-light rounded-full text-sm font-medium text-purple-500 mb-6">
-            <Zap size={14} />
-            {t("products.apps.title")}
-          </span>
           <h2 className="text-3xl md:text-5xl font-bold text-theme mb-4">
             {t("products.title")}
           </h2>
@@ -167,13 +163,13 @@ const BentoProducts = () => {
               >
                 <div className="h-full glass rounded-3xl p-8 md:p-12 relative overflow-hidden">
                   {/* Gradient accent */}
-                  <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-purple-600/20 to-purple-400/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2" />
+                  <div className="absolute top-0 right-0 w-40 h-40 bg-linear-to-br from-purple-600/20 to-purple-400/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2" />
 
                   <div className="relative z-10 h-full flex flex-col">
                     {/* Header */}
                     <div className="flex items-start justify-between mb-6">
                       <div
-                        className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${currentProduct.gradient} flex items-center justify-center shadow-lg`}
+                        className={`w-16 h-16 rounded-2xl bg-linear-to-br ${currentProduct.gradient} flex items-center justify-center shadow-lg`}
                       >
                         <currentProduct.icon size={32} className="text-white" />
                       </div>
@@ -263,7 +259,7 @@ const BentoProducts = () => {
                         }
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-purple-500 text-white font-medium hover:from-purple-500 hover:to-purple-400 transition-all w-fit"
+                        className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-linear-to-r from-purple-600 to-purple-500 text-white font-medium hover:from-purple-500 hover:to-purple-400 transition-all w-fit"
                       >
                         {isApp
                           ? t(`products.apps.items.${currentProduct.id}.cta`)

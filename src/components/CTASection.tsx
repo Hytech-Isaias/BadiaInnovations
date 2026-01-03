@@ -7,7 +7,6 @@ import {
   TrendingUp,
   ArrowUpRight,
   Mail,
-  MessageCircle,
 } from "lucide-react";
 import useThemeStore from "../store/themeStore";
 
@@ -137,17 +136,6 @@ const CTASection = () => {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto text-center"
           >
-            <motion.div
-              initial={{ scale: 0.8, opacity: 0 }}
-              whileInView={{ scale: 1, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-4 py-2 glass-light rounded-full text-sm font-medium text-purple-500 mb-6"
-            >
-              <MessageCircle size={14} />
-              {t("cta.badge")}
-            </motion.div>
-
             <h2 className="text-4xl md:text-6xl font-bold text-theme mb-6">
               {t("cta.title")}
             </h2>
@@ -162,8 +150,8 @@ const CTASection = () => {
                 whileTap={{ scale: 0.98 }}
                 className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl font-semibold text-white relative overflow-hidden"
               >
-                <span className="absolute inset-0 bg-gradient-to-r from-purple-600 to-purple-500" />
-                <span className="absolute inset-0 bg-gradient-to-r from-purple-500 to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <span className="absolute inset-0 bg-linear-to-r from-purple-600 to-purple-500" />
+                <span className="absolute inset-0 bg-linear-to-r from-purple-500 to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <span className="relative flex items-center gap-2">
                   <Mail size={18} />
                   {t("cta.button")}

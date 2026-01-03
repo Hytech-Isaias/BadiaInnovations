@@ -154,7 +154,7 @@ const Footer = () => {
             </h3>
             <ul className="space-y-4 text-sm text-muted">
               <li className="flex items-center space-x-3">
-                <div className="w-8 h-8 glass rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-8 h-8 glass rounded-lg flex items-center justify-center shrink-0">
                   <Mail size={14} className="text-purple-500" />
                 </div>
                 <a
@@ -165,7 +165,7 @@ const Footer = () => {
                 </a>
               </li>
               <li className="flex items-center space-x-3">
-                <div className="w-8 h-8 glass rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-8 h-8 glass rounded-lg flex items-center justify-center shrink-0">
                   <Linkedin size={14} className="text-purple-500" />
                 </div>
                 <a
@@ -178,7 +178,7 @@ const Footer = () => {
                 </a>
               </li>
               <li className="flex items-start space-x-3">
-                <div className="w-8 h-8 glass rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
+                <div className="w-8 h-8 glass rounded-lg flex items-center justify-center shrink-0 mt-0.5">
                   <MapPin size={14} className="text-purple-500" />
                 </div>
                 <span>{t("footer.location")}</span>

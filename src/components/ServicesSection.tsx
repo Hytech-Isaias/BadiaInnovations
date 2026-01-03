@@ -122,10 +122,6 @@ const ServicesSection = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <span className="inline-flex items-center gap-2 px-4 py-2 glass-light rounded-full text-sm font-medium text-purple-500 mb-6">
-            <Code2 size={14} />
-            {t("services.title")}
-          </span>
           <h2 className="text-3xl md:text-5xl font-bold text-theme mb-4">
             {t("services.title")}
           </h2>
@@ -152,12 +148,12 @@ const ServicesSection = () => {
               <div className="h-full glass rounded-3xl p-8 relative overflow-hidden hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300">
                 {/* Hover gradient */}
                 <div
-                  className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
+                  className={`absolute inset-0 bg-linear-to-br ${service.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
                 />
 
                 {/* Icon */}
                 <div
-                  className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${service.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                  className={`w-14 h-14 rounded-2xl bg-linear-to-br ${service.gradient} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
                 >
                   <service.icon size={28} className="text-white" />
                 </div>
@@ -211,7 +207,7 @@ const ServicesSection = () => {
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 {/* Preview */}
                 <div className="relative">
-                  <div className="aspect-[16/10] rounded-2xl overflow-hidden bg-surface-2 border border-theme relative group-hover:border-purple-500/30 transition-colors">
+                  <div className="aspect-16/10 rounded-2xl overflow-hidden bg-surface-2 border border-theme relative group-hover:border-purple-500/30 transition-colors">
                     {/* Browser chrome mockup */}
                     <div className="absolute top-0 left-0 right-0 h-8 bg-surface-3 flex items-center gap-2 px-4">
                       <div className="flex gap-1.5">
@@ -237,7 +233,7 @@ const ServicesSection = () => {
                   </div>
 
                   {/* Floating accent */}
-                  <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-br from-purple-600 to-purple-400 rounded-full blur-2xl opacity-40 group-hover:opacity-60 transition-opacity" />
+                  <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-linear-to-br from-purple-600 to-purple-400 rounded-full blur-2xl opacity-40 group-hover:opacity-60 transition-opacity" />
                 </div>
 
                 {/* Info */}
@@ -273,7 +269,7 @@ const ServicesSection = () => {
                     ))}
                   </div>
 
-                  <div className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-purple-600 to-purple-500 text-white font-medium group-hover:from-purple-500 group-hover:to-purple-400 transition-all">
+                  <div className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-linear-to-r from-purple-600 to-purple-500 text-white font-medium group-hover:from-purple-500 group-hover:to-purple-400 transition-all">
                     {t("services.portfolio.cta")}
                     <ArrowUpRight
                       size={16}

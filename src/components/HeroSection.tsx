@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { ArrowRight, Phone, Sparkles } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 import { useRef } from "react";
 import useThemeStore from "../store/themeStore";
 
@@ -91,19 +91,6 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center min-h-[calc(100vh-80px)]">
           {/* Left side - Content */}
           <div className="pt-8 lg:pt-0">
-            {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3 }}
-              className="inline-flex items-center gap-2 px-4 py-2 glass-light rounded-full mb-6"
-            >
-              <Sparkles size={14} className="text-purple-500" />
-              <span className="text-sm font-medium text-muted">
-                {t("hero.tagline")}
-              </span>
-            </motion.div>
-
             {/* Main headline */}
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
@@ -138,8 +125,8 @@ const HeroSection = () => {
                 whileTap={{ scale: 0.98 }}
                 className="group relative px-8 py-4 rounded-2xl font-semibold text-white overflow-hidden"
               >
-                <span className="absolute inset-0 bg-gradient-to-r from-purple-600 to-purple-500" />
-                <span className="absolute inset-0 bg-gradient-to-r from-purple-500 to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <span className="absolute inset-0 bg-linear-to-r from-purple-600 to-purple-500" />
+                <span className="absolute inset-0 bg-linear-to-r from-purple-500 to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <span className="relative flex items-center justify-center gap-2">
                   {t("hero.cta1")}
                   <ArrowRight
@@ -196,7 +183,7 @@ const HeroSection = () => {
             >
               <div className="glass rounded-3xl p-6 shadow-2xl hover:shadow-purple-500/10 transition-shadow">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-600 to-purple-500 flex items-center justify-center">
+                  <div className="w-12 h-12 rounded-2xl bg-linear-to-br from-purple-600 to-purple-500 flex items-center justify-center">
                     <span className="text-white font-bold text-lg">N</span>
                   </div>
                   <div>
@@ -212,7 +199,7 @@ const HeroSection = () => {
                       initial={{ width: 0 }}
                       animate={{ width: "85%" }}
                       transition={{ duration: 1, delay: 0.8 }}
-                      className="h-full bg-gradient-to-r from-purple-600 to-purple-400 rounded-full"
+                      className="h-full bg-linear-to-r from-purple-600 to-purple-400 rounded-full"
                     />
                   </div>
                   <div className="flex justify-between text-sm">
@@ -228,7 +215,7 @@ const HeroSection = () => {
                       {[...Array(4)].map((_, i) => (
                         <div
                           key={i}
-                          className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-purple-600 border-2 border-surface flex items-center justify-center text-white text-xs font-medium"
+                          className="w-8 h-8 rounded-full bg-linear-to-br from-purple-500 to-purple-600 border-2 border-surface flex items-center justify-center text-white text-xs font-medium"
                         >
                           {String.fromCharCode(65 + i)}
                         </div>
@@ -331,7 +318,7 @@ const HeroSection = () => {
                 rotate: [0, 5, 0],
               }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute top-[5%] left-[20%] w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-500/20 to-purple-600/20 backdrop-blur-sm border border-purple-500/20"
+              className="absolute top-[5%] left-[20%] w-16 h-16 rounded-2xl bg-linear-to-br from-purple-500/20 to-purple-600/20 backdrop-blur-sm border border-purple-500/20"
             />
             <motion.div
               animate={{
@@ -344,7 +331,7 @@ const HeroSection = () => {
                 ease: "easeInOut",
                 delay: 1,
               }}
-              className="absolute bottom-[25%] left-[15%] w-12 h-12 rounded-xl bg-gradient-to-br from-purple-400/20 to-purple-500/20 backdrop-blur-sm border border-purple-400/20"
+              className="absolute bottom-[25%] left-[15%] w-12 h-12 rounded-xl bg-linear-to-br from-purple-400/20 to-purple-500/20 backdrop-blur-sm border border-purple-400/20"
             />
           </div>
         </div>

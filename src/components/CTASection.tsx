@@ -40,6 +40,7 @@ const CTASection = () => {
   return (
     <>
       {/* Why Choose Us */}
+      {/* Why Choose Us */}
       <section className="py-24 bg-surface relative overflow-hidden">
         <div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full blur-3xl pointer-events-none"
@@ -52,47 +53,202 @@ const CTASection = () => {
         />
 
         <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-5xl font-bold text-theme mb-4">
-              {t("whyUs.title")}
-            </h2>
-            <p className="text-muted max-w-2xl mx-auto text-lg">
-              {t("whyUs.subtitle")}
-            </p>
-          </motion.div>
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Left Content */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="text-left"
+            >
+              <h2 className="text-3xl md:text-5xl font-bold text-theme mb-6">
+                {t("whyUs.title")}
+              </h2>
+              <p className="text-muted text-lg mb-8 leading-relaxed max-w-xl">
+                {t("whyUs.subtitle")}
+              </p>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ staggerChildren: 0.1 }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-          >
-            {features.map((feature, index) => (
+              {/* Feature List */}
+              <div className="space-y-6">
+                {features.map((feature, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                    className="flex items-start gap-4 group"
+                  >
+                    <div className="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center shrink-0 group-hover:bg-purple-500/20 transition-colors">
+                      <feature.icon size={22} className="text-purple-500" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-theme mb-1">
+                        {feature.title}
+                      </h3>
+                      <p className="text-sm text-muted">{feature.desc}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+
+            {/* Right Visualization - Glass Dashboard */}
+            <div className="relative h-[600px] w-full hidden lg:block perspective-1000">
+              {/* Main Card */}
               <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -5 }}
-                className="glass rounded-2xl p-6 text-center group hover:shadow-lg hover:shadow-purple-500/5 transition-all"
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[520px] aspect-video glass rounded-3xl border border-white/20 p-8 shadow-2xl backdrop-blur-xl z-20"
               >
-                <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-purple-500/10 flex items-center justify-center group-hover:bg-purple-500/20 transition-colors">
-                  <feature.icon size={24} className="text-purple-500" />
+                {/* Header */}
+                <div className="flex items-start justify-between mb-8">
+                  <div className="flex items-center gap-4">
+                    <div className="w-16 h-16 rounded-2xl bg-linear-to-br from-purple-600 to-indigo-600 flex items-center justify-center text-white font-bold text-2xl shadow-lg">
+                      BI
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-theme">
+                        Badia Innovations
+                      </h3>
+                      <div className="flex items-center gap-2 text-sm text-muted">
+                        <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                        Available for hire
+                      </div>
+                    </div>
+                  </div>
+                  <div className="glass-light px-3 py-1.5 rounded-full text-xs font-medium text-theme">
+                    Pro Verified
+                  </div>
                 </div>
-                <h3 className="text-lg font-semibold text-theme mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-sm text-muted">{feature.desc}</p>
+
+                {/* Stats Grid inside Main Card */}
+                <div className="grid grid-cols-3 gap-4 mb-8">
+                  {[
+                    { label: "Projects", value: "5+" },
+                    { label: "Clients", value: "3+" },
+                    { label: "Rating", value: "4.9/5" },
+                  ].map((stat, i) => (
+                    <div
+                      key={i}
+                      className="text-center p-3 rounded-xl bg-purple-500/5 border border-purple-500/10"
+                    >
+                      <div className="text-lg font-bold text-theme">
+                        {stat.value}
+                      </div>
+                      <div className="text-xs text-muted">{stat.label}</div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bottom Section */}
+                <div className="space-y-3">
+                  <h4 className="text-sm font-semibold text-muted uppercase tracking-wider">
+                    Recent Activity
+                  </h4>
+                  <div className="space-y-2">
+                    {[
+                      "Deployed new SaaS Platform",
+                      "Optimized Database Query Speed",
+                      "UI/UX Redesign for Client",
+                    ].map((activity, i) => (
+                      <div
+                        key={i}
+                        className="flex items-center gap-3 p-2 rounded-lg hover:bg-white/5 transition-colors cursor-default"
+                      >
+                        <div className="w-8 h-8 rounded-full bg-purple-500/10 flex items-center justify-center text-purple-500 text-xs font-bold">
+                          {i + 1}
+                        </div>
+                        <span className="text-sm text-theme">{activity}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </motion.div>
-            ))}
-          </motion.div>
+
+              {/* Floating Widget 1: Satisfaction (Top Left) */}
+              <motion.div
+                animate={{ y: [-10, 10, -10] }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 0,
+                }}
+                className="absolute top-[5%] -left-[8%] z-30"
+              >
+                <div className="glass p-5 rounded-2xl shadow-xl w-48 border border-white/20">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm font-semibold text-theme">
+                      Success Rate
+                    </span>
+                    <TrendingUp size={16} className="text-green-500" />
+                  </div>
+                  <div className="flex items-end gap-2 mb-2">
+                    <span className="text-3xl font-bold text-theme">98%</span>
+                    <span className="text-xs text-green-500 mb-1">+2.4%</span>
+                  </div>
+                  <div className="w-full h-1.5 bg-surface-3 rounded-full overflow-hidden">
+                    <div className="h-full w-[98%] bg-green-500 rounded-full" />
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Floating Widget 2: Tech Stack (Bottom Right) */}
+              <motion.div
+                animate={{ y: [10, -10, 10] }}
+                transition={{
+                  duration: 6,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 1,
+                }}
+                className="absolute bottom-[5%] -right-[8%] z-30"
+              >
+                <div className="glass p-5 rounded-2xl shadow-xl w-56 border border-white/20">
+                  <span className="text-sm font-semibold text-theme block mb-4">
+                    Core Technologies
+                  </span>
+                  <div className="flex flex-wrap gap-2">
+                    {["React", "NestJS", "AWS", "Framer"].map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-2 py-1 rounded-md bg-purple-500/10 text-xs text-purple-500 font-medium"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+
+              {/* Floating Widget 3: Support (Top Right) */}
+              <motion.div
+                animate={{ y: [-8, 8, -8], x: [-5, 5, -5] }}
+                transition={{
+                  duration: 7,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                  delay: 0.5,
+                }}
+                className="absolute -top-[5%] right-[5%] z-30"
+              >
+                <div className="glass p-4 rounded-xl shadow-lg border border-white/20 flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center">
+                    <Headphones size={20} className="text-blue-500" />
+                  </div>
+                  <div>
+                    <div className="text-xs text-muted">Support</div>
+                    <div className="text-sm font-bold text-theme">
+                      24/7 Live
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </div>
         </div>
       </section>
 

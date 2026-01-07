@@ -20,7 +20,7 @@ const Footer = () => {
     },
     {
       name: t("footer.productsList.leavesCalc"),
-      href: "https://tools.nominalrd.com/leaves-calculator",
+      href: "https://tools.nominalrd.com/es/leaves-calculator",
     },
   ];
 

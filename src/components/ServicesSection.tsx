@@ -11,6 +11,7 @@ import {
   Search,
 } from "lucide-react";
 import useThemeStore from "../store/themeStore";
+import tailoredWeddingsImg from "../assets/images/TailoredWeddings.png?format=webp;png&quality=90";
 
 const ServicesSection = () => {
   const { t } = useTranslation();
@@ -225,7 +226,7 @@ const ServicesSection = () => {
                     {/* Content area */}
                     <div className="absolute inset-0 top-8">
                       <img
-                        src="/src/assets/images/TailoredWeddings.png?format=webp;png&quality=90"
+                        src={tailoredWeddingsImg.img.src}
                         alt="Tailored Weddings RD Website"
                         className="w-full h-full object-cover object-top"
                         loading="lazy"

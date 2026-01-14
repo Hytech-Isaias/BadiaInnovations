@@ -115,21 +115,21 @@ const CTASection = () => {
                       </h3>
                       <div className="flex items-center gap-2 text-sm text-muted">
                         <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                        Available for hire
+                        {t("whyUs.dashboard.availableForHire")}
                       </div>
                     </div>
                   </div>
                   <div className="glass-light px-3 py-1.5 rounded-full text-xs font-medium text-theme">
-                    Pro Verified
+                    {t("whyUs.dashboard.proVerified")}
                   </div>
                 </div>
 
                 {/* Stats Grid inside Main Card */}
                 <div className="grid grid-cols-3 gap-4 mb-8">
                   {[
-                    { label: "Projects", value: "5+" },
-                    { label: "Clients", value: "3+" },
-                    { label: "Rating", value: "4.9/5" },
+                    { label: t("whyUs.dashboard.projects"), value: "5+" },
+                    { label: t("whyUs.dashboard.clients"), value: "3+" },
+                    { label: t("whyUs.dashboard.rating"), value: "4.9/5" },
                   ].map((stat, i) => (
                     <div
                       key={i}
@@ -146,13 +146,13 @@ const CTASection = () => {
                 {/* Bottom Section */}
                 <div className="space-y-3">
                   <h4 className="text-sm font-semibold text-muted uppercase tracking-wider">
-                    Recent Activity
+                    {t("whyUs.dashboard.recentActivity")}
                   </h4>
                   <div className="space-y-2">
                     {[
-                      "Deployed new SaaS Platform",
-                      "Optimized Database Query Speed",
-                      "UI/UX Redesign for Client",
+                      t("whyUs.dashboard.activities.deployed"),
+                      t("whyUs.dashboard.activities.optimized"),
+                      t("whyUs.dashboard.activities.redesign"),
                     ].map((activity, i) => (
                       <div
                         key={i}
@@ -182,7 +182,7 @@ const CTASection = () => {
                 <div className="glass p-5 rounded-2xl shadow-xl w-48 border border-white/20">
                   <div className="flex items-center justify-between mb-2">
                     <span className="text-sm font-semibold text-theme">
-                      Success Rate
+                      {t("whyUs.dashboard.successRate")}
                     </span>
                     <TrendingUp size={16} className="text-green-500" />
                   </div>
@@ -209,7 +209,7 @@ const CTASection = () => {
               >
                 <div className="glass p-5 rounded-2xl shadow-xl w-56 border border-white/20">
                   <span className="text-sm font-semibold text-theme block mb-4">
-                    Core Technologies
+                    {t("whyUs.dashboard.coreTech")}
                   </span>
                   <div className="flex flex-wrap gap-2">
                     {["React", "NestJS", "AWS", "Framer"].map((tech) => (
@@ -240,9 +240,11 @@ const CTASection = () => {
                     <Headphones size={20} className="text-blue-500" />
                   </div>
                   <div>
-                    <div className="text-xs text-muted">Support</div>
+                    <div className="text-xs text-muted">
+                      {t("whyUs.dashboard.support")}
+                    </div>
                     <div className="text-sm font-bold text-theme">
-                      24/7 Live
+                      {t("whyUs.dashboard.liveSupport")}
                     </div>
                   </div>
                 </div>

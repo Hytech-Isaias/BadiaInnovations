@@ -150,6 +150,23 @@
         "title": "Scalable Solutions",
         "desc": "Grows with your business needs"
       }
+    },
+    "dashboard": {
+      "availableForHire": "Available for hire",
+      "proVerified": "Pro Verified",
+      "projects": "Projects",
+      "clients": "Clients",
+      "rating": "Rating",
+      "recentActivity": "Recent Activity",
+      "activities": {
+        "deployed": "Deployed new SaaS Platform",
+        "optimized": "Optimized Database Query Speed",
+        "redesign": "UI/UX Redesign for Client"
+      },
+      "successRate": "Success Rate",
+      "coreTech": "Core Technologies",
+      "support": "Support",
+      "liveSupport": "24/7 Live"
     }
   },
   "about": {

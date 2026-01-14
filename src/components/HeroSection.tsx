@@ -1,8 +1,92 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import { ArrowRight, Phone } from "lucide-react";
+import {
+  ArrowRight,
+  Phone,
+  RotateCcw,
+  Plus,
+  Settings,
+  Lock,
+} from "lucide-react";
 import { useRef } from "react";
 import useThemeStore from "../store/themeStore";
+
+// TypeScript code snippet for the code editor
+const codeLines = [
+  { content: "interface", type: "keyword" },
+  { content: " ", type: "text" },
+  { content: "AppConfig", type: "type" },
+  { content: " {", type: "bracket" },
+  { content: "\n", type: "text" },
+
+  { content: "  name", type: "property" },
+  { content: ": ", type: "operator" },
+  { content: "string", type: "type" },
+  { content: ";", type: "text" },
+  { content: "\n", type: "text" },
+
+  { content: "  version", type: "property" },
+  { content: ": ", type: "operator" },
+  { content: "string", type: "type" },
+  { content: ";", type: "text" },
+  { content: "\n", type: "text" },
+
+  { content: "}", type: "bracket" },
+  { content: "\n\n", type: "text" },
+
+  { content: "const", type: "keyword" },
+  { content: " ", type: "text" },
+  { content: "config", type: "variable" },
+  { content: ": ", type: "operator" },
+  { content: "AppConfig", type: "type" },
+  { content: " = {", type: "bracket" },
+  { content: "\n", type: "text" },
+
+  { content: "  name", type: "property" },
+  { content: ": ", type: "operator" },
+  { content: '"Badia Innovations"', type: "string" },
+  { content: ",", type: "text" },
+  { content: "\n", type: "text" },
+
+  { content: "  version", type: "property" },
+  { content: ": ", type: "operator" },
+  { content: '"1.0.1"', type: "string" },
+  { content: ",", type: "text" },
+  { content: "\n", type: "text" },
+  { content: "\n", type: "text" },
+
+  { content: "};", type: "bracket" },
+  { content: "\n\n", type: "text" },
+
+  { content: "function", type: "keyword" },
+  { content: " ", type: "text" },
+  { content: "createSolution", type: "function" },
+  { content: "(", type: "bracket" },
+  { content: "client", type: "variable" },
+  { content: ": ", type: "operator" },
+  { content: "string", type: "type" },
+  { content: ")", type: "bracket" },
+  { content: " {", type: "bracket" },
+  { content: "\n", type: "text" },
+
+  { content: "  return", type: "keyword" },
+  { content: " {", type: "bracket" },
+  { content: "\n", type: "text" },
+
+  { content: "    client", type: "property" },
+  { content: ",", type: "text" },
+  { content: "\n", type: "text" },
+
+  { content: "    status", type: "property" },
+  { content: ": ", type: "operator" },
+  { content: '"building"', type: "string" },
+  { content: "\n", type: "text" },
+
+  { content: "  };", type: "bracket" },
+  { content: "\n", type: "text" },
+
+  { content: "}", type: "bracket" },
+];
 
 const HeroSection = () => {
   const { t } = useTranslation();
@@ -16,7 +100,6 @@ const HeroSection = () => {
 
   const y1 = useTransform(scrollYProgress, [0, 1], [0, -100]);
   const y2 = useTransform(scrollYProgress, [0, 1], [0, -150]);
-  const y3 = useTransform(scrollYProgress, [0, 1], [0, -50]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   const handleScrollToProducts = () => {
@@ -32,26 +115,25 @@ const HeroSection = () => {
       ref={containerRef}
       className="relative min-h-screen overflow-hidden bg-theme pt-20"
     >
-      {/* Animated background elements */}
+      {/* Background glow effects */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Large gradient orbs */}
+        {/* Primary purple glow - center bottom */}
+        <motion.div
+          animate={{
+            scale: [1, 1.1, 1],
+            opacity: [0.4, 0.6, 0.4],
+          }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          className="hero-glow hero-glow-primary absolute left-1/2 top-1/2 -translate-x-1/2 w-[800px] h-[800px]"
+          style={{
+            opacity: theme === "dark" ? 1 : 0.4,
+          }}
+        />
+
+        {/* Secondary glow - top right */}
         <motion.div
           animate={{
             scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full blur-3xl"
-          style={{
-            background:
-              theme === "dark"
-                ? "rgba(131, 66, 229, 0.15)"
-                : "rgba(131, 66, 229, 0.08)",
-          }}
-        />
-        <motion.div
-          animate={{
-            scale: [1, 1.3, 1],
             opacity: [0.2, 0.4, 0.2],
           }}
           transition={{
@@ -60,18 +142,12 @@ const HeroSection = () => {
             ease: "easeInOut",
             delay: 2,
           }}
-          className="absolute -bottom-40 -right-40 w-[700px] h-[700px] rounded-full blur-3xl"
-          style={{
-            background:
-              theme === "dark"
-                ? "rgba(146, 99, 239, 0.12)"
-                : "rgba(146, 99, 239, 0.06)",
-          }}
+          className="hero-glow hero-glow-secondary absolute -top-40 -right-40 w-[600px] h-[600px]"
         />
 
         {/* Grid pattern */}
         <div
-          className="absolute inset-0 opacity-[0.03]"
+          className="absolute inset-0 opacity-[0.02]"
           style={{
             backgroundImage: `linear-gradient(${
               theme === "dark" ? "#fff" : "#000"
@@ -79,7 +155,7 @@ const HeroSection = () => {
                              linear-gradient(90deg, ${
                                theme === "dark" ? "#fff" : "#000"
                              } 1px, transparent 1px)`,
-            backgroundSize: "100px 100px",
+            backgroundSize: "80px 80px",
           }}
         />
       </div>
@@ -95,18 +171,19 @@ const HeroSection = () => {
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.05 }}
-              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-theme leading-[1.1] mb-6"
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-theme leading-[1.05] mt-6 mb-6"
             >
-              {t("hero.title")}{" "}
+              {t("hero.title")} <span className="hero-braces">{"{"}</span>
               <span className="gradient-text">{t("hero.titleHighlight")}</span>
+              <span className="hero-braces">{"}"}</span>
             </motion.h1>
 
             {/* Subtitle */}
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.1 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
               className="text-lg md:text-xl text-muted leading-relaxed mb-8 max-w-xl"
             >
               {t("hero.subtitle")}
@@ -116,34 +193,30 @@ const HeroSection = () => {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.15 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-4 mb-12"
             >
               <motion.button
                 onClick={handleScrollToProducts}
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                className="group relative px-8 py-4 rounded-2xl font-semibold text-white overflow-hidden"
+                className="group flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold text-theme border border-theme hover:border-purple-500 hover:text-purple-500 transition-all"
               >
-                <span className="absolute inset-0 bg-linear-to-r from-purple-600 to-purple-500" />
-                <span className="absolute inset-0 bg-linear-to-r from-purple-500 to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <span className="relative flex items-center justify-center gap-2">
-                  {t("hero.cta1")}
-                  <ArrowRight
-                    size={18}
-                    className="group-hover:translate-x-1 transition-transform"
-                  />
-                </span>
+                {t("hero.cta1")}
+                <ArrowRight
+                  size={18}
+                  className="group-hover:translate-x-1 transition-transform"
+                />
               </motion.button>
 
               <motion.button
                 onClick={handleScrollToContact}
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                className="group flex items-center justify-center gap-3 px-8 py-2 rounded-2xl font-semibold glass text-theme hover:bg-purple-500/10 transition-all"
+                className="group flex items-center justify-center gap-3 px-7 py-3.5 rounded-full font-semibold glass text-theme hover:bg-purple-500/10 transition-all"
               >
-                <div className="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center group-hover:bg-purple-500/30 transition-colors">
-                  <Phone size={16} className="text-purple-500 ml-0.5" />
+                <div className="w-9 h-9 rounded-full bg-purple-500/20 flex items-center justify-center group-hover:bg-purple-500/30 transition-colors">
+                  <Phone size={14} className="text-purple-500 ml-0.5" />
                 </div>
                 {t("hero.cta2")}
               </motion.button>
@@ -153,7 +226,7 @@ const HeroSection = () => {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.2 }}
+              transition={{ duration: 0.5, delay: 0.5 }}
               className="flex flex-wrap gap-8"
             >
               {[
@@ -171,154 +244,159 @@ const HeroSection = () => {
             </motion.div>
           </div>
 
-          {/* Right side - Floating product cards */}
+          {/* Right side - Code Editor */}
           <div className="relative h-[500px] lg:h-[600px] hidden lg:block">
-            {/* Main product card */}
+            {/* Main Code Editor */}
             <motion.div
               style={{ y: y1 }}
-              initial={{ opacity: 0, x: 50, rotateY: -10 }}
+              initial={{ opacity: 0, x: 50, rotateY: -5 }}
               animate={{ opacity: 1, x: 0, rotateY: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="absolute top-[10%] right-[5%] w-[320px]"
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="absolute top-[5%] right-0 w-[400px]"
             >
-              <div className="glass rounded-3xl p-6 shadow-2xl hover:shadow-purple-500/10 transition-shadow">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-2xl bg-linear-to-br from-purple-600 to-purple-500 flex items-center justify-center">
-                    <span className="text-white font-bold text-lg">N</span>
+              <div className="code-editor shadow-2xl">
+                {/* Editor header */}
+                <div className="code-editor-header">
+                  <div className="flex gap-2">
+                    <div className="code-editor-dot red"></div>
+                    <div className="code-editor-dot yellow"></div>
+                    <div className="code-editor-dot green"></div>
                   </div>
-                  <div>
-                    <h3 className="font-bold text-theme">NominalRD</h3>
-                    <p className="text-sm text-muted">
-                      {t("hero.cards.hrPayroll")}
-                    </p>
-                  </div>
-                </div>
-                <div className="space-y-3">
-                  <div className="h-2 bg-surface-2 rounded-full overflow-hidden">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      animate={{ width: "85%" }}
-                      transition={{ duration: 1, delay: 0.8 }}
-                      className="h-full bg-linear-to-r from-purple-600 to-purple-400 rounded-full"
-                    />
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-muted">
-                      {t("hero.cards.employeeSat")}
-                    </span>
-                    <span className="text-purple-500 font-semibold">85%</span>
+                  <div className="flex items-center gap-2 ml-auto">
+                    <button className="p-1.5 rounded-lg hover:bg-white/10 transition-colors text-muted">
+                      <RotateCcw size={14} />
+                    </button>
+                    <button className="p-1.5 rounded-lg hover:bg-white/10 transition-colors text-muted">
+                      <Plus size={14} />
+                    </button>
+                    <button className="p-1.5 rounded-lg hover:bg-white/10 transition-colors text-muted">
+                      <Settings size={14} />
+                    </button>
                   </div>
                 </div>
-                <div className="mt-4 pt-4 border-t border-theme">
-                  <div className="flex items-center gap-2">
-                    <div className="flex -space-x-2">
-                      {[...Array(4)].map((_, i) => (
-                        <div
-                          key={i}
-                          className="w-8 h-8 rounded-full bg-linear-to-br from-purple-500 to-purple-600 border-2 border-surface flex items-center justify-center text-white text-xs font-medium"
-                        >
-                          {String.fromCharCode(65 + i)}
-                        </div>
-                      ))}
-                    </div>
-                    <span className="text-sm text-muted">
-                      {t("hero.cards.companies")}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
 
-            {/* Tools card */}
-            <motion.div
-              style={{ y: y2 }}
-              initial={{ opacity: 0, x: -30, rotateY: 10 }}
-              animate={{ opacity: 1, x: 0, rotateY: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="absolute top-[35%] left-[0%] w-[280px]"
-            >
-              <div className="glass rounded-3xl p-5 shadow-xl">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-sm font-medium text-muted">
-                    {t("hero.cards.salaryCalc")}
-                  </span>
-                  <span className="px-2 py-0.5 rounded-full bg-green-500/20 text-green-500 text-xs font-medium">
-                    {t("hero.cards.free")}
-                  </span>
-                </div>
-                <div className="text-3xl font-bold text-theme mb-1">
-                  RD$ 50,000
-                </div>
-                <div className="text-sm text-muted mb-4">
-                  {t("hero.cards.netSalary")}
-                </div>
-                <div className="grid grid-cols-2 gap-2 text-xs">
-                  <div className="glass-light rounded-lg p-2">
-                    <div className="text-muted">ISR</div>
-                    <div className="font-semibold text-theme">-RD$ 2,955</div>
-                  </div>
-                  <div className="glass-light rounded-lg p-2">
-                    <div className="text-muted">AFP</div>
-                    <div className="font-semibold text-theme">-RD$ 1,854</div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Web dev card */}
-            <motion.div
-              style={{ y: y3 }}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.7 }}
-              className="absolute bottom-[10%] right-[15%] w-[260px]"
-            >
-              <div className="glass rounded-3xl p-5 shadow-xl">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-10 h-10 rounded-xl glass-light flex items-center justify-center">
-                    <span className="text-purple-500">🌐</span>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-theme text-sm">
-                      {t("hero.cards.webDev")}
-                    </h4>
-                    <p className="text-xs text-muted">
-                      {t("hero.cards.customSolutions")}
-                    </p>
-                  </div>
-                </div>
-                <div className="flex flex-wrap gap-1.5">
-                  {[
-                    "React",
-                    "Vue",
-                    "Nest.js",
-                    "Next.js",
-                    "Laravel",
-                    "Spring Boot",
-                    "UI/UX",
-                    "GCP",
-                    "AWS",
-                    "Docker",
-                  ].map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-2 py-1 rounded-lg glass-light text-xs text-muted"
+                {/* Editor body */}
+                <div className="code-editor-body text-theme">
+                  {codeLines.map((token, index) => (
+                    <motion.span
+                      key={index}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 0.6 + index * 0.02 }}
+                      className={
+                        token.type !== "text" ? `syntax-${token.type}` : ""
+                      }
+                      style={{ whiteSpace: "pre" }}
                     >
-                      {tech}
-                    </span>
+                      {token.content}
+                    </motion.span>
                   ))}
                 </div>
               </div>
             </motion.div>
 
-            {/* Decorative elements */}
+            {/* CSS Card */}
+            <motion.div
+              style={{ y: y2 }}
+              initial={{ opacity: 0, x: -30, rotateY: 5 }}
+              animate={{ opacity: 1, x: 0, rotateY: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="absolute bottom-[15%] left-[0%] w-[260px]"
+            >
+              <div className="css-card shadow-xl">
+                <div className="css-card-header">
+                  <span className="text-muted">Body</span>
+                  <div className="flex items-center gap-1">
+                    <button className="px-2 py-0.5 font-bold text-theme hover:bg-purple-500/20 rounded">
+                      B
+                    </button>
+                    <button className="px-2 py-0.5 italic text-muted hover:bg-purple-500/20 rounded">
+                      I
+                    </button>
+                    <button className="px-2 py-0.5 underline text-muted hover:bg-purple-500/20 rounded">
+                      U
+                    </button>
+                    <span className="text-muted mx-1">+</span>
+                    <span className="text-muted">/</span>
+                  </div>
+                </div>
+                <div className="p-3 space-y-1 text-xs">
+                  <div>
+                    <span className="syntax-property">code</span>
+                    <span className="text-muted"> {"{"}</span>
+                  </div>
+                  <div className="pl-3">
+                    <span className="syntax-property">font-family</span>
+                    <span className="syntax-operator">: </span>
+                    <span className="syntax-string">
+                      'Fira Code', monospace
+                    </span>
+                    <span className="text-muted">;</span>
+                  </div>
+                  <div className="pl-3">
+                    <span className="syntax-property">font-size</span>
+                    <span className="syntax-operator">: </span>
+                    <span className="syntax-number">14px</span>
+                    <span className="text-muted">;</span>
+                  </div>
+                  <div className="pl-3">
+                    <span className="syntax-property">background-color</span>
+                    <span className="syntax-operator">: </span>
+                    <span className="syntax-string">#f5f5f5</span>
+                    <span className="text-muted">;</span>
+                  </div>
+                  <div className="pl-3">
+                    <span className="syntax-property">padding</span>
+                    <span className="syntax-operator">: </span>
+                    <span className="syntax-number">4px</span>
+                    <span className="text-muted">;</span>
+                  </div>
+                  <div className="pl-3">
+                    <span className="syntax-property">border-radius</span>
+                    <span className="syntax-operator">: </span>
+                    <span className="syntax-number">4px</span>
+                    <span className="text-muted">;</span>
+                  </div>
+                  <div>
+                    <span className="text-muted">{"}"}</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Floating security element */}
+            <motion.div
+              animate={{
+                y: [0, -10, 0],
+              }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute bottom-[5%] right-[40%]"
+            >
+              <div className="glass rounded-full p-4 shadow-lg">
+                <div className="flex items-center gap-2">
+                  <div className="w-5 h-5 rounded bg-purple-500/20 flex items-center justify-center">
+                    <span className="text-purple-400 text-xs">
+                      <Lock />
+                    </span>
+                  </div>
+                  <div className="flex gap-1">
+                    <div className="w-1.5 h-1.5 rounded-full bg-purple-400"></div>
+                    <div className="w-1.5 h-1.5 rounded-full bg-purple-400"></div>
+                    <div className="w-1.5 h-1.5 rounded-full bg-purple-400"></div>
+                    <div className="w-1.5 h-1.5 rounded-full bg-purple-400"></div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Decorative floating elements */}
             <motion.div
               animate={{
                 y: [0, -20, 0],
                 rotate: [0, 5, 0],
               }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute top-[5%] left-[20%] w-16 h-16 rounded-2xl bg-linear-to-br from-purple-500/20 to-purple-600/20 backdrop-blur-sm border border-purple-500/20"
+              className="absolute top-[15%] left-[10%] w-12 h-12 rounded-2xl bg-linear-to-br from-purple-500/20 to-purple-600/20 backdrop-blur-sm border border-purple-500/20"
             />
             <motion.div
               animate={{
@@ -331,7 +409,7 @@ const HeroSection = () => {
                 ease: "easeInOut",
                 delay: 1,
               }}
-              className="absolute bottom-[25%] left-[15%] w-12 h-12 rounded-xl bg-linear-to-br from-purple-400/20 to-purple-500/20 backdrop-blur-sm border border-purple-400/20"
+              className="absolute top-[40%] left-[5%] w-8 h-8 rounded-xl bg-linear-to-br from-purple-400/20 to-purple-500/20 backdrop-blur-sm border border-purple-400/20"
             />
           </div>
         </div>
@@ -344,21 +422,22 @@ const HeroSection = () => {
         transition={{ delay: 1.5 }}
         style={{ opacity }}
         onClick={handleScrollToProducts}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 cursor-pointer text-muted hover:text-purple-500 transition-colors"
+        className="absolute bottom-8 right-8 flex items-center gap-3 cursor-pointer text-muted hover:text-purple-500 transition-colors"
       >
         <span className="text-xs uppercase tracking-widest">
           {t("hero.scroll")}
         </span>
         <motion.div
-          animate={{ y: [0, 8, 0] }}
+          animate={{ y: [0, 5, 0] }}
           transition={{ duration: 1.5, repeat: Infinity }}
-          className="w-6 h-10 rounded-full border-2 border-current flex justify-center pt-2"
+          className="w-8 h-8 rounded-full border border-current flex items-center justify-center"
         >
           <motion.div
-            animate={{ y: [0, 8, 0], opacity: [1, 0, 1] }}
+            animate={{ y: [0, 3, 0], opacity: [1, 0.5, 1] }}
             transition={{ duration: 1.5, repeat: Infinity }}
-            className="w-1.5 h-1.5 rounded-full bg-current"
-          />
+          >
+            ↓
+          </motion.div>
         </motion.div>
       </motion.div>
     </section>

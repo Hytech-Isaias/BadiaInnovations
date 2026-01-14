@@ -150,6 +150,23 @@
         "title": "Soluciones Escalables",
         "desc": "Crece junto con las necesidades de tu negocio"
       }
+    },
+    "dashboard": {
+      "availableForHire": "Disponible para contratación",
+      "proVerified": "Pro Verificado",
+      "projects": "Proyectos",
+      "clients": "Clientes",
+      "rating": "Calificación",
+      "recentActivity": "Actividad Reciente",
+      "activities": {
+        "deployed": "Desplegó nueva plataforma SaaS",
+        "optimized": "Optimizó velocidad de consultas",
+        "redesign": "Rediseño UI/UX para cliente"
+      },
+      "successRate": "Tasa de Éxito",
+      "coreTech": "Tecnologías Core",
+      "support": "Soporte",
+      "liveSupport": "24/7 en Vivo"
     }
   },
   "about": {

@@ -143,7 +143,17 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="absolute top-full left-0 w-full glass md:hidden overflow-hidden"
+            className={clsx(
+              "absolute top-full left-0 w-full md:hidden overflow-hidden border-b",
+              theme === "dark" ? "border-white/10" : "border-black/10"
+            )}
+            style={{
+              backgroundColor:
+                theme === "dark"
+                  ? "rgba(20, 20, 22, 0.95)"
+                  : "rgba(255, 255, 255, 0.95)",
+              backdropFilter: "blur(20px)",
+            }}
           >
             <div className="flex flex-col py-6 px-6 space-y-4">
               {navLinks.map((link) => (

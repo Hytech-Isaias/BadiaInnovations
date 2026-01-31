@@ -5,235 +5,580 @@
     "services": "Servicios",
     "about": "Sobre Nosotros",
     "portfolio": "Portafolio",
+    "blog": "Recursos",
     "contact": "Contacto"
   },
   "hero": {
     "tagline": "Innovación que transforma tu negocio",
-    "title": "Construyendo el Futuro de las",
+    "title": "Impulsamos tu Éxito con",
     "titleHighlight": "Soluciones Digitales",
-    "subtitle": "Creamos aplicaciones de software poderosas y soluciones web personalizadas que impulsan tu negocio. Desde gestión de RRHH hasta sitios web impresionantes.",
-    "cta1": "Explorar Productos",
-    "cta2": "Contáctanos",
-    "scroll": "Desplázate para descubrir",
+    "subtitle": "Transformamos ideas en realidad. Desarrollamos software potente, sistemas de RRHH integrales y experiencias web cautivadoras que hacen crecer tu empresa.",
+    "cta1": "Ver Soluciones",
+    "cta2": "Agenda una Llamada",
+    "scroll": "Descubre más",
     "stats": {
-      "projects": "Proyectos",
-      "clients": "Clientes",
-      "satisfaction": "Satisfacción"
+      "projects": "Proyectos Exitosos",
+      "clients": "Clientes Globales",
+      "satisfaction": "Clientes Satisfechos"
     },
     "cards": {
-      "hrPayroll": "RRHH y Nómina",
-      "employeeSat": "Satisfacción de Empleados",
-      "companies": "+10 empresas",
-      "salaryCalc": "Calculadora de Salario",
+      "hrPayroll": "Nómina Inteligente",
+      "employeeSat": "Gestión de Talento",
+      "companies": "+15 Empresas",
+      "salaryCalc": "Cálculos Precisos",
       "free": "Gratis",
-      "netSalary": "Salario Neto Mensual",
-      "webDev": "Desarrollo Web",
-      "customSolutions": "Soluciones Personalizadas"
+      "netSalary": "Ingresos Claros",
+      "webDev": "Web Modernas",
+      "customSolutions": "Apps a Medida"
     }
   },
   "products": {
-    "title": "Nuestros Productos",
-    "subtitle": "Aplicaciones SaaS potentes diseñadas para optimizar las operaciones de tu negocio",
+    "title": "Nuestras Soluciones",
+    "subtitle": "Plataformas tecnológicas diseñadas para escalar tu productividad y modernizar operaciones",
     "apps": {
-      "title": "Aplicaciones Empresariales",
-      "desc": "Soluciones de software completas para empresas",
+      "title": "Software Empresarial",
+      "desc": "Herramientas robustas para la gestión eficiente de tu negocio",
       "items": {
         "nominal": {
           "name": "NominalRD",
-          "desc": "Sistema completo de gestión de RRHH y nómina para empresas dominicanas. Gestiona empleados, calcula nóminas, genera reportes y asegura cumplimiento legal.",
-          "features": ["Gestión de Nómina", "Base de Empleados", "Reportes Legales", "Cálculos de Impuestos"],
+          "desc": "La plataforma definitiva para la gestión de Recursos Humanos en República Dominicana. Automatiza tu nómina, gestiona expedientes de empleados, calcula prestaciones laborales, genera reportes TSS y DGT, y asegura el cumplimiento total con el Código de Trabajo. Diseñado para simplificar la vida de gerentes y contadores.",
+          "extendedDesc": "NominalRD fue desarrollado específicamente para el mercado dominicano, con cada cálculo y reporte alineado a las regulaciones del Ministerio de Trabajo, la DGII, y la Tesorería de la Seguridad Social. Olvídate de errores de cálculo y multas por incumplimiento.",
+          "features": [
+            "Cálculo Automático de Nómina",
+            "Expedientes Digitales de Empleados",
+            "Reportes TSS (IR-3, IR-4)",
+            "Cálculo de Prestaciones y Regalía",
+            "Portal de Empleados"
+          ],
+          "dominicanCompliance": {
+            "title": "Cumplimiento Legal RD",
+            "items": [
+              "Ley 16-92 (Código de Trabajo)",
+              "Retenciones TSS/SFS/AFP actualizadas",
+              "Cálculo ISR según Ley 11-92",
+              "Reportes IR-3, IR-4 para DGII",
+              "Formato DGT-3 y DGT-4",
+              "Salario de Navidad (Regalía Pascual)",
+              "Vacaciones conforme al Código Laboral"
+            ]
+          },
+          "hrModules": {
+            "title": "Módulos de RRHH",
+            "items": [
+              "Gestión de expedientes digitales",
+              "Control de asistencia y puntualidad",
+              "Administración de vacaciones y licencias",
+              "Evaluaciones de desempeño",
+              "Proceso de reclutamiento y onboarding",
+              "Gestión de beneficios adicionales",
+              "Historial de acciones de personal"
+            ]
+          },
+          "payrollFeatures": {
+            "title": "Funciones de Nómina",
+            "items": [
+              "Nómina quincenal y mensual",
+              "Deducciones automáticas (préstamos, adelantos)",
+              "Bonificaciones y comisiones",
+              "Horas extras ordinarias y extraordinarias",
+              "Volantes de pago digitales (PDF)",
+              "Exportación para bancos (BAC, BHD, Popular)",
+              "Histórico de pagos por empleado"
+            ]
+          },
           "link": "https://nominalrd.com",
-          "cta": "Visitar NominalRD"
+          "cta": "Prueba NominalRD Gratis"
         },
         "gymtracker": {
           "name": "GymTracker",
-          "desc": "Compañero de fitness impulsado por IA para web y Android. Obtén rutinas de ejercicio personalizadas, rastrea tu progreso y alcanza tus metas fitness con recomendaciones inteligentes.",
-          "features": ["Planes de Entrenamiento IA", "Seguimiento de Progreso", "App Web y Android", "Gratis y Premium"],
+          "desc": "Tu entrenador personal digital potenciado por Inteligencia Artificial. GymTracker crea planes de entrenamiento adaptativos basados en tu progreso real. Registra tus ejercicios, visualiza estadísticas detalladas y supera tus límites con una aplicación que aprende de ti.",
+          "features": [
+            "Rutinas Generadas por IA",
+            "Historial de Entrenamiento Detallado",
+            "Métricas de Progreso Visuales",
+            "Sincronización Multiplataforma"
+          ],
           "link": "https://gymtracker.badiainnovations.com",
-          "cta": "Próximamente",
-          "status": "En Desarrollo"
+          "cta": "Únete a la Lista de Espera",
+          "status": "Beta Privada"
         }
       }
     },
     "tools": {
-      "title": "Herramientas Gratuitas",
-      "desc": "Calculadoras y utilidades útiles sin costo",
+      "title": "Utiliades Gratuitas",
+      "desc": "Recursos esenciales para profesionales y empresas, sin costo alguno",
       "items": {
         "salary": {
-          "name": "Calculadora de Salario",
-          "desc": "Calcula el salario neto, deducciones de ISR, AFP, SFS y más para empleados dominicanos.",
-          "features": ["Cálculo automático de ISR", "Deducciones de Seguro Social", "Horas extras y nocturnidad", "Vista mensual y quincenal"],
+          "name": "Calculadora Salarial RD",
+          "desc": "Herramienta precisa para conocer el salario neto real. Calcula al instante las retenciones de Impuesto sobre la Renta (ISR), Seguridad Social (SFS) y Fondo de Pensiones (AFP) según la legislación dominicana vigente.",
+          "extendedDesc": "Entiende exactamente cuánto ganarás después de impuestos. Nuestra calculadora aplica las tasas oficiales de la DGII y la TSS para darte un desglose completo de tu salario.",
+          "features": [
+            "Cálculo Exacto de Deducciones",
+            "Desglose de ISR Anual y Mensual",
+            "Compatible con Salario Quincenal",
+            "Actualizado al 2026"
+          ],
+          "howItWorks": {
+            "title": "¿Cómo funcionan las deducciones en RD?",
+            "intro": "En República Dominicana, el salario bruto está sujeto a varias deducciones obligatorias antes de recibir tu pago neto:",
+            "deductions": [
+              {
+                "name": "AFP (Fondo de Pensiones)",
+                "rate": "2.87% del salario cotizable",
+                "desc": "Aporte obligatorio para tu fondo de retiro. Tu empleador aporta un 7.10% adicional."
+              },
+              {
+                "name": "SFS (Seguro Familiar de Salud)",
+                "rate": "3.04% del salario cotizable",
+                "desc": "Cobertura de salud para ti y tus dependientes. El empleador aporta 7.09%."
+              },
+              {
+                "name": "ISR (Impuesto sobre la Renta)",
+                "rate": "0% - 25% según escala",
+                "desc": "Impuesto progresivo según tu nivel de ingresos. Exento hasta RD$416,220/año."
+              }
+            ],
+            "note": "El tope cotizable para TSS en 2026 es de RD$207,091.67 mensual (10 salarios mínimos del sector privado no sectorizado)."
+          },
+          "isrScale": {
+            "title": "Escala del ISR 2026",
+            "brackets": [
+              {
+                "range": "RD$0 - RD$416,220",
+                "rate": "Exento"
+              },
+              {
+                "range": "RD$416,220.01 - RD$624,329",
+                "rate": "15% del excedente"
+              },
+              {
+                "range": "RD$624,329.01 - RD$867,123",
+                "rate": "RD$31,216 + 20% del excedente"
+              },
+              {
+                "range": "Más de RD$867,123",
+                "rate": "RD$79,776 + 25% del excedente"
+              }
+            ]
+          },
           "link": "https://tools.nominalrd.com/es/salary-calculator",
-          "cta": "Probar Herramientas"
+          "cta": "Calcular Mi Salario"
         },
         "leaves": {
-          "name": "Calculadora de Despidos y Beneficios",
-          "desc": "Calcula rápidamente los despidos y beneficios legales para empleadores y empleados.",
-          "features": ["Despidos Legales", "Beneficios Legales", "Cumplimiento Legal"],
+          "name": "Calculadora de Prestaciones",
+          "desc": "Evita conflictos laborales con cálculos transparentes de prestaciones. Determina preaviso, cesantía, vacaciones no disfrutadas y salario de navidad (regalía) de acuerdo con el Ministerio de Trabajo.",
+          "features": [
+            "Cálculo de Cesantía y Preaviso",
+            "Derechos Adquiridos",
+            "Reporte Detallado imprimible",
+            "100% Acorde a la Ley 16-92"
+          ],
           "link": "https://tools.nominalrd.com/es/leaves-benefits-calculator",
-          "cta": "Calcular Despidos y Beneficios"
+          "cta": "Calcular Prestaciones"
         }
       }
     }
   },
   "services": {
-    "title": "Servicios de Desarrollo Web",
-    "subtitle": "Sitios web y aplicaciones personalizadas para tu marca",
-    "desc": "Construimos sitios web impresionantes y de alto rendimiento que convierten visitantes en clientes. Desde páginas de aterrizaje hasta plataformas de comercio electrónico completas.",
+    "title": "Desarrollo y Consultoría Tecnológica",
+    "subtitle": "Servicios profesionales para llevar tu presencia digital al siguiente nivel",
+    "desc": "No solo escribimos código; creamos soluciones estratégicas. Desde la identidad de marca hasta sistemas complejos, nuestro equipo entrega calidad, rendimiento y seguridad.",
     "items": {
       "landing": {
-        "name": "Landing Pages",
-        "desc": "Páginas de aterrizaje llamativas y optimizadas para conversión, diseñadas para captar leads y hacer crecer tu negocio.",
-        "features": ["Diseño Moderno", "Optimizado SEO", "Carga Rápida", "Mobile First"]
+        "name": "Landing Pages de Alta Conversión",
+        "desc": "Diseñamos páginas de aterrizaje optimizadas para convertir visitantes en clientes. Estructura persuasiva, diseño impactante y tiempos de carga ultrarrápidos para maximizar tu ROI publicitario.",
+        "extendedDesc": "Cada landing page es un embudo de ventas estratégicamente diseñado. Aplicamos principios psicológicos de persuasión, jerarquía visual clara, y calls-to-action irresistibles que guían al visitante hacia la conversión.",
+        "features": [
+          "Diseño UX/UI Persuasivo",
+          "Optimización Técnica SEO",
+          "Velocidad Extrema (Core Web Vitals)",
+          "Integración con CRM/Email"
+        ],
+        "process": {
+          "title": "Proceso de Diseño Web",
+          "steps": [
+            {
+              "step": "1. Briefing",
+              "desc": "Definimos objetivos, audiencia y propuesta de valor"
+            },
+            {
+              "step": "2. Wireframe",
+              "desc": "Estructura de contenidos y flujo de usuario"
+            },
+            {
+              "step": "3. Diseño Visual",
+              "desc": "Mockups en alta fidelidad para tu aprobación"
+            },
+            {
+              "step": "4. Desarrollo",
+              "desc": "Código optimizado y responsive"
+            },
+            {
+              "step": "5. Testing",
+              "desc": "Pruebas en múltiples dispositivos y navegadores"
+            },
+            {
+              "step": "6. Lanzamiento",
+              "desc": "Publicación y configuración de analytics"
+            }
+          ]
+        },
+        "deliverables": {
+          "title": "Entregables Incluidos",
+          "items": [
+            "Diseño 100% personalizado (no templates)",
+            "Código optimizado para SEO técnico",
+            "Integración con Google Analytics 4",
+            "Formularios conectados a tu CRM/email",
+            "Certificado SSL gratuito",
+            "1 mes de soporte post-lanzamiento"
+          ]
+        }
       },
       "business": {
-        "name": "Sitios Web Empresariales",
-        "desc": "Sitios web profesionales que establecen la presencia de tu marca y conectan con tu audiencia.",
-        "features": ["Diseño Personalizado", "Integración CMS", "Analíticas", "Multi-idioma"]
+        "name": "Portales Corporativos",
+        "desc": "Fortalece tu marca con un sitio web corporativo que inspire confianza. Mostramos la propuesta de valor de tu empresa con un diseño profesional, gestión de contenidos fácil (CMS) y adaptabilidad total a móviles.",
+        "features": [
+          "Arquitectura de Información Clara",
+          "Gestor de Contenidos (CMS)",
+          "Seguridad SSL Integrada",
+          "Formularios de Contacto Avanzados"
+        ]
       },
       "ecommerce": {
-        "name": "E-Commerce",
-        "desc": "Tiendas en línea completas con integración de pagos, gestión de inventario y envíos.",
-        "features": ["Pasarela de Pagos", "Sistema de Inventario", "Gestión de Pedidos", "Portal de Clientes"]
+        "name": "Tiendas Online (E-Commerce)",
+        "desc": "Vende las 24 horas con una plataforma de comercio electrónico robusta. Gestiona inventario, procesa pagos seguros (Azul, PayPal, Stripe) y ofrece un experiencia de compra fluida a tus clientes.",
+        "extendedDesc": "Desarrollamos tiendas virtuales que no solo se ven bien, sino que venden. Optimizamos cada paso del funnel de compra para maximizar conversiones y reducir carritos abandonados.",
+        "features": [
+          "Pasarelas de Pago Locales",
+          "Gestión de Inventario Real",
+          "Panel de Administración Intuitivo",
+          "Integración con Envíos"
+        ],
+        "platforms": {
+          "title": "Plataformas que Dominamos",
+          "items": [
+            "WooCommerce (WordPress)",
+            "Shopify",
+            "Desarrollo custom con React/Next.js",
+            "Magento para grandes catálogos"
+          ]
+        },
+        "paymentMethods": {
+          "title": "Métodos de Pago Soportados",
+          "items": [
+            "Azul (tarjetas locales RD)",
+            "PayPal y Stripe",
+            "Transferencias bancarias",
+            "Pagos contra entrega"
+          ]
+        },
+        "benefits": {
+          "title": "Beneficios E-commerce",
+          "items": [
+            "Ventas automatizadas 24/7/365",
+            "Alcance nacional e internacional",
+            "Gestión centralizada de productos",
+            "Reportes de ventas en tiempo real",
+            "Integración con redes sociales",
+            "Programa de fidelización de clientes"
+          ]
+        }
       },
       "custom": {
-        "name": "Desarrollo Personalizado",
-        "desc": "Soluciones de software a medida construidas desde cero para satisfacer los requisitos únicos y flujos de trabajo de tu negocio.",
-        "features": ["Escalable", "Seguro", "Optimizado"]
+        "name": "Software a la Medida",
+        "desc": "Desarrollamos la solución exacta que tu negocio necesita. Si no existe en el mercado, lo construimos. Automatización de procesos, CRMs internos, dashboards y sistemas de gestión integrados.",
+        "extendedDesc": "Nuestro equipo de desarrollo aplica metodologías ágiles (Scrum/Kanban) para entregar software robusto y escalable. Desde la concepción inicial hasta el despliegue en producción, trabajamos estrechamente contigo para asegurar que cada funcionalidad resuelva un problema real de negocio.",
+        "features": [
+          "Arquitectura Escalable",
+          "APIs Robustas",
+          "Seguridad de Datos",
+          "Soporte Continuo"
+        ],
+        "methodology": {
+          "title": "Nuestra Metodología de Desarrollo",
+          "items": [
+            "Desarrollo Ágil con sprints de 2 semanas",
+            "Revisiones de código y pair programming",
+            "Integración y despliegue continuos (CI/CD)",
+            "Testing automatizado (unitario, integración, E2E)",
+            "Documentación técnica completa"
+          ]
+        },
+        "process": {
+          "title": "Nuestro Proceso",
+          "steps": [
+            {
+              "step": "1. Descubrimiento",
+              "desc": "Entendemos tu negocio, usuarios y problemas a resolver"
+            },
+            {
+              "step": "2. Planificación",
+              "desc": "Definimos alcance, arquitectura y roadmap de desarrollo"
+            },
+            {
+              "step": "3. Diseño UX/UI",
+              "desc": "Creamos prototipos interactivos antes de codificar"
+            },
+            {
+              "step": "4. Desarrollo",
+              "desc": "Construimos en sprints con demos frecuentes"
+            },
+            {
+              "step": "5. QA y Testing",
+              "desc": "Pruebas exhaustivas en cada iteración"
+            },
+            {
+              "step": "6. Despliegue",
+              "desc": "Lanzamiento controlado y monitoreo"
+            },
+            {
+              "step": "7. Soporte",
+              "desc": "Mantenimiento y mejoras continuas"
+            }
+          ]
+        },
+        "projectTypes": {
+          "title": "Tipos de Proyectos",
+          "items": [
+            "Sistemas ERP personalizados",
+            "CRMs y gestión de clientes",
+            "Automatización de procesos empresariales",
+            "Dashboards y Business Intelligence",
+            "Portales de empleados y clientes",
+            "Integraciones con sistemas legados",
+            "APIs y microservicios"
+          ]
+        },
+        "benefits": {
+          "title": "Beneficios",
+          "items": [
+            "Solución 100% adaptada a tus procesos únicos",
+            "Propiedad total del código fuente",
+            "Escalabilidad para crecer con tu negocio",
+            "Integración con herramientas existentes",
+            "Soporte técnico local y cercano",
+            "Sin licencias recurrentes de terceros"
+          ]
+        }
       },
       "app": {
-        "name": "Desarrollo de Apps",
-        "desc": "Aplicaciones móviles nativas y multiplataforma que ofrecen experiencias de usuario excepcionales en iOS y Android.",
-        "features": ["Alto Rendimiento", "Experiencia Nativa", "Seguro"]
+        "name": "Apps Móviles (iOS/Android)",
+        "desc": "Lleva tu negocio al bolsillo de tus clientes. Desarrollo de aplicaciones móviles nativas o híbridas con experiencias de usuario fluidas, notificaciones push y funcionalidades offline.",
+        "features": [
+          "Desarrollo React Native / Flutter",
+          "Publicación en Tiendas",
+          "Funciones Nativas (GPS, Cámara)",
+          "Alto Rendimiento"
+        ]
       },
       "seo": {
-        "name": "SEO y Estrategia de Contenido",
-        "desc": "Impulsa tu visibilidad online con estrategias de contenido bilingüe y optimización SEO técnica. Atrae tráfico orgánico, mejora tu posicionamiento y conecta con tu audiencia en inglés y español.",
-        "features": ["Optimización Técnica","Velocidad de Carga","Mobile-First", "Contenido Adaptable" ]
+        "name": "SEO y Posicionamiento Web",
+        "desc": "Haz que te encuentren. Estrategias de posicionamiento en buscadores para aumentar tu tráfico orgánico. Auditoría técnica, optimización de contenidos y mejora de la autoridad de dominio.",
+        "features": [
+          "Auditoría SEO Técnica",
+          "Optimización On-Page",
+          "Estrategia de Contenidos",
+          "Reportes de Rendimiento"
+        ]
       }
     },
     "portfolio": {
-      "title": "Nuestro Portafolio",
-      "subtitle": "Mira nuestro último trabajo en acción",
-      "cta": "Ver Sitio en Vivo",
-      "tailored": {
-        "name": "Tailored Weddings RD",
-        "desc": "Sitio web de planificación de bodas de lujo con diseño elegante y soporte bilingüe.",
-        "link": "https://tailoredweddingsrd.com"
+      "title": "Casos de Éxito",
+      "subtitle": "Resultados reales para empresas visionarias",
+      "cta": "Explorar en Vivo",
+      "projects": {
+        "tailored": {
+          "name": "Tailored Weddings RD",
+          "category": "Sitio Web Premium",
+          "desc": "Plataforma premium para la planificación de bodas de destino. Un escaparate elegante que conecta parejas internacionales con servicios locales de lujo.",
+          "extendedDesc": "Desarrollamos una experiencia web inmersiva con galería de fotos dinámica, formulario de cotización personalizado, blog integrado y optimización SEO multiidioma para atraer parejas de Estados Unidos y Europa.",
+          "tech": [
+            "React",
+            "TypeScript",
+            "Tailwind CSS",
+            "Cloudflare"
+          ],
+          "results": [
+            "+300% tráfico orgánico en 6 meses",
+            "80+ consultas mensuales de parejas",
+            "Tiempo de carga <2 segundos"
+          ],
+          "link": "https://tailoredweddingsrd.com"
+        },
+        "nominalrd": {
+          "name": "NominalRD",
+          "category": "SaaS / Aplicación Web",
+          "desc": "Sistema integral de gestión de RRHH y nómina 100% enfocado en República Dominicana.",
+          "extendedDesc": "Plataforma SaaS completa con módulos de nómina, expedientes de empleados, reportes TSS/DGII, portal de empleados, y calculadora de prestaciones. Arquitectura multi-tenant para servir a múltiples empresas.",
+          "tech": [
+            "React",
+            "NestJS",
+            "PostgreSQL",
+            "AWS"
+          ],
+          "results": [
+            "15+ empresas activas",
+            "500+ empleados gestionados",
+            "99.9% uptime garantizado"
+          ],
+          "link": "https://nominalrd.com"
+        },
+        "gymtracker": {
+          "name": "GymTracker AI",
+          "category": "App Móvil / IA",
+          "desc": "Entrenador personal digital con planes de ejercicio generados por Inteligencia Artificial.",
+          "extendedDesc": "Aplicación móvil que aprende del progreso del usuario para crear rutinas adaptativas. Incluye seguimiento de ejercicios, métricas visuales, y sincronización multiplataforma.",
+          "tech": [
+            "React Native",
+            "OpenAI",
+            "Node.js",
+            "MongoDB"
+          ],
+          "results": [
+            "Beta privada exitosa",
+            "4.8★ valoración de testers",
+            "Lanzamiento Q2 2026"
+          ],
+          "link": "https://gymtracker.badiainnovations.com"
+        }
+      },
+      "testimonials": {
+        "title": "Lo que dicen nuestros clientes",
+        "items": [
+          {
+            "quote": "Badia Innovations transformó completamente nuestra presencia digital. El nuevo sitio web genera más consultas que nunca y se ve absolutamente profesional.",
+            "author": "Perla Jimenez",
+            "role": "CEO, Tailored Weddings RD",
+            "company": "Tailored Weddings RD"
+          },
+          {
+            "quote": "NominalRD nos ahorró horas de trabajo cada quincena. El cálculo de nómina es preciso y los reportes TSS se generan en segundos.",
+            "author": "Carlos Mejía",
+            "role": "Director de RRHH",
+            "company": "Empresa Comercial Dominicana"
+          },
+          {
+            "quote": "El equipo de desarrollo entiende nuestras necesidades locales. El soporte es rápido y hablan nuestro idioma, literalmente.",
+            "author": "Ana Martínez",
+            "role": "Gerente de Operaciones",
+            "company": "Distribuidora Nacional"
+          }
+        ]
       }
     },
-    "cta": "Inicia Tu Proyecto"
+    "cta": "Cotizar Mi Proyecto"
   },
   "whyUs": {
-    "title": "¿Por Qué Elegirnos?",
-    "subtitle": "Combinamos innovación con confiabilidad para entregar resultados excepcionales",
+    "title": "¿Por Qué Badia Innovations?",
+    "subtitle": "Más que proveedores, somos tus socios tecnológicos estratégicos",
     "stats": {
-      "clients": "Clientes Felices",
-      "projects": "Proyectos Entregados",
-      "experience": "Años de Experiencia",
-      "support": "Soporte 24/7"
+      "clients": "Socios Satisfechos",
+      "projects": "Soluciones Desplegadas",
+      "experience": "Años Innovando",
+      "support": "Soporte Garantizado"
     },
     "features": {
       "modern": {
-        "title": "Tecnología Moderna",
-        "desc": "Construido con los últimos frameworks y mejores prácticas"
+        "title": "Stack Tecnológico Moderno",
+        "desc": "Usamos tecnologías de vanguardia (React, Node, Cloud) para garantizar longevidad y rendimiento."
       },
       "security": {
-        "title": "Seguro y Confiable",
-        "desc": "Seguridad de nivel empresarial para tu tranquilidad"
+        "title": "Seguridad Primero",
+        "desc": "Implementamos las mejores prácticas de seguridad para proteger tus datos y los de tus usuarios."
       },
       "support": {
-        "title": "Soporte Dedicado",
-        "desc": "Asistencia experta cuando más la necesitas"
+        "title": "Acompañamiento Cercano",
+        "desc": "Comunicación constante y transparente durante todo el ciclo de desarrollo."
       },
       "scalable": {
-        "title": "Soluciones Escalables",
-        "desc": "Crece junto con las necesidades de tu negocio"
+        "title": "Preparado para Crecer",
+        "desc": "Arquitecturas diseñadas para escalar junto con tu éxito empresarial."
       }
     },
     "dashboard": {
-      "availableForHire": "Disponible para contratación",
-      "proVerified": "Pro Verificado",
+      "availableForHire": "Agenda Abierta",
+      "proVerified": "Verificado",
       "projects": "Proyectos",
       "clients": "Clientes",
-      "rating": "Calificación",
-      "recentActivity": "Actividad Reciente",
+      "rating": "Calidad",
+      "recentActivity": "Hitos Recientes",
       "activities": {
-        "deployed": "Desplegó nueva plataforma SaaS",
-        "optimized": "Optimizó velocidad de consultas",
-        "redesign": "Rediseño UI/UX para cliente"
+        "deployed": "Lanzamiento NominalRD V2",
+        "optimized": "Mejora de rendimiento del 40%",
+        "redesign": "Rediseño de Identidad Visual"
       },
-      "successRate": "Tasa de Éxito",
-      "coreTech": "Tecnologías Core",
+      "successRate": "Retención",
+      "coreTech": "Core Stack",
       "support": "Soporte",
-      "liveSupport": "24/7 en Vivo"
+      "liveSupport": "Prioritario"
     }
   },
   "about": {
-    "title": "Sobre Nosotros",
-    "subtitle": "Construyendo soluciones innovadoras con pasión y experiencia",
-    "badge": "Ingeniero de Software",
-    "heading": "Creando Excelencia Digital",
+    "title": "Quiénes Somos",
+    "subtitle": "Talento dominicano, estándares globales",
+    "badge": "Líder Técnico",
+    "heading": "Pasión por el Código y el Diseño",
     "description": {
-      "p1": "Hola, soy Isaías Badia, un ingeniero de software apasionado especializado en desarrollo full-stack y soluciones web innovadoras. Con experiencia en tecnologías modernas como React, Vue, NestJS, Laravel, Spring Boot y plataformas en la nube, transformo ideas en experiencias digitales poderosas.",
-      "p2": "Desde sistemas empresariales de RRHH como NominalRD hasta elegantes sitios web de planificación de bodas, he construido soluciones que combinan diseño hermoso con funcionalidad robusta. Cada proyecto es una oportunidad para superar límites y entregar valor excepcional.",
-      "p3": "Basado en República Dominicana, estoy comprometido a ayudar a las empresas a prosperar en la era digital a través de desarrollo de software personalizado, aplicaciones web modernas y consultoría técnica estratégica."
+      "p1": "Hola, soy Isaías Badia, fundador de Badia Innovations. Como ingeniero de software full-stack, mi misión es cerrar la brecha entre las necesidades empresariales complejas y soluciones digitales elegantes. Con una trayectoria sólida en tecnologías como React, Node.js y Cloud Computing, lidero un equipo enfocado en la excelencia.",
+      "p2": "Hemos creado desde cero plataformas críticas como NominalRD, facilitando la vida a cientos de empresas dominicanas. Creemos que el software bien hecho no solo funciona, sino que inspira.",
+      "p3": "Ubicados en República Dominicana, servimos a clientes locales e internacionales, ofreciendo la confiabilidad de un socio local con la calidad de una agencia global."
     },
-    "cta": "Conectar en LinkedIn",
+    "cta": "Ver Perfil Profesional",
     "highlights": {
       "experience": {
-        "title": "Experiencia Full-Stack",
-        "desc": "React, Vue, Node.js, Laravel, Spring Boot"
+        "title": "Experiencia Probada",
+        "desc": "Historial de proyectos exitosos y clientes recurrentes."
       },
       "innovation": {
-        "title": "Impulsado por Innovación",
-        "desc": "Soluciones de vanguardia para desafíos modernos"
+        "title": "Innovación Constante",
+        "desc": "Siempre aprendiendo e implementando lo nuevo."
       },
       "clients": {
-        "title": "Enfocado en el Cliente",
-        "desc": "Tu éxito es mi prioridad"
+        "title": "Centrados en Ti",
+        "desc": "Tu visión es nuestra hoja de ruta."
       },
       "quality": {
-        "title": "Calidad Primero",
-        "desc": "Código limpio, mejores prácticas, excelencia"
+        "title": "Excelencia Técnica",
+        "desc": "Código limpio, mantenible y documentado."
       }
     }
   },
   "cta": {
-    "title": "¿Listo para Transformar tu Negocio?",
-    "subtitle": "Construyamos algo increíble juntos. Contáctanos hoy para discutir tu proyecto.",
-    "button": "Ponte en Contacto",
-    "badge": "Trabajemos juntos",
-    "linkedin": "LinkedIn",
+    "title": "¿Tienes una Idea en Mente?",
+    "subtitle": "No dejes pasar el momento. Convirtamos esa visión en un producto digital exitoso.",
+    "button": "Hablemos Ahora",
+    "badge": "Consulta Gratuita",
+    "linkedin": "Conectar",
     "trust": {
-      "available": "Disponible para proyectos",
-      "fastResponse": "Tiempo de respuesta rápido",
-      "location": "Basado en República Dominicana"
+      "available": "Disponibilidad Inmediata",
+      "fastResponse": "Respuesta en < 24h",
+      "location": "Desarrollado en RD"
     }
   },
   "footer": {
-    "description": "Creando soluciones de software innovadoras que empoderan a las empresas a prosperar en la era digital.",
-    "products": "Productos",
-    "services": "Servicios",
+    "description": "Impulsando el ecosistema digital de República Dominicana con software de clase mundial.",
+    "products": "Soluciones",
+    "services": "Servicios Web",
     "contact": "Contacto",
-    "quickLinks": "Enlaces Rápidos",
+    "quickLinks": "Navegación",
     "rights": "Todos los derechos reservados.",
-    "privacy": "Política de Privacidad",
-    "terms": "Términos de Servicio",
+    "privacy": "Privacidad",
+    "terms": "Términos",
     "productsList": {
-      "nominal": "NominalRD",
-      "salaryCalc": "Calculadora de Salario",
-      "leavesCalc": "Calculadora de Despidos y Beneficios",
-      "gymtracker": "GymTracker"
+      "nominal": "NominalRD - Nómina",
+      "salaryCalc": "Calculadora Salario",
+      "leavesCalc": "Calculadora Prestaciones",
+      "gymtracker": "GymTracker AI"
     },
     "servicesList": {
-      "landing": "Páginas de Aterrizaje",
-      "business": "Sitios Web Empresariales",
-      "ecommerce": "Comercio Electrónico",
-      "custom": "Desarrollo Personalizado"
+      "landing": "Landing Pages",
+      "business": "Web Corporativa",
+      "ecommerce": "Tienda Online",
+      "custom": "Desarrollo a Medida"
     },
     "location": "República Dominicana",
-    "madeWith": "Hecho con",
+    "madeWith": "Desarrollado con",
     "in": "en"
   },
   "privacy": {
@@ -510,5 +855,20 @@
       "title": "Actualizaciones de Términos:",
       "content": "Nos reservamos el derecho de modificar estos Términos en cualquier momento. Le notificaremos de cualquier cambio material publicando los nuevos Términos en esta página y actualizando la fecha de \"Última Actualización\". Su uso continuado de nuestros Servicios después de tales cambios constituye su aceptación de los nuevos Términos."
     }
+  },
+  "blog": {
+    "latestInput": "Últimos Recursos",
+    "latestTitle": "Últimos Recursos",
+    "subtitle": "Ideas y noticias sobre tecnología, gestión empresarial y desarrollo de software.",
+    "pageTitle": "Blog & Recursos",
+    "pageSubtitle": "Artículos sobre tecnología, gestión empresarial y desarrollo de software para potenciar tu negocio.",
+    "readArticle": "Leer Artículo",
+    "readMore": "Leer más",
+    "viewAll": "Ver todos los artículos",
+    "notFound": "Artículo no encontrado",
+    "backToBlog": "Volver al Blog",
+    "readTimeLabel": "de lectura",
+    "author": "Autor",
+    "shareArticle": "Compartir este artículo"
   }
 }

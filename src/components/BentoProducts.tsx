@@ -145,7 +145,7 @@ const BentoProducts = () => {
         {/* Carousel */}
         <div className="relative max-w-4xl mx-auto">
           {/* Main Card */}
-          <div className="relative min-h-[580px] md:min-h-[500px]">
+          <div className="relative min-h-[520px] md:min-h-[440px]">
             <AnimatePresence initial={false} custom={direction} mode="wait">
               <motion.div
                 key={currentIndex}
@@ -161,17 +161,17 @@ const BentoProducts = () => {
                 }}
                 className="absolute inset-0"
               >
-                <div className="h-full glass rounded-3xl p-8 md:p-12 relative overflow-hidden">
+                <div className="h-full glass rounded-3xl p-6 md:p-10 relative overflow-hidden">
                   {/* Gradient accent */}
                   <div className="absolute top-0 right-0 w-40 h-40 bg-linear-to-br from-purple-600/20 to-purple-400/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/2" />
 
                   <div className="relative z-10 h-full flex flex-col">
                     {/* Header */}
-                    <div className="flex items-start justify-between mb-6">
+                    <div className="flex items-start justify-between mb-4">
                       <div
-                        className={`w-16 h-16 rounded-2xl bg-linear-to-br ${currentProduct.gradient} flex items-center justify-center shadow-lg`}
+                        className={`w-14 h-14 rounded-2xl bg-linear-to-br ${currentProduct.gradient} flex items-center justify-center shadow-lg`}
                       >
-                        <currentProduct.icon size={32} className="text-white" />
+                        <currentProduct.icon size={28} className="text-white" />
                       </div>
                       <span
                         className={`px-3 py-1 rounded-full ${currentProduct.badgeColor} text-xs font-semibold`}
@@ -181,12 +181,12 @@ const BentoProducts = () => {
                     </div>
 
                     {/* Content */}
-                    <h3 className="text-2xl md:text-3xl font-bold text-theme mb-3">
+                    <h3 className="text-xl md:text-2xl font-bold text-theme mb-2">
                       {isApp
                         ? t(`products.apps.items.${currentProduct.id}.name`)
                         : t(`products.tools.items.${currentProduct.id}.name`)}
                     </h3>
-                    <p className="text-muted mb-6 leading-relaxed">
+                    <p className="text-muted text-sm mb-4 leading-relaxed line-clamp-3">
                       {isApp
                         ? t(`products.apps.items.${currentProduct.id}.desc`)
                         : t(`products.tools.items.${currentProduct.id}.desc`)}
@@ -194,48 +194,48 @@ const BentoProducts = () => {
 
                     {/* Features */}
                     {currentProduct.features ? (
-                      <div className="grid grid-cols-2 gap-3 mb-6">
+                      <div className="grid grid-cols-2 gap-2 mb-4 flex-shrink-0">
                         {currentProduct.features.map((feature, i) => (
                           <div
                             key={i}
-                            className="flex items-center gap-2 glass-light rounded-xl p-3"
+                            className="flex items-center gap-2 glass-light rounded-lg p-2"
                           >
                             <feature.icon
-                              size={16}
-                              className="text-purple-500"
+                              size={14}
+                              className="text-purple-500 flex-shrink-0"
                             />
-                            <span className="text-sm text-muted">
+                            <span className="text-xs text-muted truncate">
                               {feature.label}
                             </span>
                           </div>
                         ))}
                       </div>
                     ) : (
-                      <div className="grid grid-cols-2 gap-3 mb-6">
+                      <div className="grid grid-cols-2 gap-2 mb-4 flex-shrink-0">
                         {(
                           (isApp
                             ? t(
-                                `products.apps.items.${currentProduct.id}.features`,
-                                {
-                                  returnObjects: true,
-                                }
-                              )
+                              `products.apps.items.${currentProduct.id}.features`,
+                              {
+                                returnObjects: true,
+                              }
+                            )
                             : t(
-                                `products.tools.items.${currentProduct.id}.features`,
-                                {
-                                  returnObjects: true,
-                                }
-                              )) as string[]
+                              `products.tools.items.${currentProduct.id}.features`,
+                              {
+                                returnObjects: true,
+                              }
+                            )) as string[]
                         ).map((feature: string, i: number) => (
                           <div
                             key={i}
-                            className="flex items-center gap-2 glass-light rounded-xl p-3"
+                            className="flex items-center gap-2 glass-light rounded-lg p-2"
                           >
                             <CheckCircle2
-                              size={16}
-                              className="text-purple-500"
+                              size={14}
+                              className="text-purple-500 flex-shrink-0"
                             />
-                            <span className="text-sm text-muted">
+                            <span className="text-xs text-muted truncate">
                               {feature}
                             </span>
                           </div>
@@ -243,30 +243,32 @@ const BentoProducts = () => {
                       </div>
                     )}
 
-                    {/* CTA */}
-                    {currentProduct.id === "gymtracker" ? (
-                      <div className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-surface-2 border border-theme text-muted font-medium cursor-not-allowed opacity-60">
-                        {t("products.apps.items.gymtracker.cta")}
-                      </div>
-                    ) : (
-                      <a
-                        href={
-                          isApp
-                            ? t(`products.apps.items.${currentProduct.id}.link`)
-                            : t(
+                    {/* CTA - always at bottom */}
+                    <div className="mt-auto pt-4">
+                      {currentProduct.id === "gymtracker" ? (
+                        <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-surface-2 border border-theme text-muted font-medium cursor-not-allowed opacity-60 text-sm">
+                          {t("products.apps.items.gymtracker.cta")}
+                        </div>
+                      ) : (
+                        <a
+                          href={
+                            isApp
+                              ? t(`products.apps.items.${currentProduct.id}.link`)
+                              : t(
                                 `products.tools.items.${currentProduct.id}.link`
                               )
-                        }
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-linear-to-r from-purple-600 to-purple-500 text-white font-medium hover:from-purple-500 hover:to-purple-400 transition-all w-fit"
-                      >
-                        {isApp
-                          ? t(`products.apps.items.${currentProduct.id}.cta`)
-                          : t(`products.tools.items.${currentProduct.id}.cta`)}
-                        <ArrowUpRight size={16} />
-                      </a>
-                    )}
+                          }
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-linear-to-r from-purple-600 to-purple-500 text-white font-medium hover:from-purple-500 hover:to-purple-400 transition-all w-fit text-sm"
+                        >
+                          {isApp
+                            ? t(`products.apps.items.${currentProduct.id}.cta`)
+                            : t(`products.tools.items.${currentProduct.id}.cta`)}
+                          <ArrowUpRight size={14} />
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
               </motion.div>
@@ -295,11 +297,10 @@ const BentoProducts = () => {
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`h-2 rounded-full transition-all ${
-                  index === currentIndex
+                className={`h-2 rounded-full transition-all ${index === currentIndex
                     ? "w-8 bg-purple-500"
                     : "w-2 bg-surface-3 hover:bg-purple-500/50"
-                }`}
+                  }`}
                 aria-label={`Go to product ${index + 1}`}
               />
             ))}

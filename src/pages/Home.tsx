@@ -2,6 +2,7 @@ import HeroSection from "../components/HeroSection";
 import BentoProducts from "../components/BentoProducts";
 import ServicesSection from "../components/ServicesSection";
 import AboutSection from "../components/AboutSection";
+import RecentPosts from "../components/RecentPosts";
 import CTASection from "../components/CTASection";
 
 const Home = () => {
@@ -11,6 +12,7 @@ const Home = () => {
       <BentoProducts />
       <ServicesSection />
       <AboutSection />
+      <RecentPosts />
       <CTASection />
     </>
   );

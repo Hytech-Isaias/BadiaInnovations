@@ -4,7 +4,6 @@ import {
   Globe,
   Code2,
   ShoppingCart,
-  ArrowUpRight,
   ExternalLink,
   Smartphone,
   Blocks,
@@ -182,7 +181,6 @@ const ServicesSection = () => {
             </motion.div>
           ))}
         </motion.div>
-
         {/* Portfolio showcase */}
         <motion.div
           id="portfolio"
@@ -191,98 +189,164 @@ const ServicesSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-theme mb-2">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-bold text-theme mb-4">
               {t("services.portfolio.title")}
-            </h3>
-            <p className="text-muted">{t("services.portfolio.subtitle")}</p>
+            </h2>
+            <p className="text-muted text-lg max-w-2xl mx-auto">{t("services.portfolio.subtitle")}</p>
           </div>
 
-          <a
-            href="https://tailoredweddingsrd.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block group"
-          >
-            <div className="glass rounded-3xl p-8 md:p-12 hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                {/* Preview */}
-                <div className="relative">
-                  <div className="aspect-16/10 rounded-2xl overflow-hidden bg-surface-2 border border-theme relative group-hover:border-purple-500/30 transition-colors">
-                    {/* Browser chrome mockup */}
-                    <div className="absolute top-0 left-0 right-0 h-8 bg-surface-3 flex items-center gap-2 px-4">
-                      <div className="flex gap-1.5">
-                        <div className="w-3 h-3 rounded-full bg-red-400/70" />
-                        <div className="w-3 h-3 rounded-full bg-yellow-400/70" />
-                        <div className="w-3 h-3 rounded-full bg-green-400/70" />
-                      </div>
-                      <div className="flex-1 flex justify-center">
-                        <div className="px-4 py-1 rounded-md bg-surface-2 text-xs text-muted truncate max-w-[200px]">
-                          tailoredweddingsrd.com
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Content area */}
-                    <div className="absolute inset-0 top-8">
-                      <img
-                        src={tailoredWeddingsImg.img.src}
-                        alt="Tailored Weddings RD Website"
-                        className="w-full h-full object-cover object-top"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    </div>
+          {/* Projects Grid */}
+          <div className="grid md:grid-cols-3 gap-6 mb-16">
+            {/* Tailored Weddings */}
+            <a
+              href={t("services.portfolio.projects.tailored.link")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block group"
+            >
+              <div className="h-full glass rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300">
+                <div className="h-48 overflow-hidden relative bg-surface-2">
+                  <img
+                    src={tailoredWeddingsImg.img.src}
+                    alt="Tailored Weddings RD"
+                    className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute top-3 left-3">
+                    <span className="px-3 py-1 bg-purple-600/90 backdrop-blur-sm rounded-full text-xs text-white font-medium">
+                      {t("services.portfolio.projects.tailored.category")}
+                    </span>
                   </div>
-
-                  {/* Floating accent */}
-                  <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-linear-to-br from-purple-600 to-purple-400 rounded-full blur-2xl opacity-40 group-hover:opacity-60 transition-opacity" />
                 </div>
-
-                {/* Info */}
-                <div>
-                  <div className="flex items-center gap-2 mb-4">
-                    <h4 className="text-2xl font-bold text-theme">
-                      {t("services.portfolio.tailored.name")}
+                <div className="p-6">
+                  <div className="flex items-center gap-2 mb-3">
+                    <h4 className="text-xl font-bold text-theme group-hover:text-purple-500 transition-colors">
+                      {t("services.portfolio.projects.tailored.name")}
                     </h4>
-                    <ExternalLink
-                      size={20}
-                      className="text-muted group-hover:text-purple-500 transition-colors"
-                    />
+                    <ExternalLink size={16} className="text-muted" />
                   </div>
-
-                  <p className="text-muted mb-6 leading-relaxed">
-                    {t("services.portfolio.tailored.desc")}
+                  <p className="text-muted text-sm mb-4 line-clamp-2">
+                    {t("services.portfolio.projects.tailored.desc")}
                   </p>
-
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {[
-                      "React",
-                      "TailwindCSS",
-                      "Framer Motion",
-                      "i18n",
-                      "Sanity CMS",
-                    ].map((tech) => (
-                      <span
-                        key={tech}
-                        className="px-3 py-1.5 glass-light rounded-lg text-xs text-muted font-medium"
-                      >
+                  <div className="flex flex-wrap gap-1.5">
+                    {(t("services.portfolio.projects.tailored.tech", { returnObjects: true }) as string[]).slice(0, 3).map((tech) => (
+                      <span key={tech} className="px-2 py-1 glass-light rounded text-xs text-muted">
                         {tech}
                       </span>
                     ))}
                   </div>
+                </div>
+              </div>
+            </a>
 
-                  <div className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-linear-to-r from-purple-600 to-purple-500 text-white font-medium group-hover:from-purple-500 group-hover:to-purple-400 transition-all">
-                    {t("services.portfolio.cta")}
-                    <ArrowUpRight
-                      size={16}
-                      className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"
-                    />
+            {/* NominalRD */}
+            <a
+              href={t("services.portfolio.projects.nominalrd.link")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block group"
+            >
+              <div className="h-full glass rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300">
+                <div className="h-48 overflow-hidden relative bg-gradient-to-br from-purple-900 to-purple-700 flex items-center justify-center">
+                  <div className="text-6xl font-black text-white/20">NRD</div>
+                  <div className="absolute top-3 left-3">
+                    <span className="px-3 py-1 bg-purple-600/90 backdrop-blur-sm rounded-full text-xs text-white font-medium">
+                      {t("services.portfolio.projects.nominalrd.category")}
+                    </span>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center gap-2 mb-3">
+                    <h4 className="text-xl font-bold text-theme group-hover:text-purple-500 transition-colors">
+                      {t("services.portfolio.projects.nominalrd.name")}
+                    </h4>
+                    <ExternalLink size={16} className="text-muted" />
+                  </div>
+                  <p className="text-muted text-sm mb-4 line-clamp-2">
+                    {t("services.portfolio.projects.nominalrd.desc")}
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {(t("services.portfolio.projects.nominalrd.tech", { returnObjects: true }) as string[]).slice(0, 3).map((tech) => (
+                      <span key={tech} className="px-2 py-1 glass-light rounded text-xs text-muted">
+                        {tech}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>
+            </a>
+
+            {/* GymTracker */}
+            <a
+              href={t("services.portfolio.projects.gymtracker.link")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block group"
+            >
+              <div className="h-full glass rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300">
+                <div className="h-48 overflow-hidden relative bg-gradient-to-br from-green-900 to-emerald-700 flex items-center justify-center">
+                  <div className="text-6xl font-black text-white/20">GT</div>
+                  <div className="absolute top-3 left-3">
+                    <span className="px-3 py-1 bg-emerald-600/90 backdrop-blur-sm rounded-full text-xs text-white font-medium">
+                      {t("services.portfolio.projects.gymtracker.category")}
+                    </span>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center gap-2 mb-3">
+                    <h4 className="text-xl font-bold text-theme group-hover:text-purple-500 transition-colors">
+                      {t("services.portfolio.projects.gymtracker.name")}
+                    </h4>
+                    <ExternalLink size={16} className="text-muted" />
+                  </div>
+                  <p className="text-muted text-sm mb-4 line-clamp-2">
+                    {t("services.portfolio.projects.gymtracker.desc")}
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {(t("services.portfolio.projects.gymtracker.tech", { returnObjects: true }) as string[]).slice(0, 3).map((tech) => (
+                      <span key={tech} className="px-2 py-1 glass-light rounded text-xs text-muted">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          {/* Testimonials */}
+          <div className="mt-20">
+            <h3 className="text-2xl md:text-3xl font-bold text-theme text-center mb-10">
+              {t("services.portfolio.testimonials.title")}
+            </h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              {(t("services.portfolio.testimonials.items", { returnObjects: true }) as Array<{ quote: string, author: string, role: string, company: string }>).map((testimonial, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                  className="glass rounded-2xl p-6"
+                >
+                  <div className="text-purple-500 text-4xl mb-4">"</div>
+                  <p className="text-muted text-sm mb-6 leading-relaxed italic">
+                    {testimonial.quote}
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-600 to-purple-400 flex items-center justify-center text-white font-bold text-sm">
+                      {testimonial.author.split(' ').map(n => n[0]).join('')}
+                    </div>
+                    <div>
+                      <p className="text-theme font-semibold text-sm">{testimonial.author}</p>
+                      <p className="text-muted text-xs">{testimonial.role}</p>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
             </div>
-          </a>
+          </div>
         </motion.div>
       </div>
     </section>

@@ -34,6 +34,7 @@ const Navbar = () => {
     { name: t("nav.products"), path: "#products" },
     { name: t("nav.services"), path: "#services" },
     { name: t("nav.portfolio"), path: "#portfolio" },
+    { name: t("nav.blog", "Recursos"), path: "/blog" },
     { name: t("nav.about"), path: "#about" },
   ];
 
@@ -41,8 +42,18 @@ const Navbar = () => {
     if (path === "/") {
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else if (path.startsWith("#")) {
-      const element = document.querySelector(path);
-      element?.scrollIntoView({ behavior: "smooth" });
+      // Check if we are on the home page
+      if (location.pathname !== "/") {
+        // If not on home, we might need to navigate to home first then scroll
+        // But for now let's assume hash links are mostly for home page
+        window.location.href = "/" + path;
+      } else {
+        const element = document.querySelector(path);
+        element?.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // Normal navigation
+      window.location.href = path; // Or use navigate from react-router but this works fine
     }
   };
 

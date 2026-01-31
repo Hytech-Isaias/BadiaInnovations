@@ -183,6 +183,7 @@
     "title": "Desarrollo y Consultoría Tecnológica",
     "subtitle": "Servicios profesionales para llevar tu presencia digital al siguiente nivel",
     "desc": "No solo escribimos código; creamos soluciones estratégicas. Desde la identidad de marca hasta sistemas complejos, nuestro equipo entrega calidad, rendimiento y seguridad.",
+    "learnMore": "Más Información",
     "items": {
       "landing": {
         "name": "Landing Pages de Alta Conversión",
@@ -397,11 +398,11 @@
             "React",
             "TypeScript",
             "Tailwind CSS",
-            "Cloudflare"
+            "DigitalOcean"
           ],
           "results": [
-            "+300% tráfico orgánico en 6 meses",
-            "80+ consultas mensuales de parejas",
+            "+100% tráfico orgánico en 6 meses",
+            "10+ consultas mensuales de parejas",
             "Tiempo de carga <2 segundos"
           ],
           "link": "https://tailoredweddingsrd.com"
@@ -413,13 +414,13 @@
           "extendedDesc": "Plataforma SaaS completa con módulos de nómina, expedientes de empleados, reportes TSS/DGII, portal de empleados, y calculadora de prestaciones. Arquitectura multi-tenant para servir a múltiples empresas.",
           "tech": [
             "React",
-            "NestJS",
+            "Spring Boot",
             "PostgreSQL",
-            "AWS"
+            "DigitalOcean"
           ],
           "results": [
-            "15+ empresas activas",
-            "500+ empleados gestionados",
+            "1+ empresas activas",
+            "10+ empleados gestionados",
             "99.9% uptime garantizado"
           ],
           "link": "https://nominalrd.com"
@@ -427,13 +428,13 @@
         "gymtracker": {
           "name": "GymTracker AI",
           "category": "App Móvil / IA",
-          "desc": "Entrenador personal digital con planes de ejercicio generados por Inteligencia Artificial.",
+          "desc": "Entrenador personal digital con rutinas de ejercicio generadas por Inteligencia Artificial.",
           "extendedDesc": "Aplicación móvil que aprende del progreso del usuario para crear rutinas adaptativas. Incluye seguimiento de ejercicios, métricas visuales, y sincronización multiplataforma.",
           "tech": [
             "React Native",
-            "OpenAI",
-            "Node.js",
-            "MongoDB"
+            "Next.js",
+            "Gemini API",
+            "PostgreSQL"
           ],
           "results": [
             "Beta privada exitosa",

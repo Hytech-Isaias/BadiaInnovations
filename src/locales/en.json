@@ -180,9 +180,10 @@
     }
   },
   "services": {
-    "title": "Development & Tech Consulting",
+    "title": "Development & Technology Consulting",
     "subtitle": "Professional services to take your digital presence to the next level",
-    "desc": "We don’t just write code; we create strategic solutions. From brand identity to complex systems, our team delivers quality, performance, and security.",
+    "desc": "We don't just write code; we create strategic solutions. From brand identity to complex systems, our team delivers quality, performance, and security.",
+    "learnMore": "Learn More",
     "items": {
       "landing": {
         "name": "High Conversion Landing Pages",
@@ -397,11 +398,11 @@
             "React",
             "TypeScript",
             "Tailwind CSS",
-            "Cloudflare"
+            "DigitalOcean"
           ],
           "results": [
-            "+300% organic traffic in 6 months",
-            "80+ monthly couple inquiries",
+            "+100% organic traffic in 6 months",
+            "10+ monthly couple inquiries",
             "Load time <2 seconds"
           ],
           "link": "https://tailoredweddingsrd.com"
@@ -413,13 +414,13 @@
           "extendedDesc": "Complete SaaS platform with payroll modules, employee files, TSS/DGII reports, employee portal, and benefits calculator. Multi-tenant architecture to serve multiple companies.",
           "tech": [
             "React",
-            "NestJS",
+            "Spring Boot",
             "PostgreSQL",
-            "AWS"
+            "DigitalOcean"
           ],
           "results": [
-            "15+ active companies",
-            "500+ employees managed",
+            "1+ active companies",
+            "10+ employees managed",
             "99.9% uptime guaranteed"
           ],
           "link": "https://nominalrd.com"
@@ -431,9 +432,9 @@
           "extendedDesc": "Mobile application that learns from user progress to create adaptive routines. Includes exercise tracking, visual metrics, and multi-platform synchronization.",
           "tech": [
             "React Native",
-            "OpenAI",
-            "Node.js",
-            "MongoDB"
+            "Gemini API",
+            "Next.js",
+            "PostgreSQL"
           ],
           "results": [
             "Successful private beta",

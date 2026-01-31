@@ -16,12 +16,14 @@ import {
 } from "lucide-react";
 import useThemeStore from "../store/themeStore";
 import { useState, useEffect } from "react";
+import ProductModal from "./ProductModal";
 
 const BentoProducts = () => {
   const { t } = useTranslation();
   const { theme } = useThemeStore();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(0);
+  const [selectedProduct, setSelectedProduct] = useState<{ id: string, type: 'apps' | 'tools' } | null>(null);
 
   const products = [
     {
@@ -244,7 +246,16 @@ const BentoProducts = () => {
                     )}
 
                     {/* CTA - always at bottom */}
-                    <div className="mt-auto pt-4">
+                    <div className="mt-auto pt-4 flex flex-wrap gap-3">
+                      {/* Secondary Action: Learn More */}
+                      <button
+                        onClick={() => setSelectedProduct({ id: currentProduct.id, type: isApp ? 'apps' : 'tools' })}
+                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-surface-2 border border-theme text-theme font-medium hover:bg-surface-3 transition-colors text-sm"
+                      >
+                        {t("services.learnMore", "Learn More")}
+                      </button>
+
+                      {/* Primary Action */}
                       {currentProduct.id === "gymtracker" ? (
                         <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-surface-2 border border-theme text-muted font-medium cursor-not-allowed opacity-60 text-sm">
                           {t("products.apps.items.gymtracker.cta")}
@@ -260,7 +271,7 @@ const BentoProducts = () => {
                           }
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-linear-to-r from-purple-600 to-purple-500 text-white font-medium hover:from-purple-500 hover:to-purple-400 transition-all w-fit text-sm"
+                          className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-purple-600 to-purple-500 text-white font-medium hover:from-purple-500 hover:to-purple-400 transition-all text-sm"
                         >
                           {isApp
                             ? t(`products.apps.items.${currentProduct.id}.cta`)
@@ -298,8 +309,8 @@ const BentoProducts = () => {
                 key={index}
                 onClick={() => goToSlide(index)}
                 className={`h-2 rounded-full transition-all ${index === currentIndex
-                    ? "w-8 bg-purple-500"
-                    : "w-2 bg-surface-3 hover:bg-purple-500/50"
+                  ? "w-8 bg-purple-500"
+                  : "w-2 bg-surface-3 hover:bg-purple-500/50"
                   }`}
                 aria-label={`Go to product ${index + 1}`}
               />
@@ -307,6 +318,16 @@ const BentoProducts = () => {
           </div>
         </div>
       </div>
+
+      {/* Product Modal */}
+      {selectedProduct && (
+        <ProductModal
+          isOpen={!!selectedProduct}
+          onClose={() => setSelectedProduct(null)}
+          productId={selectedProduct.id}
+          productType={selectedProduct.type}
+        />
+      )}
     </section>
   );
 };

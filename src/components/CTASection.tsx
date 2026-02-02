@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import {
   Sparkles,
@@ -13,6 +14,7 @@ import useThemeStore from "../store/themeStore";
 const CTASection = () => {
   const { t } = useTranslation();
   const { theme } = useThemeStore();
+  const navigate = useNavigate();
 
   const features = [
     {
@@ -39,7 +41,6 @@ const CTASection = () => {
 
   return (
     <>
-      {/* Why Choose Us */}
       {/* Why Choose Us */}
       <section className="py-24 bg-surface relative overflow-hidden">
         <div
@@ -303,7 +304,11 @@ const CTASection = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a
-                href="mailto:support@badiainnovations.com"
+                href="/contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate("/contact");
+                }}
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl font-semibold text-white relative overflow-hidden"

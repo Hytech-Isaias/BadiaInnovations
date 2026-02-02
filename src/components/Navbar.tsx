@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import clsx from "clsx";
@@ -16,6 +16,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,7 +54,7 @@ const Navbar = () => {
       }
     } else {
       // Normal navigation
-      window.location.href = path; // Or use navigate from react-router but this works fine
+      navigate(path);
     }
   };
 
@@ -63,7 +64,7 @@ const Navbar = () => {
         "fixed w-full z-50 transition-all duration-500",
         isScrolled
           ? "glass py-3 shadow-lg shadow-black/10"
-          : "bg-transparent py-5"
+          : "bg-transparent py-5",
       )}
     >
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
@@ -119,10 +120,10 @@ const Navbar = () => {
           </div>
 
           <motion.a
-            href="#contact"
+            href="/contact"
             onClick={(e) => {
               e.preventDefault();
-              handleNavClick("#contact");
+              handleNavClick("/contact");
             }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
@@ -156,7 +157,7 @@ const Navbar = () => {
             exit={{ opacity: 0, height: 0 }}
             className={clsx(
               "absolute top-full left-0 w-full md:hidden overflow-hidden border-b",
-              theme === "dark" ? "border-white/10" : "border-black/10"
+              theme === "dark" ? "border-white/10" : "border-black/10",
             )}
             style={{
               backgroundColor:
@@ -185,10 +186,10 @@ const Navbar = () => {
               </div>
 
               <a
-                href="#contact"
+                href="/contact"
                 onClick={(e) => {
                   e.preventDefault();
-                  handleNavClick("#contact");
+                  handleNavClick("/contact");
                   setIsOpen(false);
                 }}
                 className="bg-linear-to-r from-purple-600 to-purple-500 text-white px-6 py-3 rounded-full text-center font-medium"

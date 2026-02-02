@@ -482,7 +482,7 @@
     "features": {
       "modern": {
         "title": "Stack Tecnológico Moderno",
-        "desc": "Usamos tecnologías de vanguardia (React, Node, Cloud) para garantizar longevidad y rendimiento."
+        "desc": "Usamos tecnologías de vanguardia para garantizar longevidad y rendimiento."
       },
       "security": {
         "title": "Seguridad Primero",
@@ -555,6 +555,25 @@
       "available": "Disponibilidad Inmediata",
       "fastResponse": "Respuesta en < 24h",
       "location": "Desarrollado en RD"
+    }
+  },
+  "contactPage": {
+    "title": "Contáctanos",
+    "subtitle": "¿Tienes un proyecto en mente? Convirtamos tu visión en realidad.",
+    "form": {
+      "name": "Nombre Completo",
+      "email": "Correo Electrónico",
+      "subject": "Asunto",
+      "message": "Mensaje",
+      "submit": "Enviar Mensaje",
+      "sending": "Enviando...",
+      "success": "¡Mensaje enviado con éxito!",
+      "error": "Error al enviar el mensaje. Por favor intenta de nuevo."
+    },
+    "info": {
+      "email": "Escríbenos",
+      "location": "Ubicación",
+      "social": "Síguenos"
     }
   },
   "footer": {

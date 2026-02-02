@@ -481,5 +481,1180 @@ export const blogPostsEN: BlogPost[] = [
 
       <p class="mb-4">At <strong>Badia Innovations</strong>, we apply these principles to every landing page we create, combining attractive design with proven conversion strategy.</p>
     `
+    },
+    {
+        id: "13",
+        slug: "complete-guide-create-react-app-2026",
+        title: "Complete Guide: Building Your First React App in 2026",
+        excerpt: "Learn step by step how to create a modern React application from scratch using Vite, functional components, hooks, and current frontend development best practices.",
+        author: "Isaías Badia",
+        date: "February 3, 2026",
+        readTime: "12 min",
+        category: "Web Development",
+        image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&q=80&w=1000",
+        content: `
+      <p class="mb-4">React remains the most popular frontend framework in 2026, and for good reasons. Its mature ecosystem, abundance of learning resources, and job market demand make it the ideal choice for developers who want to build modern, scalable interfaces.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Why React in 2026?</h2>
+      <p class="mb-4">Before diving into the code, it's important to understand why React is still relevant:</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Mature ecosystem:</strong> Thousands of production-tested libraries.</li>
+        <li><strong>Server Components:</strong> React 19 introduced hybrid rendering that improves SEO and performance.</li>
+        <li><strong>Active community:</strong> Fast answers on Stack Overflow, Discord, and GitHub.</li>
+        <li><strong>Job market:</strong> Highest demand for frontend developers globally.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Step 1: Set Up Your Development Environment</h2>
+      <p class="mb-4">First, make sure you have Node.js 18+ installed. Then, we'll use Vite to create our project:</p>
+      <pre class="bg-gray-900 text-green-400 p-4 rounded-lg mb-4 overflow-x-auto"><code>npm create vite@latest my-first-app -- --template react-ts
+cd my-first-app
+npm install
+npm run dev</code></pre>
+      <p class="mb-4">Vite offers instant startup times and ultra-fast Hot Module Replacement (HMR), drastically improving the development experience compared to Create React App.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Step 2: Understand the Project Structure</h2>
+      <p class="mb-4">Your project will have this basic structure:</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>src/main.tsx:</strong> Application entry point.</li>
+        <li><strong>src/App.tsx:</strong> Root component.</li>
+        <li><strong>src/components/:</strong> Folder for your reusable components.</li>
+        <li><strong>public/:</strong> Static files (favicon, images).</li>
+        <li><strong>vite.config.ts:</strong> Vite configuration.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Step 3: Create Your First Component</h2>
+      <p class="mb-4">Components are the heart of React. Let's create a reusable card component:</p>
+      <pre class="bg-gray-900 text-green-400 p-4 rounded-lg mb-4 overflow-x-auto"><code>// src/components/Card.tsx
+interface CardProps {
+  title: string;
+  description: string;
+  imageUrl?: string;
+}
+
+export function Card({ title, description, imageUrl }: CardProps) {
+  return (
+    &lt;div className="rounded-xl shadow-lg overflow-hidden bg-white"&gt;
+      {imageUrl && (
+        &lt;img src={imageUrl} alt={title} className="w-full h-48 object-cover" /&gt;
+      )}
+      &lt;div className="p-6"&gt;
+        &lt;h3 className="text-xl font-bold mb-2"&gt;{title}&lt;/h3&gt;
+        &lt;p className="text-gray-600"&gt;{description}&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Step 4: Handle State with useState</h2>
+      <p class="mb-4">React uses hooks to manage state. The most basic is useState:</p>
+      <pre class="bg-gray-900 text-green-400 p-4 rounded-lg mb-4 overflow-x-auto"><code>import { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;You clicked {count} times&lt;/p&gt;
+      &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+        Increment
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Step 5: Side Effects with useEffect</h2>
+      <p class="mb-4">For operations like API calls, we use useEffect:</p>
+      <pre class="bg-gray-900 text-green-400 p-4 rounded-lg mb-4 overflow-x-auto"><code>import { useState, useEffect } from 'react';
+
+function UserList() {
+  const [users, setUsers] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch('https://api.example.com/users')
+      .then(res => res.json())
+      .then(data => {
+        setUsers(data);
+        setLoading(false);
+      });
+  }, []); // Empty array = run only on mount
+
+  if (loading) return &lt;p&gt;Loading...&lt;/p&gt;;
+  
+  return (
+    &lt;ul&gt;
+      {users.map(user =&gt; &lt;li key={user.id}&gt;{user.name}&lt;/li&gt;)}
+    &lt;/ul&gt;
+  );
+}</code></pre>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Step 6: Deploy Your Application</h2>
+      <p class="mb-4">Once your app is ready, deploy it for free on Vercel:</p>
+      <ol class="list-decimal pl-6 mb-6 space-y-2">
+        <li>Push your code to GitHub.</li>
+        <li>Go to <a href="https://vercel.com" class="text-purple-500 hover:underline">vercel.com</a> and connect your repository.</li>
+        <li>Vercel will automatically detect it's a Vite app.</li>
+        <li>Click Deploy and you're done!</li>
+      </ol>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Next Steps</h2>
+      <p class="mb-4">Now that you have your first React app running, we recommend exploring:</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li>React Router for page navigation.</li>
+        <li>TanStack Query for advanced data management.</li>
+        <li>Tailwind CSS for fast, consistent styling.</li>
+        <li>TypeScript if you're not using it yet.</li>
+      </ul>
+
+      <p class="mb-4">Need help developing your React application? At <strong>Badia Innovations</strong> we create modern, scalable web applications. <a href="/contact" class="text-purple-500 hover:underline">Contact us</a> for your next project.</p>
+    `
+    },
+    {
+        id: "14",
+        slug: "tailwind-css-vs-traditional-css",
+        title: "Tailwind CSS vs Traditional CSS: When to Use Each",
+        excerpt: "In-depth analysis comparing Tailwind CSS with traditional CSS. Discover the advantages, disadvantages, and ideal use cases for each approach in modern projects.",
+        author: "Isaías Badia",
+        date: "February 7, 2026",
+        readTime: "10 min",
+        category: "Web Development",
+        image: "https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19?auto=format&fit=crop&q=80&w=1000",
+        content: `
+      <p class="mb-4">The debate between Tailwind CSS and traditional CSS has divided the frontend developer community. In this article, we objectively analyze both approaches to help you make the best decision for your project.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">What is Tailwind CSS?</h2>
+      <p class="mb-4">Tailwind is a "utility-first" CSS framework that provides atomic classes for building designs directly in your HTML. Instead of writing custom CSS, you combine classes like <code>flex</code>, <code>pt-4</code>, <code>text-center</code>.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Traditional CSS: The Classic Approach</h2>
+      <p class="mb-4">With traditional CSS (or methodologies like BEM), you completely separate styles from structure.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">When to Choose Tailwind CSS</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Component-based projects:</strong> React, Vue, Svelte where you encapsulate logic and styles.</li>
+        <li><strong>Large teams:</strong> Fewer merge conflicts, automatic consistency.</li>
+        <li><strong>Rapid prototyping:</strong> MVPs and proof of concepts where speed matters.</li>
+        <li><strong>Design systems:</strong> When you want consistent design tokens.</li>
+        <li><strong>Full-stack developers:</strong> Less context-switching between files.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">When to Choose Traditional CSS</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Complex animations:</strong> Traditional CSS offers more granular control.</li>
+        <li><strong>Projects without JS framework:</strong> Static sites, WordPress themes.</li>
+        <li><strong>Highly custom designs:</strong> When styles are unique to each element.</li>
+        <li><strong>CSS-first teams:</strong> If your team has designers who write pure CSS.</li>
+        <li><strong>Legacy projects:</strong> Maintaining consistency with existing code.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Our Recommendation</h2>
+      <p class="mb-4">At <strong>Badia Innovations</strong>, we use Tailwind CSS for most React and Vue projects because it significantly accelerates development. However, we complement with custom CSS when the design requires it.</p>
+
+      <p class="mb-4">Need help choosing the right stack for your project? <a href="/contact" class="text-purple-500 hover:underline">Contact us</a> for a free consultation.</p>
+    `
+    },
+    {
+        id: "15",
+        slug: "digital-branding-dominican-businesses",
+        title: "Digital Branding for Dominican Businesses: From Idea to Identity",
+        excerpt: "Complete guide to creating a solid digital brand identity in the Dominican Republic. From defining values to visual implementation across all channels.",
+        author: "Isaías Badia",
+        date: "February 10, 2026",
+        readTime: "11 min",
+        category: "Branding",
+        image: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&q=80&w=1000",
+        content: `
+      <p class="mb-4">In the competitive Dominican market, a solid digital brand can be the difference between success and anonymity. This article will guide you step by step in creating a brand identity that resonates with your local and international audience.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">What is Digital Branding?</h2>
+      <p class="mb-4">Digital branding goes beyond a pretty logo. It's the sum of all interactions a customer has with your brand in the digital world: your website, social media, emails, apps, and any online touchpoint.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Step 1: Define Your Brand Essence</h2>
+      <p class="mb-4">Before designing any visual element, answer these fundamental questions:</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Mission:</strong> Why does your company exist beyond making money?</li>
+        <li><strong>Vision:</strong> What does the world look like if your company succeeds?</li>
+        <li><strong>Values:</strong> What principles guide every decision?</li>
+        <li><strong>Personality:</strong> If your brand were a person, what would they be like?</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Step 2: Research Your Market</h2>
+      <p class="mb-4">The Dominican market has unique characteristics:</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Visual culture:</strong> Dominicans respond well to vibrant colors and dynamic designs.</li>
+        <li><strong>Bilingualism:</strong> Consider if your brand should work in Spanish and English.</li>
+        <li><strong>Mobile-first:</strong> Most access the internet from mobile devices.</li>
+        <li><strong>Social media:</strong> Instagram and WhatsApp dominate communication.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Step 3: Create Your Visual Identity</h2>
+      <p class="mb-4">Visual elements include logo, color palette, and typography. Each must be consistent across all channels.</p>
+
+      <p class="mb-4">At <strong>Badia Innovations</strong>, we create brand identities that connect with your audience and scale with your business. <a href="/contact" class="text-purple-500 hover:underline">Let's talk about your branding project</a>.</p>
+    `
+    },
+    {
+        id: "16",
+        slug: "ux-mistakes-costing-ecommerce-sales",
+        title: "10 UX Mistakes Costing Your E-commerce Sales",
+        excerpt: "Identify and correct the most common user experience errors that reduce conversions in online stores. Practical guide with implementable solutions.",
+        author: "Isaías Badia",
+        date: "February 14, 2026",
+        readTime: "9 min",
+        category: "UX/UI",
+        image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1000",
+        content: `
+      <p class="mb-4">Every obstacle in your e-commerce user experience is money slipping away. These are the 10 most common mistakes we see in online stores and how to fix them.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">1. Checkout Too Long</h2>
+      <p class="mb-4"><strong>The problem:</strong> 5+ page forms with unnecessary fields.</p>
+      <p class="mb-4"><strong>The solution:</strong> Implement single-page checkout. Only ask for essential data. Offer guest checkout; don't force account creation.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">2. Slow Loading Speed</h2>
+      <p class="mb-4"><strong>The problem:</strong> Pages that take more than 3 seconds to load.</p>
+      <p class="mb-4"><strong>Impact:</strong> Amazon calculates that every 100ms of latency costs them 1% of sales.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">3. Hidden Shipping Information</h2>
+      <p class="mb-4"><strong>The problem:</strong> Shipping costs hidden until the last checkout step.</p>
+      <p class="mb-4"><strong>Impact:</strong> Unexpected shipping costs are the #1 reason for cart abandonment.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">4. Poor Mobile Experience</h2>
+      <p class="mb-4"><strong>The problem:</strong> Site not optimized for mobile where 60%+ of traffic occurs.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">5. Lack of Reviews and Social Proof</h2>
+      <p class="mb-4"><strong>The problem:</strong> Products without reviews, ratings, or social validation.</p>
+
+      <p class="mb-4">Does your e-commerce need a professional UX audit? At <strong>Badia Innovations</strong> we analyze and optimize online stores to maximize conversions. <a href="/contact" class="text-purple-500 hover:underline">Request your audit</a>.</p>
+    `
+    },
+    {
+        id: "17",
+        slug: "digital-transformation-dominican-republic-2026",
+        title: "State of Digital Transformation in Dominican Republic 2026",
+        excerpt: "Analysis of the Dominican technological landscape: digital adoption by sectors, opportunities, challenges, and trends defining the country's future.",
+        author: "Isaías Badia",
+        date: "February 17, 2026",
+        readTime: "10 min",
+        category: "Digital Transformation",
+        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1000",
+        content: `
+      <p class="mb-4">The Dominican Republic has made significant progress in its digital transformation journey, but still faces important challenges. This analysis examines the current state and opportunities for companies looking to digitize.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Current Landscape</h2>
+      <p class="mb-4">According to Central Bank and OGTIC data, digital penetration in DR has grown consistently:</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Internet penetration:</strong> 78% of population (2025)</li>
+        <li><strong>Mobile users:</strong> 9.2 million active smartphones</li>
+        <li><strong>E-commerce:</strong> 45% growth post-pandemic</li>
+        <li><strong>Digital banking:</strong> 62% of transactions are now digital</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Most Advanced Sectors</h2>
+      <p class="mb-4"><strong>Banking and Finance:</strong> The financial sector leads transformation with robust mobile apps, contactless payments, and local fintech adoption.</p>
+      <p class="mb-4"><strong>Telecommunications:</strong> Claro, Altice, and Viva have expanded 5G coverage in main urban areas.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Sectors with Greatest Opportunity</h2>
+      <p class="mb-4"><strong>Healthcare:</strong> Telemedicine and electronic records are still in early stages. Massive opportunity for healthtechs.</p>
+      <p class="mb-4"><strong>SMBs:</strong> 95% of Dominican companies are small or medium, and many still operate manually. Accessible tools like <strong>NominalRD</strong> are helping close this gap.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">2026-2027 Trends</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Generative AI:</strong> Adoption of chatbots and virtual assistants in customer service.</li>
+        <li><strong>Mobile payments:</strong> Expansion of digital wallets beyond VISA/MC.</li>
+        <li><strong>Local cloud:</strong> More companies migrating to cloud with regional data centers.</li>
+      </ul>
+
+      <p class="mb-4">At <strong>Badia Innovations</strong>, we accompany Dominican companies in every step of their digital transformation. <a href="/contact" class="text-purple-500 hover:underline">Let's talk about your project</a>.</p>
+    `
+    },
+    {
+        id: "18",
+        slug: "success-story-nominalrd-payroll-automation",
+        title: "Success Story: How NominalRD Automated Payroll for 500+ Businesses",
+        excerpt: "Complete story of NominalRD development, from the initial idea to becoming the most-used payroll platform by Dominican SMBs.",
+        author: "Isaías Badia",
+        date: "February 21, 2026",
+        readTime: "8 min",
+        category: "Case Study",
+        image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=1000",
+        content: `
+      <p class="mb-4">NominalRD was born from a personal frustration: watching Dominican companies waste hours calculating payroll in Excel, making costly errors, and struggling with TSS complexities. This is the story of how we turned that problem into a solution now used by over 500 companies.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">The Problem</h2>
+      <p class="mb-4">Before NominalRD, the reality of payroll in Dominican SMBs was:</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Manual Excel sheets:</strong> Prone to errors in complex tiered ISR formulas.</li>
+        <li><strong>Incorrect TSS calculations:</strong> Frequent fines for contribution errors.</li>
+        <li><strong>Lost hours:</strong> Accountants dedicating entire days just to payroll.</li>
+        <li><strong>Lack of history:</strong> No centralized record of employees and payments.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">The Solution: Design for Simplicity</h2>
+      <p class="mb-4">We designed NominalRD with clear principles:</p>
+      <ol class="list-decimal pl-6 mb-6 space-y-2">
+        <li><strong>Zero learning curve:</strong> If you can use WhatsApp, you can use NominalRD.</li>
+        <li><strong>RD-first:</strong> Built specifically for Dominican legislation, not adapted.</li>
+        <li><strong>Smart automation:</strong> ISR, TSS, benefits calculated automatically.</li>
+        <li><strong>Accessible pricing:</strong> Freemium model that grows with your company.</li>
+      </ol>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Measurable Results</h2>
+      <p class="mb-4">After one year of operation, the numbers speak:</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li>Payroll processing time: From 8-12 hours to 30 minutes</li>
+        <li>Calculation errors: From 15-20% to less than 0.1%</li>
+        <li>TSS fines: Practically zero</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Lessons Learned</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Listen to users:</strong> Most-used features came from customer suggestions.</li>
+        <li><strong>Iterate fast:</strong> We launched MVP in 3 months and improved based on feedback.</li>
+        <li><strong>Support is product:</strong> Direct WhatsApp support generates loyalty.</li>
+      </ul>
+
+      <p class="mb-4">Does your company need a similar custom solution? At <strong>Badia Innovations</strong> we develop software that solves real problems in the Dominican market. <a href="/contact" class="text-purple-500 hover:underline">Tell us your idea</a>.</p>
+    `
+    },
+    {
+        id: "19",
+        slug: "cicd-guide-github-actions-react-projects",
+        title: "CI/CD Guide with GitHub Actions for React Projects",
+        excerpt: "Implement continuous integration and deployment pipelines from scratch. Automate tests, builds, and deploys for faster and more reliable deliveries.",
+        author: "Isaías Badia",
+        date: "February 24, 2026",
+        readTime: "14 min",
+        category: "Web Development",
+        image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&q=80&w=1000",
+        content: `
+      <p class="mb-4">CI/CD (Continuous Integration/Continuous Deployment) is one of the most important concepts in modern development. It automates repetitive tasks, reduces human error, and drastically accelerates the development cycle.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Why GitHub Actions?</h2>
+      <p class="mb-4">GitHub Actions offers several advantages for React projects:</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Integrated with GitHub:</strong> No external tools needed.</li>
+        <li><strong>Free for public repos:</strong> 2,000 minutes/month for private repos.</li>
+        <li><strong>Actions marketplace:</strong> Thousands of predefined actions.</li>
+        <li><strong>Secure secrets:</strong> Encrypted environment variables.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Step 1: Create Basic Workflow</h2>
+      <p class="mb-4">Create .github/workflows/ci.yml in your project with build, test, and lint steps.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Best Practices</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Dependency caching:</strong> Reduces installation time.</li>
+        <li><strong>Parallel jobs:</strong> Run tests and lint simultaneously.</li>
+        <li><strong>Matrix builds:</strong> Test on multiple Node versions.</li>
+        <li><strong>Environments:</strong> Separate staging and production.</li>
+      </ul>
+
+      <p class="mb-4">Need help setting up CI/CD for your project? At <strong>Badia Innovations</strong> we implement professional pipelines. <a href="/contact" class="text-purple-500 hover:underline">Contact us</a>.</p>
+    `
+    },
+    {
+        id: "20",
+        slug: "figma-vs-adobe-xd-ui-design-comparison",
+        title: "Figma vs Adobe XD: Complete UI Design Comparison",
+        excerpt: "Detailed analysis of the two leading interface design tools. Features, pricing, learning curve, and which to choose based on your project.",
+        author: "Isaías Badia",
+        date: "February 28, 2026",
+        readTime: "9 min",
+        category: "UX/UI",
+        image: "https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&q=80&w=1000",
+        content: `
+      <p class="mb-4">Figma and Adobe XD are the two most popular interface design tools in 2026. Choosing between them can significantly impact your team's efficiency and final product quality.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Figma Advantages</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>100% browser-based:</strong> Works on any operating system.</li>
+        <li><strong>Real-time collaboration:</strong> Multiple users editing simultaneously.</li>
+        <li><strong>Advanced Auto Layout:</strong> Responsive components natively.</li>
+        <li><strong>Dev Mode:</strong> Developers see CSS/code directly.</li>
+        <li><strong>Community:</strong> Thousands of free templates and resources.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Adobe XD Advantages</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Adobe integration:</strong> Perfect if you already use Photoshop, Illustrator.</li>
+        <li><strong>Offline performance:</strong> Better experience without connection.</li>
+        <li><strong>Voice prototyping:</strong> Prototypes with voice commands.</li>
+        <li><strong>3D transforms:</strong> Native 3D animations.</li>
+      </ul>
+
+      <p class="mb-4">At <strong>Badia Innovations</strong> we use Figma for all our design projects due to its superior collaboration and Dev Mode. <a href="/contact" class="text-purple-500 hover:underline">Let's talk about your design project</a>.</p>
+    `
+    },
+    {
+        id: "21",
+        slug: "web-accessibility-wcag-complete-guide",
+        title: "Web Accessibility (WCAG): Complete Guide for Developers",
+        excerpt: "Learn to create accessible websites for everyone. From screen readers to color contrast, everything you need to know about WCAG 2.2.",
+        author: "Isaías Badia",
+        date: "March 3, 2026",
+        readTime: "12 min",
+        category: "Web Development",
+        image: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&q=80&w=1000",
+        content: `
+      <p class="mb-4">Web accessibility is not optional. Over 15% of the world's population lives with some type of disability. Creating accessible sites is both an ethical responsibility and a legal requirement in many countries.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">The 4 WCAG Principles (POUR)</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Perceivable:</strong> Information must be presented in ways users can perceive.</li>
+        <li><strong>Operable:</strong> UI components must be navigable and usable.</li>
+        <li><strong>Understandable:</strong> Content must be readable and predictable.</li>
+        <li><strong>Robust:</strong> Must work with current and future assistive technologies.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Essential Accessibility Checklist</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li>All images have alternative text (alt)</li>
+        <li>Videos have captions and transcripts</li>
+        <li>All interactive elements are keyboard accessible</li>
+        <li>Minimum contrast ratio of 4.5:1 for normal text</li>
+        <li>Information doesn't rely on color alone</li>
+      </ul>
+
+      <p class="mb-4">At <strong>Badia Innovations</strong> accessibility is an integral part of our development process. <a href="/contact" class="text-purple-500 hover:underline">Audit your site's accessibility</a>.</p>
+    `
+    },
+    {
+        id: "22",
+        slug: "restful-api-integration-frontend-guide",
+        title: "RESTful API Integration in Frontend: Practical Guide",
+        excerpt: "Master REST API consumption in React applications. Fetch, Axios, error handling, authentication, and best practices with real examples.",
+        author: "Isaías Badia",
+        date: "March 7, 2026",
+        readTime: "13 min",
+        category: "Web Development",
+        image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&q=80&w=1000",
+        content: `
+      <p class="mb-4">Consuming APIs is a fundamental skill for any frontend developer. This guide will teach you best practices for integrating external services in your React applications.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Fetch vs Axios: Which to Use?</h2>
+      <p class="mb-4"><strong>Fetch (native):</strong></p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>No external dependencies required</li>
+        <li>Promise-based API</li>
+        <li>Doesn't reject promise for HTTP errors (4xx, 5xx)</li>
+      </ul>
+      <p class="mb-4"><strong>Axios:</strong></p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Interceptors for requests/responses</li>
+        <li>Automatic JSON data transformation</li>
+        <li>Built-in request cancellation</li>
+        <li>Native timeouts</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Error Handling</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Network errors:</strong> Show connection message</li>
+        <li><strong>401 Unauthorized:</strong> Redirect to login</li>
+        <li><strong>404 Not Found:</strong> Show empty state</li>
+        <li><strong>500 Server Error:</strong> Generic message + retry</li>
+      </ul>
+
+      <p class="mb-4">Need to integrate complex APIs in your application? At <strong>Badia Innovations</strong> we develop robust and scalable integrations. <a href="/contact" class="text-purple-500 hover:underline">Contact us</a>.</p>
+    `
+    },
+    {
+        id: "23",
+        slug: "zepp-os-vs-gymtracker-fitness-apps-comparison",
+        title: "Zepp OS vs GymTracker: Fitness Apps Comparison for Wearables",
+        excerpt: "Technical analysis of two different approaches to fitness apps on wearable devices. Architecture, UX, and performance on smartwatches.",
+        author: "Isaías Badia",
+        date: "March 10, 2026",
+        readTime: "10 min",
+        category: "Technology",
+        image: "https://images.unsplash.com/photo-1576243345690-4e4b79b63288?auto=format&fit=crop&q=80&w=1000",
+        content: `
+      <p class="mb-4">The fitness app market for wearables has exploded in recent years. In this analysis, we compare two approaches: Zepp OS (Amazfit's closed ecosystem) vs cross-platform applications like GymTracker.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Zepp OS: The Amazfit Ecosystem</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Battery optimized:</strong> Up to 14 days duration.</li>
+        <li><strong>Mini Apps:</strong> Simplified JavaScript development.</li>
+        <li><strong>Native integration:</strong> Direct access to device sensors.</li>
+        <li><strong>Limitations:</strong> Only works on Amazfit devices.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">GymTracker: Cross-Platform Approach</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Multi-device:</strong> Apple Watch, Wear OS, Garmin.</li>
+        <li><strong>Cloud sync:</strong> Data accessible from anywhere.</li>
+        <li><strong>Community:</strong> Share workouts and competitions.</li>
+        <li><strong>Trade-off:</strong> Higher battery consumption.</li>
+      </ul>
+
+      <p class="mb-4">Developing a fitness app? At <strong>Badia Innovations</strong> we create applications for wearables and mobile. <a href="/contact" class="text-purple-500 hover:underline">Let's talk about your project</a>.</p>
+    `
+    },
+    {
+        id: "24",
+        slug: "technical-seo-developers-complete-guide",
+        title: "Technical SEO for Developers: Complete Guide 2026",
+        excerpt: "Master technical SEO from a code perspective. Core Web Vitals, schema markup, indexing, and everything Google evaluates on your site.",
+        author: "Isaías Badia",
+        date: "March 14, 2026",
+        readTime: "15 min",
+        category: "SEO",
+        image: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=1000",
+        content: `
+      <p class="mb-4">Technical SEO is where web development and digital marketing intersect. As a developer, you have the power to implement optimizations that can multiply a site's organic traffic.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Core Web Vitals: The Key Metrics</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>LCP (Largest Contentful Paint):</strong> < 2.5s. Measures when main content loads.</li>
+        <li><strong>INP (Interaction to Next Paint):</strong> < 200ms. Replaced FID in 2024. Measures responsiveness.</li>
+        <li><strong>CLS (Cumulative Layout Shift):</strong> < 0.1. Measures visual stability.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Technical SEO Checklist</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li>✅ sitemap.xml updated and in Search Console</li>
+        <li>✅ robots.txt correctly configured</li>
+        <li>✅ Canonical URLs on all pages</li>
+        <li>✅ HTTPS site-wide</li>
+        <li>✅ Mobile-first responsive design</li>
+        <li>✅ Unique titles and meta descriptions</li>
+        <li>✅ Optimized images (WebP, lazy loading)</li>
+        <li>✅ Correct heading hierarchy (H1 → H6)</li>
+      </ul>
+
+      <p class="mb-4">Does your site need a technical SEO audit? At <strong>Badia Innovations</strong> we optimize sites for maximum search engine performance. <a href="/contact" class="text-purple-500 hover:underline">Request your audit</a>.</p>
+    `
+    },
+    {
+        id: "25",
+        slug: "typescript-react-advanced-guide",
+        title: "TypeScript in React: Advanced Guide for Robust Projects",
+        excerpt: "Master TypeScript in React projects. Generics, inference, advanced patterns, and how to avoid the most common mistakes in enterprise applications.",
+        author: "Isaías Badia",
+        date: "March 17, 2026",
+        readTime: "14 min",
+        category: "Web Development",
+        image: "https://images.unsplash.com/photo-1516116216624-53e697fedbea?auto=format&fit=crop&q=80&w=1000",
+        content: `
+      <p class="mb-4">TypeScript has become the de facto standard for professional React projects. In this advanced guide, we'll explore patterns that will elevate your code quality and maintainability.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Why TypeScript?</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Early error detection:</strong> Find bugs before running code.</li>
+        <li><strong>Superior autocomplete:</strong> Precise IntelliSense in your IDE.</li>
+        <li><strong>Safe refactoring:</strong> Change code with confidence.</li>
+        <li><strong>Living documentation:</strong> Types document the code.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Best Practices</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li>Avoid <code>any</code> - use <code>unknown</code> when you need flexibility</li>
+        <li>Prefer <code>interface</code> for objects, <code>type</code> for unions</li>
+        <li>Use <code>as const</code> for immutable literals</li>
+        <li>Leverage inference - don't over-type</li>
+      </ul>
+
+      <p class="mb-4">Need to migrate your project to TypeScript? At <strong>Badia Innovations</strong> we help teams adopt TypeScript gradually and effectively. <a href="/contact" class="text-purple-500 hover:underline">Contact us</a>.</p>
+    `
+    },
+    {
+        id: "26",
+        slug: "react-component-architecture-patterns",
+        title: "React Component Architecture: Patterns for Scaling",
+        excerpt: "Learn to structure React projects so they grow without pain. Atomic Design, feature folders, and how to organize code for large teams.",
+        author: "Isaías Badia",
+        date: "March 21, 2026",
+        readTime: "11 min",
+        category: "Web Development",
+        image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&q=80&w=1000",
+        content: `
+      <p class="mb-4">The right architecture from the start can save months of refactoring later. This guide presents proven patterns for React projects that need to scale.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Atomic Design in React</h2>
+      <p class="mb-4">Brad Frost popularized this system that organizes components in 5 levels:</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Atoms:</strong> Button, Input, Label - indivisible elements</li>
+        <li><strong>Molecules:</strong> SearchBar (Input + Button) - simple combinations</li>
+        <li><strong>Organisms:</strong> Header, Footer - complete sections</li>
+        <li><strong>Templates:</strong> PageLayout - structures without data</li>
+        <li><strong>Pages:</strong> HomePage - templates with real data</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Golden Rules</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Colocation:</strong> Keep related files together</li>
+        <li><strong>Barrel exports:</strong> One index.ts per folder</li>
+        <li><strong>Clear boundaries:</strong> Features shouldn't import from other features</li>
+        <li><strong>Minimal shared:</strong> Only truly reusable code</li>
+      </ul>
+
+      <p class="mb-4">Does your project need restructuring? At <strong>Badia Innovations</strong> we audit and refactor React architectures. <a href="/contact" class="text-purple-500 hover:underline">Request consulting</a>.</p>
+    `
+    },
+    {
+        id: "27",
+        slug: "generative-ai-web-development-2026",
+        title: "Generative AI in Web Development: Tools and Best Practices",
+        excerpt: "How to integrate generative AI (ChatGPT, Claude, Copilot) into your development workflow. Real productivity without sacrificing code quality.",
+        author: "Isaías Badia",
+        date: "March 24, 2026",
+        readTime: "10 min",
+        category: "Technology",
+        image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1000",
+        content: `
+      <p class="mb-4">Generative AI has transformed how we write code in 2026. But using it effectively requires understanding its strengths and limitations.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Leading Tools</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>GitHub Copilot:</strong> Intelligent autocomplete integrated in VS Code.</li>
+        <li><strong>Claude (Anthropic):</strong> Excellent for explanations and refactoring.</li>
+        <li><strong>ChatGPT-4:</strong> Versatile for debugging and boilerplate generation.</li>
+        <li><strong>Cursor:</strong> IDE with native AI for code editing.</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Effective Use Cases</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li>✅ Generate boilerplate and repetitive code</li>
+        <li>✅ Write unit tests</li>
+        <li>✅ Convert code between languages</li>
+        <li>✅ Explain complex legacy code</li>
+        <li>✅ Generate documentation and comments</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Common Mistakes to Avoid</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li>❌ Copying code without understanding it</li>
+        <li>❌ Blindly trusting generated code security</li>
+        <li>❌ Using for critical business logic without review</li>
+        <li>❌ Ignoring knowledge limitations (cutoff dates)</li>
+      </ul>
+
+      <p class="mb-4">At <strong>Badia Innovations</strong> we responsibly integrate AI in our development processes. <a href="/contact" class="text-purple-500 hover:underline">Discover how</a>.</p>
+    `
+    },
+    {
+        id: "28",
+        slug: "caribbean-tech-ecosystem-opportunities-2026",
+        title: "The Caribbean Tech Ecosystem: Opportunities for Developers",
+        excerpt: "Analysis of the tech market in Dominican Republic, Puerto Rico, and the Caribbean. Salaries, demand, and how to position yourself for regional opportunities.",
+        author: "Isaías Badia",
+        date: "March 28, 2026",
+        readTime: "12 min",
+        category: "Trends",
+        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=1000",
+        content: `
+      <p class="mb-4">The Caribbean is experiencing an unprecedented tech boom. Local developers have access to opportunities that previously required emigrating.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Dominican Republic</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Tech centers:</strong> Santo Domingo, Santiago emerging</li>
+        <li><strong>Average salaries:</strong> $800-2,500 USD/month (local) | $3,000-6,000 (remote)</li>
+        <li><strong>Demand:</strong> React, Node.js, Python, DevOps</li>
+        <li><strong>Benefits:</strong> Free Trade Zone Tech with tax incentives</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Remote Work: The Game Changer</h2>
+      <p class="mb-4">Post-pandemic, Caribbean developers access:</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li>US companies paying competitive salaries</li>
+        <li>European startups seeking talent in similar timezone</li>
+        <li>Platforms like Turing, Toptal, Arc</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">How to Position Yourself</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li>Fluent English is a salary multiplier</li>
+        <li>Portfolio with real projects on GitHub</li>
+        <li>Open source contributions</li>
+        <li>Cloud certifications (AWS, GCP)</li>
+      </ul>
+
+      <p class="mb-4">At <strong>Badia Innovations</strong> we hire Caribbean talent. <a href="/contact" class="text-purple-500 hover:underline">Explore opportunities</a>.</p>
+    `
+    },
+    {
+        id: "29",
+        slug: "modern-authentication-react-jwt-oauth",
+        title: "Modern Authentication in React: JWT, OAuth and Best Practices",
+        excerpt: "Implement secure authentication in React applications. From basic JWT to OAuth with social providers and 2FA.",
+        author: "Isaías Badia",
+        date: "March 31, 2026",
+        readTime: "15 min",
+        category: "Security",
+        image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?auto=format&fit=crop&q=80&w=1000",
+        content: `
+      <p class="mb-4">Authentication is the most critical security component in any application. Implementing it wrong can expose data from all your users.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">JWT (JSON Web Tokens)</h2>
+      <p class="mb-4">The most used standard for stateless authentication:</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Access Token:</strong> Short-lived (15-60 min), sent in headers</li>
+        <li><strong>Refresh Token:</strong> Long-lived (days), stored securely</li>
+        <li><strong>Storage:</strong> httpOnly cookies > localStorage</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Security Checklist</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li>✅ HTTPS mandatory always</li>
+        <li>✅ Tokens in httpOnly cookies</li>
+        <li>✅ CSRF protection</li>
+        <li>✅ Rate limiting on auth endpoints</li>
+        <li>✅ Passwords hashed with bcrypt/argon2</li>
+        <li>✅ 2FA option for users</li>
+      </ul>
+
+      <p class="mb-4">Implementing authentication in your app? At <strong>Badia Innovations</strong> we design secure and scalable auth systems. <a href="/contact" class="text-purple-500 hover:underline">Consult with us</a>.</p>
+    `
+    },
+    {
+        id: "30",
+        slug: "owasp-top-10-web-developers-guide",
+        title: "OWASP Top 10: Guide for Web Developers",
+        excerpt: "The 10 most critical vulnerabilities in web applications and how to prevent them in your code. From injections to insecure configurations.",
+        author: "Isaías Badia",
+        date: "April 4, 2026",
+        readTime: "13 min",
+        category: "Security",
+        image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1000",
+        content: `
+      <p class="mb-4">OWASP (Open Web Application Security Project) periodically publishes the most critical vulnerabilities in web applications. Every developer should know them.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">1. Broken Access Control</h2>
+      <p class="mb-4">When users access resources they shouldn't.</p>
+      <p class="mb-4"><strong>Prevention:</strong> Verify permissions on every endpoint, never in frontend only.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">2. Cryptographic Failures</h2>
+      <p class="mb-4">Sensitive data without proper encryption.</p>
+      <p class="mb-4"><strong>Prevention:</strong> Mandatory HTTPS, bcrypt for passwords, AES-256 for data at rest.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">3. Injection</h2>
+      <p class="mb-4">SQL, NoSQL, OS command injection.</p>
+      <p class="mb-4"><strong>Prevention:</strong> Prepared statements, ORMs, strict input validation.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Quick Checklist</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li>✅ Sanitize all inputs</li>
+        <li>✅ Implement CSP headers</li>
+        <li>✅ Update dependencies regularly</li>
+        <li>✅ Periodic security audits</li>
+        <li>✅ Security event logging</li>
+      </ul>
+
+      <p class="mb-4">Does your application need a security audit? <strong>Badia Innovations</strong> offers comprehensive OWASP assessments. <a href="/contact" class="text-purple-500 hover:underline">Request yours</a>.</p>
+    `
+    },
+    {
+        id: "31",
+        slug: "web-launch-checklist-complete",
+        title: "Web Launch Checklist: 50 Points Before Going to Production",
+        excerpt: "Don't launch your site without checking this list. SEO, security, performance, accessibility and more. Includes downloadable PDF.",
+        author: "Isaías Badia",
+        date: "April 7, 2026",
+        readTime: "8 min",
+        category: "Resources",
+        image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&q=80&w=1000",
+        content: `
+      <p class="mb-4">Launching a website involves coordinating dozens of details. This checklist ensures you don't forget anything critical.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">🔒 Security</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li>☐ SSL certificate installed and working</li>
+        <li>☐ HTTP → HTTPS redirect active</li>
+        <li>☐ Security headers configured (CSP, X-Frame-Options)</li>
+        <li>☐ Forms with CSRF protection</li>
+        <li>☐ Rate limiting on APIs</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">🚀 Performance</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li>☐ Optimized images (WebP, lazy loading)</li>
+        <li>☐ Minified CSS/JS</li>
+        <li>☐ CDN configured</li>
+        <li>☐ Lighthouse score > 90</li>
+        <li>☐ Core Web Vitals in green</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">🔍 SEO</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li>☐ Unique meta titles and descriptions</li>
+        <li>☐ sitemap.xml generated</li>
+        <li>☐ Correct robots.txt</li>
+        <li>☐ Schema markup implemented</li>
+        <li>☐ Canonical URLs configured</li>
+      </ul>
+
+      <p class="mb-4">Launching soon? <strong>Badia Innovations</strong> offers complete pre-launch reviews. <a href="/contact" class="text-purple-500 hover:underline">Schedule yours</a>.</p>
+    `
+    },
+    {
+        id: "32",
+        slug: "commercial-proposal-template-web-services",
+        title: "Template: Commercial Proposal for Web Services",
+        excerpt: "Proven structure for proposals that win projects. Includes sections, persuasive language, and mistakes to avoid.",
+        author: "Isaías Badia",
+        date: "April 11, 2026",
+        readTime: "9 min",
+        category: "Resources",
+        image: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&q=80&w=1000",
+        content: `
+      <p class="mb-4">A well-structured proposal can be the difference between winning or losing a project. Here's the structure we use at Badia Innovations.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Winning Proposal Structure</h2>
+
+      <h3 class="text-xl font-bold text-theme mb-3 mt-6">1. Executive Summary (1 page)</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Problem we solve</li>
+        <li>Proposed solution in 2-3 sentences</li>
+        <li>Total investment and timeline</li>
+        <li>Why we're the best option</li>
+      </ul>
+
+      <h3 class="text-xl font-bold text-theme mb-3 mt-6">2. Understanding the Problem</h3>
+      <p class="mb-4">Demonstrate you listened. Paraphrase the client's pain points.</p>
+
+      <h3 class="text-xl font-bold text-theme mb-3 mt-6">3. Proposed Solution</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Technical description (accessible to non-technical)</li>
+        <li>Technologies to use and why</li>
+        <li>Specific deliverables</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Mistakes to Avoid</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li>❌ Generic copy-paste proposals</li>
+        <li>❌ Excessive technical jargon</li>
+        <li>❌ Prices without value context</li>
+        <li>❌ Lack of clear next step</li>
+      </ul>
+
+      <p class="mb-4">Need help creating proposals? <a href="/contact" class="text-purple-500 hover:underline">Contact us</a> for mentoring.</p>
+    `
+    },
+    {
+        id: "33",
+        slug: "success-case-dominican-fashion-ecommerce",
+        title: "Success Case: Dominican Fashion E-commerce - 300% Growth",
+        excerpt: "How we helped a local fashion brand triple their online sales. Strategy, implementation, and measurable results.",
+        author: "Isaías Badia",
+        date: "April 14, 2026",
+        readTime: "10 min",
+        category: "Success Cases",
+        image: "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=1000",
+        content: `
+      <p class="mb-4">A Dominican fashion brand contacted us with a common problem: they had Instagram followers but couldn't convert them into sales in their online store.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">The Challenge</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li>Conversion rate: 0.5% (industry average: 2-3%)</li>
+        <li>Cart abandonment: 85%</li>
+        <li>Load time: 8+ seconds on mobile</li>
+        <li>No integration with local payment gateways</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Our Solution</h2>
+
+      <h3 class="text-xl font-bold text-theme mb-3 mt-6">1. Complete UX Redesign</h3>
+      <p class="mb-4">Simplified checkout from 5 steps to 2. Added guest checkout.</p>
+
+      <h3 class="text-xl font-bold text-theme mb-3 mt-6">2. Performance Optimization</h3>
+      <p class="mb-4">Migrated to headless commerce with React + API. Load time: 1.2 seconds.</p>
+
+      <h3 class="text-xl font-bold text-theme mb-3 mt-6">3. Local Payment Integration</h3>
+      <p class="mb-4">Added Cardnet, local bank transfer, and cash on delivery.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Results (6 months later)</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li>Online sales: +300%</li>
+        <li>Conversion rate: 3.2% (vs 0.5% initial)</li>
+        <li>Cart abandonment: 45% (vs 85%)</li>
+        <li>Recurring customers: +150%</li>
+      </ul>
+
+      <p class="mb-4">Does your e-commerce need similar results? <a href="/contact" class="text-purple-500 hover:underline">Let's talk about your project</a>.</p>
+    `
+    },
+    {
+        id: "34",
+        slug: "dominican-tech-entrepreneurs-interviews",
+        title: "Dominican Tech Entrepreneurs: 5 Inspiring Stories",
+        excerpt: "Interviews with founders of local tech startups. Their beginnings, challenges, and advice for new entrepreneurs.",
+        author: "Isaías Badia",
+        date: "April 18, 2026",
+        readTime: "11 min",
+        category: "Trends",
+        image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=1000",
+        content: `
+      <p class="mb-4">Dominican Republic has a growing entrepreneurial ecosystem. We talked with five founders who are building the country's tech future.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">1. Ana García - Fintech for Remittances</h2>
+      <p class="mb-4">"The biggest challenge was convincing banks to integrate. It took 18 months, but now we process $2M monthly in remittances."</p>
+      <p class="mb-4"><strong>Advice:</strong> "Patience with regulators. Don't try shortcuts."</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">2. Carlos Méndez - Rural EdTech</h2>
+      <p class="mb-4">"We bring digital education to areas without stable internet. We use offline-first content."</p>
+      <p class="mb-4"><strong>Advice:</strong> "Design for your user's reality, not an ideal one."</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">3. María Santos - HealthTech</h2>
+      <p class="mb-4">"Our app connects patients with rural doctors. We already have 50,000 virtual consultations."</p>
+      <p class="mb-4"><strong>Advice:</strong> "Find a problem you're passionate about solving."</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Common Patterns</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li>They solve DR-specific problems</li>
+        <li>Started with minimal MVPs</li>
+        <li>Raised capital locally first</li>
+        <li>Diverse founding team (tech + business)</li>
+      </ul>
+
+      <p class="mb-4">Working on your startup? <strong>Badia Innovations</strong> supports tech entrepreneurs. <a href="/contact" class="text-purple-500 hover:underline">Tell us your idea</a>.</p>
+    `
+    },
+    {
+        id: "35",
+        slug: "how-to-choose-web-development-agency",
+        title: "How to Choose the Right Web Development Agency",
+        excerpt: "Guide for companies looking to hire development. Key questions, red flags, and how to evaluate technical proposals without being technical.",
+        author: "Isaías Badia",
+        date: "April 21, 2026",
+        readTime: "10 min",
+        category: "Business",
+        image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&q=80&w=1000",
+        content: `
+      <p class="mb-4">Hiring web development is a significant decision. A bad partner can cost you months and thousands of dollars. This guide will help you choose correctly.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Key Questions to Ask</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li>"Who exactly will work on my project?"</li>
+        <li>"Can I see code from previous projects?"</li>
+        <li>"What happens if I need changes after launch?"</li>
+        <li>"How do you handle projects that go out of scope?"</li>
+        <li>"What guarantees do you offer?"</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">🚩 Red Flags</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li>Promise unrealistically short timelines</li>
+        <li>Can't explain their process clearly</li>
+        <li>No verifiable references</li>
+        <li>Everything is "easy" or "quick"</li>
+        <li>Don't ask questions about your business</li>
+        <li>Very low price without explanation</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">✅ Green Flags</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li>Portfolio with projects similar to yours</li>
+        <li>Documented and transparent process</li>
+        <li>Clear and responsive communication</li>
+        <li>Ask more than they talk</li>
+        <li>Detailed proposal with clear deliverables</li>
+        <li>Clients you can contact directly</li>
+      </ul>
+
+      <p class="mb-4">At <strong>Badia Innovations</strong> we're transparent at every stage. <a href="/contact" class="text-purple-500 hover:underline">Request a proposal</a> and compare us with others.</p>
+    `
+    },
+    {
+        id: "36",
+        slug: "future-web-development-predictions-2027",
+        title: "The Future of Web Development: Predictions 2027 and Beyond",
+        excerpt: "Emerging trends that will define the next era of web development. Edge computing, mature Web3, native AI, and more.",
+        author: "Isaías Badia",
+        date: "April 25, 2026",
+        readTime: "12 min",
+        category: "Trends",
+        image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=1000",
+        content: `
+      <p class="mb-4">Web development constantly evolves. Based on current trends and our experience, here are our predictions for the coming years.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">1. Mainstream Edge Computing</h2>
+      <p class="mb-4">Code running close to the user will be the norm, not the exception. Vercel, Cloudflare Workers, and Deno Deploy will lead this transition.</p>
+      <p class="mb-4"><strong>Impact:</strong> Sub-50ms latencies globally, less dependence on centralized cloud regions.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">2. AI as Standard Copilot</h2>
+      <p class="mb-4">By 2027, most IDEs will include generative AI natively. Developers who don't leverage it will be significantly less productive.</p>
+      <p class="mb-4"><strong>Impact:</strong> Developer role evolves toward architecture and review.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">3. Pragmatic Web3</h2>
+      <p class="mb-4">After the hype, real use cases will remain: decentralized identity, payments without intermediaries, verifiable digital ownership.</p>
+      <p class="mb-4"><strong>Impact:</strong> Selective integration, not "crypto everything".</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">How to Prepare</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li>Learn fundamentals that transcend frameworks</li>
+        <li>Experiment with edge computing now</li>
+        <li>Master prompt engineering for development</li>
+        <li>Stay curious about emerging technologies</li>
+      </ul>
+
+      <p class="mb-4">Planning your stack for the future? At <strong>Badia Innovations</strong> we design architectures prepared for what's coming. <a href="/contact" class="text-purple-500 hover:underline">Consult with us</a>.</p>
+    `
+    },
+    {
+        id: "37",
+        slug: "vercel-vs-netlify-vs-aws-amplify-hosting-react",
+        title: "Vercel vs Netlify vs AWS Amplify: Best Hosting for React Apps",
+        excerpt: "Complete comparison of leading hosting platforms for React. Pricing, performance, features and which to choose based on your project.",
+        author: "Isaías Badia",
+        date: "April 28, 2026",
+        readTime: "11 min",
+        category: "Web Development",
+        image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?auto=format&fit=crop&q=80&w=1000",
+        content: `
+      <p class="mb-4">Choosing the right hosting platform can make or break your project. This guide compares the three leading options for deploying React applications.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Vercel: The Premium Option</h2>
+      <p class="mb-4">Created by the team behind Next.js, Vercel offers the best integration for modern React projects.</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Pros:</strong> Automatic Git deploy, Edge Functions, Preview Deployments</li>
+        <li><strong>Cons:</strong> Pricing can scale quickly, free tier limitations</li>
+        <li><strong>Best for:</strong> Startups, Next.js projects, sites needing edge performance</li>
+        <li><strong>Price:</strong> Free for hobby, $20/dev/month Pro</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Netlify: Balance of Flexibility</h2>
+      <p class="mb-4">Pioneer of Jamstack, Netlify offers a complete ecosystem with forms, identity, and functions.</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Pros:</strong> Built-in forms, Identity service, Split Testing</li>
+        <li><strong>Cons:</strong> Limited build minutes, newer Edge Functions</li>
+        <li><strong>Best for:</strong> Static sites, blogs, Gatsby/Astro projects</li>
+        <li><strong>Price:</strong> Generous free tier, $19/user/month Pro</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">AWS Amplify: Enterprise Power</h2>
+      <p class="mb-4">Amazon's option for web app hosting, with native integration to the AWS ecosystem.</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Pros:</strong> AWS integration, Auth/API/Storage included, scalability</li>
+        <li><strong>Cons:</strong> Steeper learning curve, complex pricing</li>
+        <li><strong>Best for:</strong> Enterprise, apps already using AWS, complex projects</li>
+        <li><strong>Price:</strong> Pay-as-you-go, free tier available</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Our Recommendation</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li><strong>Next.js:</strong> Vercel (perfect framework integration)</li>
+        <li><strong>Vite/CRA:</strong> Netlify (simplicity and included features)</li>
+        <li><strong>Enterprise:</strong> AWS Amplify (full control and AWS ecosystem)</li>
+      </ul>
+
+      <p class="mb-4">Need help choosing the best platform? At <strong>Badia Innovations</strong> we optimize your deployment stack. <a href="/contact" class="text-purple-500 hover:underline">Consult with us</a>.</p>
+    `
+    },
+    {
+        id: "38",
+        slug: "core-web-vitals-2026-google-optimization",
+        title: "Core Web Vitals 2026: Optimize Your Site for Google Rankings",
+        excerpt: "Complete guide to updated Core Web Vitals metrics. LCP, INP, CLS explained with practical optimization tools and techniques.",
+        author: "Isaías Badia",
+        date: "May 2, 2026",
+        readTime: "13 min",
+        category: "SEO",
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000",
+        content: `
+      <p class="mb-4">Google has made it clear: user experience is a ranking factor. Core Web Vitals are the metrics that determine whether your site delivers that experience.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">The 3 Key Metrics</h2>
+
+      <h3 class="text-xl font-bold text-theme mb-3 mt-6">1. LCP (Largest Contentful Paint)</h3>
+      <p class="mb-4"><strong>What it measures:</strong> Time until the largest element is visible.</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>✅ Good: ≤2.5 seconds</li>
+        <li>⚠️ Needs improvement: 2.5-4 seconds</li>
+        <li>❌ Poor: >4 seconds</li>
+      </ul>
+      <p class="mb-4"><strong>How to optimize:</strong> Optimize images, preload critical resources, use CDN, eliminate render-blocking resources.</p>
+
+      <h3 class="text-xl font-bold text-theme mb-3 mt-6">2. INP (Interaction to Next Paint)</h3>
+      <p class="mb-4"><strong>What it measures:</strong> Page responsiveness to user interactions.</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>✅ Good: ≤200ms</li>
+        <li>⚠️ Needs improvement: 200-500ms</li>
+        <li>❌ Poor: >500ms</li>
+      </ul>
+      <p class="mb-4"><strong>How to optimize:</strong> Break up long JavaScript tasks, use web workers, optimize event handlers.</p>
+
+      <h3 class="text-xl font-bold text-theme mb-3 mt-6">3. CLS (Cumulative Layout Shift)</h3>
+      <p class="mb-4"><strong>What it measures:</strong> Visual stability - how much elements move while loading.</p>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>✅ Good: ≤0.1</li>
+        <li>⚠️ Needs improvement: 0.1-0.25</li>
+        <li>❌ Poor: >0.25</li>
+      </ul>
+      <p class="mb-4"><strong>How to optimize:</strong> Set dimensions on images/iframes, reserve space for ads, avoid inserting content above existing.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Quick Wins for React</h2>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li>Use React.lazy() for code splitting</li>
+        <li>Implement Suspense for loading states</li>
+        <li>Optimize images with next/image or similar libraries</li>
+        <li>Memoize expensive components with React.memo</li>
+        <li>Virtualize long lists with react-window</li>
+      </ul>
+
+      <p class="mb-4">Is your site failing Core Web Vitals? At <strong>Badia Innovations</strong> we optimize web performance. <a href="/contact" class="text-purple-500 hover:underline">Request an audit</a>.</p>
+    `
+    },
+    {
+        id: "39",
+        slug: "digitalization-guide-dominican-smbs",
+        title: "Digitalization Guide for Dominican SMBs: From Paper to Digital",
+        excerpt: "Practical whitepaper for small and medium businesses in Dominican Republic. Concrete steps, accessible tools, and local success stories.",
+        author: "Isaías Badia",
+        date: "May 5, 2026",
+        readTime: "15 min",
+        category: "Business",
+        image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=1000",
+        content: `
+      <p class="mb-4">Digitalization is not a luxury, it's business survival. This practical guide helps Dominican SMBs make the digital leap without breaking the budget.</p>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">Current State: The Dominican Challenge</h2>
+      <p class="mb-4">According to recent studies, less than 30% of Dominican SMBs have effective digital presence. The main barriers are:</p>
+      <ul class="list-disc pl-6 mb-6 space-y-2">
+        <li>Perception of high implementation cost</li>
+        <li>Lack of technical knowledge</li>
+        <li>Resistance to change in established processes</li>
+        <li>Distrust in digital solutions</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">The 5 Pillars of Digitalization</h2>
+
+      <h3 class="text-xl font-bold text-theme mb-3 mt-6">1. Basic Digital Presence</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Optimized Google My Business profile (free!)</li>
+        <li>Basic website or landing page</li>
+        <li>Active social media (Instagram, Facebook)</li>
+      </ul>
+
+      <h3 class="text-xl font-bold text-theme mb-3 mt-6">2. Digital Administrative Management</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Accounting: QuickBooks, Wave, or structured Excel</li>
+        <li>Invoicing: DGII-compatible systems</li>
+        <li>Payroll: <strong>NominalRD</strong> for TSS compliance</li>
+      </ul>
+
+      <h3 class="text-xl font-bold text-theme mb-3 mt-6">3. Communication and Customer Service</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>WhatsApp Business (free)</li>
+        <li>Professional email (Google Workspace from $6/month)</li>
+        <li>Basic CRM (HubSpot free tier)</li>
+      </ul>
+
+      <h3 class="text-xl font-bold text-theme mb-3 mt-6">4. Digital Sales</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Digital catalog (Instagram Shop, Facebook Shop)</li>
+        <li>Mobile payments (tPago, Azul QR)</li>
+        <li>Basic e-commerce when volume warrants</li>
+      </ul>
+
+      <h3 class="text-xl font-bold text-theme mb-3 mt-6">5. Data Analytics</h3>
+      <ul class="list-disc pl-6 mb-4 space-y-2">
+        <li>Google Analytics (free) for web traffic</li>
+        <li>Social media insights</li>
+        <li>Basic KPIs in simple dashboards</li>
+      </ul>
+
+      <h2 class="text-2xl font-bold text-theme mb-4 mt-8">90-Day Implementation Plan</h2>
+      <p class="mb-4">Phase 1 (Days 1-30): Google My Business, basic website. Phase 2 (Days 31-60): Invoicing, digital payroll. Phase 3 (Days 61-90): Digital catalog, online payments.</p>
+
+      <p class="mb-4">Ready to digitalize your SMB? At <strong>Badia Innovations</strong> we accompany Dominican businesses in their digital transformation. <a href="/contact" class="text-purple-500 hover:underline">Schedule a free consultation</a>.</p>
+    `
     }
 ];

@@ -12,6 +12,8 @@ import {
 } from "lucide-react";
 import useThemeStore from "../store/themeStore";
 import tailoredWeddingsImg from "../assets/images/TailoredWeddings.png?format=webp;png&quality=90";
+import nominalImg from "../assets/images/NominalRD.png?format=webp;png&quality=90";
+import gymTrackerImg from "../assets/images/GymTracker.png?format=webp;png&quality=90";
 import ServiceModal from "./ServiceModal";
 import PortfolioModal from "./PortfolioModal";
 
@@ -294,8 +296,13 @@ const ServicesSection = () => {
               className="block group cursor-pointer"
             >
               <div className="h-full glass rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300">
-                <div className="h-48 overflow-hidden relative bg-gradient-to-br from-purple-900 to-purple-700 flex items-center justify-center">
-                  <div className="text-6xl font-black text-white/20">NRD</div>
+                <div className="h-48 overflow-hidden relative bg-linear-to-br from-purple-900 to-purple-700 flex items-center justify-center">
+                  <img
+                    src={nominalImg.img.src}
+                    alt="NominalRD"
+                    className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
                   <div className="absolute top-3 left-3">
                     <span className="px-3 py-1 bg-purple-600/90 backdrop-blur-sm rounded-full text-xs text-white font-medium">
                       {t("services.portfolio.projects.nominalrd.category")}
@@ -344,8 +351,13 @@ const ServicesSection = () => {
               className="block group cursor-pointer"
             >
               <div className="h-full glass rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300">
-                <div className="h-48 overflow-hidden relative bg-gradient-to-br from-green-900 to-emerald-700 flex items-center justify-center">
-                  <div className="text-6xl font-black text-white/20">GT</div>
+                <div className="h-48 overflow-hidden relative bg-linear-to-br from-green-900 to-emerald-700 flex items-center justify-center">
+                  <img
+                    src={gymTrackerImg.img.src}
+                    alt="GymTracker"
+                    className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
                   <div className="absolute top-3 left-3">
                     <span className="px-3 py-1 bg-emerald-600/90 backdrop-blur-sm rounded-full text-xs text-white font-medium">
                       {t("services.portfolio.projects.gymtracker.category")}
@@ -416,7 +428,7 @@ const ServicesSection = () => {
                     {testimonial.quote}
                   </p>
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-600 to-purple-400 flex items-center justify-center text-white font-bold text-sm">
+                    <div className="w-10 h-10 rounded-full bg-linear-to-br from-purple-600 to-purple-400 flex items-center justify-center text-white font-bold text-sm">
                       {testimonial.author
                         .split(" ")
                         .map((n) => n[0])

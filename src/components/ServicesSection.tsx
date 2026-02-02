@@ -8,7 +8,6 @@ import {
   Smartphone,
   Blocks,
   Search,
-  ExternalLink,
   ArrowRight,
 } from "lucide-react";
 import useThemeStore from "../store/themeStore";
@@ -20,7 +19,10 @@ const ServicesSection = () => {
   const { t } = useTranslation();
   const { theme } = useThemeStore();
   const [selectedService, setSelectedService] = useState<string | null>(null);
-  const [selectedProject, setSelectedProject] = useState<{ id: string, img: string | null } | null>(null);
+  const [selectedProject, setSelectedProject] = useState<{
+    id: string;
+    img: string | null;
+  } | null>(null);
 
   const services = [
     {
@@ -198,7 +200,10 @@ const ServicesSection = () => {
                     className="mt-auto flex items-center gap-2 text-sm font-medium text-purple-500 hover:text-purple-600 transition-colors group/btn"
                   >
                     {t("services.learnMore", "Learn More")}
-                    <ArrowRight size={16} className="group-hover/btn:translate-x-1 transition-transform" />
+                    <ArrowRight
+                      size={16}
+                      className="group-hover/btn:translate-x-1 transition-transform"
+                    />
                   </button>
                 </div>
               </div>
@@ -217,15 +222,21 @@ const ServicesSection = () => {
             <h2 className="text-3xl md:text-5xl font-bold text-theme mb-4">
               {t("services.portfolio.title")}
             </h2>
-            <p className="text-muted text-lg max-w-2xl mx-auto">{t("services.portfolio.subtitle")}</p>
+            <p className="text-muted text-lg max-w-2xl mx-auto">
+              {t("services.portfolio.subtitle")}
+            </p>
           </div>
-
 
           {/* Projects Grid */}
           <div className="grid md:grid-cols-3 gap-6 mb-16">
             {/* Tailored Weddings */}
             <div
-              onClick={() => setSelectedProject({ id: 'tailored', img: tailoredWeddingsImg.img.src })}
+              onClick={() =>
+                setSelectedProject({
+                  id: "tailored",
+                  img: tailoredWeddingsImg.img.src,
+                })
+              }
               className="block group cursor-pointer"
             >
               <div className="h-full glass rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300">
@@ -258,11 +269,20 @@ const ServicesSection = () => {
                     {t("services.portfolio.projects.tailored.desc")}
                   </p>
                   <div className="flex flex-wrap gap-1.5">
-                    {(t("services.portfolio.projects.tailored.tech", { returnObjects: true }) as string[]).slice(0, 3).map((tech) => (
-                      <span key={tech} className="px-2 py-1 glass-light rounded text-xs text-muted">
-                        {tech}
-                      </span>
-                    ))}
+                    {(
+                      t("services.portfolio.projects.tailored.tech", {
+                        returnObjects: true,
+                      }) as string[]
+                    )
+                      .slice(0, 3)
+                      .map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-2 py-1 glass-light rounded text-xs text-muted"
+                        >
+                          {tech}
+                        </span>
+                      ))}
                   </div>
                 </div>
               </div>
@@ -270,7 +290,7 @@ const ServicesSection = () => {
 
             {/* NominalRD */}
             <div
-              onClick={() => setSelectedProject({ id: 'nominalrd', img: null })}
+              onClick={() => setSelectedProject({ id: "nominalrd", img: null })}
               className="block group cursor-pointer"
             >
               <div className="h-full glass rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300">
@@ -297,11 +317,20 @@ const ServicesSection = () => {
                     {t("services.portfolio.projects.nominalrd.desc")}
                   </p>
                   <div className="flex flex-wrap gap-1.5">
-                    {(t("services.portfolio.projects.nominalrd.tech", { returnObjects: true }) as string[]).slice(0, 3).map((tech) => (
-                      <span key={tech} className="px-2 py-1 glass-light rounded text-xs text-muted">
-                        {tech}
-                      </span>
-                    ))}
+                    {(
+                      t("services.portfolio.projects.nominalrd.tech", {
+                        returnObjects: true,
+                      }) as string[]
+                    )
+                      .slice(0, 3)
+                      .map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-2 py-1 glass-light rounded text-xs text-muted"
+                        >
+                          {tech}
+                        </span>
+                      ))}
                   </div>
                 </div>
               </div>
@@ -309,7 +338,9 @@ const ServicesSection = () => {
 
             {/* GymTracker */}
             <div
-              onClick={() => setSelectedProject({ id: 'gymtracker', img: null })}
+              onClick={() =>
+                setSelectedProject({ id: "gymtracker", img: null })
+              }
               className="block group cursor-pointer"
             >
               <div className="h-full glass rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300">
@@ -336,11 +367,20 @@ const ServicesSection = () => {
                     {t("services.portfolio.projects.gymtracker.desc")}
                   </p>
                   <div className="flex flex-wrap gap-1.5">
-                    {(t("services.portfolio.projects.gymtracker.tech", { returnObjects: true }) as string[]).slice(0, 3).map((tech) => (
-                      <span key={tech} className="px-2 py-1 glass-light rounded text-xs text-muted">
-                        {tech}
-                      </span>
-                    ))}
+                    {(
+                      t("services.portfolio.projects.gymtracker.tech", {
+                        returnObjects: true,
+                      }) as string[]
+                    )
+                      .slice(0, 3)
+                      .map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-2 py-1 glass-light rounded text-xs text-muted"
+                        >
+                          {tech}
+                        </span>
+                      ))}
                   </div>
                 </div>
               </div>
@@ -353,7 +393,16 @@ const ServicesSection = () => {
               {t("services.portfolio.testimonials.title")}
             </h3>
             <div className="grid md:grid-cols-3 gap-6">
-              {(t("services.portfolio.testimonials.items", { returnObjects: true }) as Array<{ quote: string, author: string, role: string, company: string }>).map((testimonial, index) => (
+              {(
+                t("services.portfolio.testimonials.items", {
+                  returnObjects: true,
+                }) as Array<{
+                  quote: string;
+                  author: string;
+                  role: string;
+                  company: string;
+                }>
+              ).map((testimonial, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -368,10 +417,15 @@ const ServicesSection = () => {
                   </p>
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-600 to-purple-400 flex items-center justify-center text-white font-bold text-sm">
-                      {testimonial.author.split(' ').map(n => n[0]).join('')}
+                      {testimonial.author
+                        .split(" ")
+                        .map((n) => n[0])
+                        .join("")}
                     </div>
                     <div>
-                      <p className="text-theme font-semibold text-sm">{testimonial.author}</p>
+                      <p className="text-theme font-semibold text-sm">
+                        {testimonial.author}
+                      </p>
                       <p className="text-muted text-xs">{testimonial.role}</p>
                     </div>
                   </div>
@@ -403,6 +457,5 @@ const ServicesSection = () => {
     </section>
   );
 };
-
 
 export default ServicesSection;

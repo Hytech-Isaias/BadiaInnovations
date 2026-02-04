@@ -28,7 +28,19 @@ export default defineConfig({
           }
           return `assets/${extType}/[name]-[hash][extname]`
         },
+        // Code splitting for better loading
+        manualChunks: {
+          vendor: ['react', 'react-dom', 'react-router-dom'],
+          i18n: ['i18next', 'react-i18next', 'i18next-browser-languagedetector'],
+          animations: ['framer-motion'],
+        },
       },
     },
+    // Increase chunk size warning limit (we'll optimize later)
+    chunkSizeWarningLimit: 1000,
+  },
+  // Optimize dependencies
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom', 'framer-motion'],
   },
 })

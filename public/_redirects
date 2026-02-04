@@ -1,0 +1,6 @@
+/*    /index.html   200
+/assets/*  /assets/:splat  200
+/ads.txt  /ads.txt  200
+/robots.txt  /robots.txt  200
+/sitemap.xml  /sitemap.xml  200
+/bot-test.html  /bot-test.html  200

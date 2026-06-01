@@ -46,6 +46,7 @@
     "vite-imagetools": "^7.0.4"
   }, 
   "engines": {
-    "node": "20.x"
+    "node": "20.x",
+    "pnpm": "8.x"
   }
 }

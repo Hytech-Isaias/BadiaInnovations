@@ -27,8 +27,9 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    setIsOpen(false);
-  }, [location]);
+    const id = setTimeout(() => setIsOpen(false), 0);
+    return () => clearTimeout(id);
+  }, [location.pathname]);
 
   const navLinks = [
     { name: t("nav.home"), path: "/" },
@@ -43,17 +44,13 @@ const Navbar = () => {
     if (path === "/") {
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else if (path.startsWith("#")) {
-      // Check if we are on the home page
       if (location.pathname !== "/") {
-        // If not on home, we might need to navigate to home first then scroll
-        // But for now let's assume hash links are mostly for home page
         window.location.href = "/" + path;
       } else {
         const element = document.querySelector(path);
         element?.scrollIntoView({ behavior: "smooth" });
       }
     } else {
-      // Normal navigation
       navigate(path);
     }
   };
@@ -127,11 +124,9 @@ const Navbar = () => {
             }}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
-            className="relative px-6 py-2.5 rounded-full font-medium text-sm overflow-hidden group"
+            className="flex items-center justify-center px-8 py-2.5 rounded-full font-medium text-sm overflow-hidden group bg-linear-to-r from-purple-600 to-purple-500 text-white hover:from-purple-700 hover:to-purple-600 transition-all duration-300 relative"
           >
-            <span className="absolute inset-0 bg-linear-to-r from-purple-600 to-purple-500" />
-            <span className="absolute inset-0 bg-linear-to-r from-purple-500 to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <span className="relative text-white">{t("nav.contact")}</span>
+            <span className="text-white">{t("nav.contact")}</span>
           </motion.a>
         </div>
 

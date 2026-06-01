@@ -112,7 +112,7 @@ const ServicesSection = () => {
       {/* Background elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div
-          className="absolute top-0 left-0 w-[500px] h-[500px] rounded-full blur-3xl"
+          className="absolute top-0 left-0 w-125 h-125 rounded-full blur-3xl"
           style={{
             background:
               theme === "dark"
@@ -121,7 +121,7 @@ const ServicesSection = () => {
           }}
         />
         <div
-          className="absolute bottom-0 right-0 w-[600px] h-[600px] rounded-full blur-3xl"
+          className="absolute bottom-0 right-0 w-150 h-150 rounded-full blur-3xl"
           style={{
             background:
               theme === "dark"

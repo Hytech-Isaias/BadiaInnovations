@@ -442,6 +442,30 @@
             "Lanzamiento Q2 2026"
           ],
           "link": "https://gymtracker.badiainnovations.com"
+        },
+        "badiainvoices": {
+          "name": "Badia Invoices",
+          "category": "SaaS / Aplicación Web",
+          "desc": "Sistema de facturación y gestión de clientes para empresas en RD.",
+          "extendedDesc": "Plataforma SaaS que permite a las empresas crear y enviar facturas profesionales, gestionar clientes, y llevar un control financiero básico. Integración con pasarelas de pago locales.",
+          "tech": [
+            "React",
+            "NestJS",
+            "PostgreSQL",
+            "Prisma ORM",
+            "Cloudflare Storage",
+            "VPS Hosting",
+            "Docker",
+            "Redis",
+            "Google Vision API (OCR)"
+          ],
+          "results": [
+            "Beta privada exitosa",
+            "MVP desarrollado en 3 meses",
+            "Feedback positivo de usuarios",
+            "Feedback positivo sobre la calidad de las facturas"
+          ],
+          "link": "https://invoices.badiainnovations.dev"
         }
       },
       "testimonials": {

@@ -439,9 +439,33 @@
           "results": [
             "Successful private beta",
             "4.8★ tester rating",
-            "Q2 2026 launch"
+            "Positive feedback on routine quality"
           ],
           "link": "https://gymtracker.badiainnovations.com"
+        },
+        "badiainvoices": {
+          "name": "Badia Invoices",
+          "category": "SaaS / Web Application",
+          "desc": "Invoicing and expense management system for businesses in the Dominican Republic.",
+          "extendedDesc": "Cloud-based platform to create professional invoices, manage expenses, and track payments. Integrated with local tax regulations and payment gateways.",
+            "tech": [
+              "React",
+              "NestJS",
+              "PostgreSQL",
+              "Prisma ORM",
+              "Cloudflare Storage",
+              "VPS Hosting",
+              "Docker",
+              "Redis",
+              "Google Vision API (OCR)"
+            ],
+            "results": [
+              "Successful private beta",
+              "Positive user feedback",
+              "Positive feedback on routine quality",
+              "MVP developed in 3 months"
+            ],
+            "link": "https://invoices.badiainnovations.dev"
         }
       },
       "testimonials": {

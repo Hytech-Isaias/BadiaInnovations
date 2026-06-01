@@ -14,6 +14,7 @@ import useThemeStore from "../store/themeStore";
 import tailoredWeddingsImg from "../assets/images/TailoredWeddings.png?format=webp;png&quality=90";
 import nominalImg from "../assets/images/NominalRD.png?format=webp;png&quality=90";
 import gymTrackerImg from "../assets/images/GymTracker.png?format=webp;png&quality=90";
+import badiainvoicesImg from "../assets/images/BadiaInvoices.png?format=webp;png&quality=90";
 import ServiceModal from "./ServiceModal";
 import PortfolioModal from "./PortfolioModal";
 
@@ -381,6 +382,59 @@ const ServicesSection = () => {
                   <div className="flex flex-wrap gap-1.5">
                     {(
                       t("services.portfolio.projects.gymtracker.tech", {
+                        returnObjects: true,
+                      }) as string[]
+                    )
+                      .slice(0, 3)
+                      .map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-2 py-1 glass-light rounded text-xs text-muted"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Badia Invoices */}
+            <div
+              onClick={() => setSelectedProject({ id: "badiainvoices", img: null })}
+              className="block group cursor-pointer"
+            >
+              <div className="h-full glass rounded-2xl overflow-hidden hover:shadow-xl hover:shadow-purple-500/10 transition-all duration-300">
+                <div className="h-48 overflow-hidden relative bg-linear-to-br from-purple-900 to-purple-700 flex items-center justify-center">
+                  <img
+                    src={badiainvoicesImg.img.src}
+                    alt="Badia Invoices"
+                    className="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute top-3 left-3">
+                    <span className="px-3 py-1 bg-purple-600/90 backdrop-blur-sm rounded-full text-xs text-white font-medium">
+                      {t("services.portfolio.projects.badiainvoices.category")}
+                    </span>
+                  </div>
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
+                    <span className="px-4 py-2 bg-black/30 backdrop-blur-md rounded-full text-white text-sm font-medium flex items-center gap-2">
+                      View Details <ArrowRight size={14} />
+                    </span>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <div className="flex items-center gap-2 mb-3">
+                    <h4 className="text-xl font-bold text-theme group-hover:text-purple-500 transition-colors">
+                      {t("services.portfolio.projects.badiainvoices.name")}
+                    </h4>
+                  </div>
+                  <p className="text-muted text-sm mb-4 line-clamp-2">
+                    {t("services.portfolio.projects.badiainvoices.desc")}
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {(
+                      t("services.portfolio.projects.badiainvoices.tech", {
                         returnObjects: true,
                       }) as string[]
                     )
